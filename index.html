@@ -3,6 +3,7 @@
     <title>Halo</title>
     <style>
         body{
+            position: relative;
             margin: 0;
             background: rgb(27, 24, 36);
         }
@@ -51,11 +52,34 @@
             width: 85%;
             margin: auto;
         }
-        .content{
+        .content{            
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 2vw;
             color: white;
             text-align: center;
+        }
+        #link1{
+            margin: auto;
+            background: white;
+            border: 0.5vw solid white;
+            border-radius: 0.5vw;
+            display: block;
+            width: 10vw;
+            margin-block: 1vw;            
+        }
+        .kotak1{            
+            margin: auto;
+            border: 0.2vw solid white;
+            border-radius: 0.7vw;
+            width: 30vw;
+            height: 30vw;
+        }
+        #sumber{
+            color: white;
+            text-align: center;
+            font-size: 1vw;
+            position: absolute;
+            bottom: 0;
         }
     </style>
 </head>
@@ -69,7 +93,12 @@
         <div class="content_bg">
             <div class="content">
                 <p>Web ini sedang dalam pengembangan</p>
-            </div>            
+                <div class="kotak1">
+                    <a id="link1" href="https://www.instagram.com/williamsetiawan33/">Instagram</a>
+                    <a id="link1" href="https://www.youtube.com/channel/UCMbJrVWPEfuwDZLLAmOCptQ">Youtube</a>                    
+                </div>                           
+            </div>                        
         </div>
     </div>    
+    <p id="sumber">©William Bagus Setiawan</p>    
 </body>
