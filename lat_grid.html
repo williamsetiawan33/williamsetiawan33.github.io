@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Grid</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        .container
+        {
+            display: grid;
+            grid-template-columns: 20% 30% 25% 25%;   
+            grid-template-rows: 220px 500px;      
+        }   
+
+        .container .item1
+        {
+            background: rgb(205, 209, 209);
+            grid-column: 1/ span 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .item1 p
+        {
+            font-size: 70px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .container .item2
+        {                        
+            background: rgb(255, 255, 255);
+            grid-column: 1/ span 1;
+            border-right: 5px solid black;
+        }
+        .container .item2 p
+        {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: white;
+            font-size: 35px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: black;
+            margin: 5px;
+            border-radius: 7px;
+            overflow: hidden;
+        }        
+        
+        .container .item3
+        {
+            background: rgb(255, 255, 255);
+            grid-column: 2/ span 4;
+        }
+        .container .item3 p
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        @media only screen and (max-width: 600px)
+        {
+            .container
+            {
+            display: grid;
+            grid-template-columns: 100%;   
+            grid-template-rows: 220px 195px 500px;      
+            }   
+            .container .item1
+            {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .container .item2
+            {
+                grid-column: 1;
+                grid-row: 2;
+                border-right: none;
+            }
+            .container .item2 p
+            {
+                margin-inline: 20px;
+            }
+            .container .item3
+            {
+                grid-column: 1;
+                grid-row: 3;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1"><p>William</p></div>
+        <div class="item2">
+                <p>Home</p>
+                <p>About</p>
+                <p>Link</p>
+                <p>Project</p>
+        </div>
+        <div class="item3">
+            <p style="margin: 10px; text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore doloribus perferendis laudantium aut adipisci. Est inventore soluta ullam beatae cumque? Corporis aspernatur amet facilis eos nesciunt culpa, eaque quam possimus.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore doloribus perferendis laudantium aut adipisci. Est inventore soluta ullam beatae cumque? Corporis aspernatur amet facilis eos nesciunt culpa, eaque quam possimus.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore doloribus perferendis laudantium aut adipisci. Est inventore soluta ullam beatae cumque? Corporis aspernatur amet facilis eos nesciunt culpa, eaque quam possimus.</p>
+            <p style="margin: 10px; text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore doloribus perferendis laudantium aut adipisci. Est inventore soluta ullam beatae cumque? Corporis aspernatur amet facilis eos nesciunt culpa, eaque quam possimus.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore doloribus perferendis laudantium aut adipisci. Est inventore soluta ullam beatae cumque? Corporis aspernatur amet facilis eos nesciunt culpa, eaque quam possimus.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore doloribus perferendis laudantium aut adipisci. Est inventore soluta ullam beatae cumque? Corporis aspernatur amet facilis eos nesciunt culpa, eaque quam possimus.</p>
+        </div>
+</body>
+</html>
