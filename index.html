@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> 
+    <style>
+        .navbar a
+        {
+            text-decoration: none;            
+            color: black;
+        }
+        body
+        {
+            margin: 0;
+        }
+        .header
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1px;
+            color: rgb(0, 0, 0);
+        }
+        .header p
+        {
+            font-family: 'Roboto', sans-serif;
+            font-size: 70px;
+        }    
+        .navbar
+        {
+            top: 0;
+            position: sticky;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: rgb(218, 213, 213);
+            height: 50px;
+            margin: auto;
+        }    
+        .navbar .btn
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-inline: 10px;
+            padding-inline: 10px;
+            height: 50px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+        }
+        .main
+        {
+            margin: 20px;            
+        }
+        .main p
+        {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            text-align: justify;
+        }  
+        .konten
+        {            
+            width: 100%;
+            height: 500px;
+            margin-inline: auto;
+            margin-block: 10px;
+            background: rgb(226, 222, 222);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .konten .judul p
+        {
+            font-family: 'Roboto', sans-serif;
+            background: rgb(165, 162, 162);
+            color: white;
+            text-align: center;
+            padding: 13px;
+            margin-top: 0;
+        }    
+        .konten .isi
+        {
+            display: flex;
+            justify-content: flex-start;  
+            flex-wrap: wrap;          
+            height: 350px;  
+            overflow: hidden;
+        }               
+        .konten .isi .gambar
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:500px;
+            height: 345px;        
+        }
+        .konten .isi .gambar img
+        {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .konten .isi .teks
+        {
+        }
+        .konten .isi .teks p
+        {
+            font-family: 'Roboto', sans-serif;
+            margin: 5px;
+            width: 700px;
+        } 
+        .konten .btn_read
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }    
+        .konten .btn_read p
+        {
+            font-family: 'Roboto', sans-serif;
+            background: rgb(165, 162, 162);
+            color: white;
+            text-align: center;
+            padding: 13px;
+            margin-bottom: 0;
+            width: 200px;
+            border-radius: 10px;
+        }
+        .konten .btn_read a
+        {
+            text-decoration: none;            
+            color: black;
+        }
+        .sosmedicon
+        {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .sosmedicon .logo
+        {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }        
+        body #copyright
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><p>William</p></div>
+    <div class="navbar">
+        <a href="web_main.html">
+            <div class="btn">Home</div>
+        </a>
+            <div class="btn">About</div>
+        <a href="https://www.youtube.com/channel/UCMbJrVWPEfuwDZLLAmOCptQ">
+            <div class="btn">Other Project</div>
+        </a>
+    </div>
+    <div class="main">
+        <p>Halo. Nama saya William Bagus Setiawan. Ini adalah website pribadi saya.
+        Di sini saya menampilkan portfolio dari projek yang telah saya buat. Ada projek tim dan juga ada projek yang saya
+        buat sendiri.
+        </p>  
+        <div class="konten">
+            <div class="judul">
+                <p>Alat Pemantauan Rumah</p>
+            </div>
+            <div class="isi">                  
+                <div class="gambar">
+                    <img src="img/projek1.jpg" alt="">
+                </div>    
+                <div class="teks">
+                    <p>Projek ini adalah projek akhir mata kuliah mikrokontroller di kampus saya. Pengerjaan projek ini dilakukan secara berkelompok.
+                        terjadi revisi penggunaan komponen, sehingga komponen yang digunakan adalah esp8266 (wemos d1), buzzer, kabel jumper, dan sensor mc-38 (magnet).
+                        Lebih detail mengenai cara kerja alat ini silahkan tekan tombol lebih lanjut. Kelompok Mikromatis terdiri dari
+                        Bagas Julio Nugroho, Ayunda Putri Purnama S, Hafid Kurniadi, dan William Bagus Setiawan.
+                    </p>
+                </div>                                          
+            </div>
+            <div class="btn_read">
+                <a href="https://www.youtube.com/watch?v=sGHO7Wg-L-I"><p>Lebih Lanjut</p></a>
+            </div>            
+        </div>
+        <div class="konten">
+            <div class="judul">
+                <p>Judul 2</p>
+            </div>
+            <div class="isi">                  
+                <div class="gambar">
+                    <img src="img/user1.svg" alt="">
+                </div>    
+                <div class="teks">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem enim blanditiis tenetur cumque vel! Itaque illum earum iste sed quis maiores consequatur, quos architecto voluptatem autem facere? Eaque, dicta maxime!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat in nisi, dignissimos ratione repellendus ex perspiciatis deserunt esse accusamus eveniet soluta nam aperiam illum. Fuga exercitationem ut eos reiciendis eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam consectetur quidem, eveniet dolor fugiat nesciunt est harum modi esse laudantium culpa officiis sequi fugit et facere. Quasi, ullam totam.
+                    </p>
+                </div>                                          
+            </div>
+            <div class="btn_read">
+                <p>Lebih Lanjut</p>
+            </div>            
+        </div>
+        <p>William Bagus Setiawan</p>
+    <div class="sosmedicon">
+        <a href="https://www.instagram.com/williamsetiawan33/">
+            <img class="logo" src="img/Instagram_logo_2016.svg" alt="">
+        </a>    
+        <a href="https://github.com/williamsetiawan33">   
+            <img class="logo" src="img/Octicons-mark-github.svg" alt="">
+        </a> 
+        <a href="https://www.youtube.com/channel/UCMbJrVWPEfuwDZLLAmOCptQ">
+            <img class="logo" style="width: 70px;" src="img/YouTube_full-color_icon_(2017).svg" alt="">
+        </a>
+    </div>    
+</body>
+</html>
