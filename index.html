@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        html
+        {
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            margin: 0;
+            /* height: 2000px; */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #header
+        {            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;            
+            width: 100%;
+            height: 700px;
+            background-image: url(img/forest-g256f55096_1280.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+        #coverblack
+        {
+            width: 100%;
+            height: 700px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            z-index: 1;
+        }
+        #circle
+        {
+            width: 230px;
+            height: 230px;
+            background-image: url(img/sidebg.jpg);
+            background-size: cover;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        #headername
+        {
+            color: white;
+            font-size: 40px;
+            z-index: 2;
+            /* background-color: red; */
+        }
+        #headerdesc
+        {
+            color: white;
+            font-size: 27px;
+            z-index: 2;
+            /* background-color: red; */
+        }   
+        .ctittle
+        {
+            /* background-color: blue; */
+            flex-basis: 100%;
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            margin-block: 20px;
+        }     
+        #aboutc
+        {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 700px;
+            background-image: url(img/background-g7cb785f4d_1280.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }        
+        #aboutdesc1
+        {
+            /* background-color: blue; */
+            margin-inline: 20%;
+            margin-block: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+        #skillsc
+        {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 700px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .skillbar
+        {
+            display: flex;
+            align-items: center;
+            width: 70%;
+            height: 40px;
+            margin-block: 10px;
+            background-color: rgb(216, 213, 213);
+            border-radius: 7px;
+            overflow: hidden;
+            color: white;
+        }
+        #skilltittle
+        {
+            /* color: black; */
+        }
+        #progress1
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 40%;
+            height: 40px;
+            background-color: rgb(240, 177, 95);
+        }
+        #progress2
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 40px;
+            background-color: rgb(95, 105, 240);
+        }
+        #progress3
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 30%;
+            height: 40px;
+            background-color: rgb(240, 124, 95);
+        }
+        #progress4
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 20%;
+            height: 40px;
+            background-color: rgb(136, 240, 95);
+        }
+        #projekc
+        {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            /* height: 1000px; */
+            /* background-color: red; */
+        }
+        #projektittle
+        {
+            color: black;
+        }
+        #projekrow1
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: rgb(255, 255, 255);
+            width: 70%;
+            /* height: 370px; */
+            margin-block: 10px;
+        }
+        #projekrow2
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: white;
+            width: 70%;
+            /* height: 370px; */
+            margin-block: 10px;
+        }
+        .projekcard
+        {
+            width: 230px;
+            height: 300px;
+            margin: 10px;
+            background-color: rgb(122, 120, 233);
+            box-shadow: 1px 1px 5px -3px;
+        }
+        #menubtn
+        {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            margin: 20px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        #barc
+        {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 20px;
+            /* background-color: red; */
+        }
+        .btnbar
+        {
+            width: 15px;
+            height: 3px;
+            margin: 3px;
+            background-color: white;
+        }
+        #sidemenu
+        {
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            background-color: white;
+            width: 300px;
+            height: 700px;
+            z-index: 3;
+            transition: transform 0.3s;
+            transform: translateX(-300px);
+            box-shadow: 1px 1px 5px -3px;
+        }
+        #sidemenu a:link
+        {
+            text-decoration: none;
+            color: black;
+        }
+        #sidemenu a:visited
+        {
+            text-decoration: none;
+            color: black;
+        }
+        #sidemenu a:hover
+        {
+            background-color: rgba(196, 191, 191, 0.4);
+        }
+        #sidemenu a
+        {
+            flex-basis: 100%;
+            margin-block: 10px;
+            text-align: center;
+            /* padding: 20px; */
+            font-size: 30px;
+            /* background-color: red; */
+        }        
+        @media only screen and (orientation: portrait) 
+        {
+            #projekrow1, #projekrow2
+            {
+                justify-content: center;
+            }            
+        }
+    </style>
+    <script>
+        var a = 0;
+        function openclosemenu()
+        {
+            var x = document.getElementById("sidemenu");
+            if(a == 0)
+            {
+            x.style.transform = "translateX(0px)"
+            a = 1;
+            }
+            else
+            {
+                x.style.transform = "translateX(-300px)"
+                a = 0;
+            }
+        }
+        function forceclosenav()
+        {
+            var x = document.getElementById("sidemenu");
+            x.style.transform = "translateX(-300px)"
+            a = 0;
+        }
+    </script>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div id="coverblack"></div>
+        <div id="circle"></div>
+        <p id="headername">William Bagus Setiawan</p>
+        <p id="headerdesc">Orang biasa</p>
+    </div>    
+    <div id="aboutc">
+        <p class="ctittle">Tentang</p>
+        <p id="aboutdesc1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis at perferendis cum cupiditate repudiandae officia nisi quo odit. Recusandae blanditiis incidunt possimus dolorum pariatur maiores aliquid ducimus deserunt explicabo voluptates.            
+        </p>
+    </div>
+    <div id="skillsc">
+        <p class="ctittle" id="skilltittle">Keahlian</p>
+        <div class="skillbar">
+            <div id="progress1">
+                <p>1 : 40%</p>
+            </div>
+        </div>
+        <div class="skillbar">
+            <div id="progress2">
+                <p>2 : 50%</p>
+            </div>
+        </div>
+        <div class="skillbar">
+            <div id="progress3">
+                <p>3 : 30%</p>
+            </div>
+        </div>
+        <div class="skillbar">
+            <div id="progress4">
+                <p>4 : 20%</p>
+            </div>
+        </div>
+    </div>
+    <div id="projekc">
+        <p class="ctittle" id="projektittle">Projek</p>
+        <div id="projekrow1">
+            <div class="projekcard"></div>
+            <div class="projekcard"></div>
+            <div class="projekcard"></div>
+        </div>
+        <div id="projekrow2">
+            <div class="projekcard"></div>
+            <div class="projekcard"></div>
+            <div class="projekcard"></div>
+        </div>
+    </div>
+    <div id="menubtn" onclick="openclosemenu()">
+        <div id="barc">
+            <div class="btnbar"></div>
+            <div class="btnbar"></div>
+            <div class="btnbar"></div>
+        </div>        
+    </div>
+    <div id="sidemenu">    
+        <a href="index.html" onclick="forceclosenav()">
+            <p>Beranda</p>
+        </a>         
+        <a href="#aboutc" onclick="forceclosenav()">
+            <p>Tentang</p>
+        </a>  
+        <a href="#skillsc" onclick="forceclosenav()">
+            <p>Keahlian</p>
+        </a>     
+        <a href="#projekc" onclick="forceclosenav()">
+            <p>Portfolio</p>
+        </a>                            
+    </div>
+</body>
+</html>
