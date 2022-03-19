@@ -1,0 +1,21 @@
+body
+{
+    height: 1700px;
+}
+.jumbotron
+{
+    padding: 2rem 1rem;
+    background-color: #e2edff;
+}
+#abouttittle
+{
+    width: 100%;
+    /* background-color: red; */
+    text-align: center;
+    font-size: 35px;
+}
+.aboutpar
+{
+    width: 300px;
+    text-align: center;
+}
