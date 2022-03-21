@@ -1,6 +1,5 @@
 body
 {
-    height: 1700px;
 }
 .jumbotron
 {
@@ -30,6 +29,7 @@ body
     background-color: black;
     color: white;
     height: 50px;
+    margin-top: 200px
 }
 #footerc a:link
 {
