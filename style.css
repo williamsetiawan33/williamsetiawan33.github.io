@@ -1,0 +1,54 @@
+body
+{
+    /* height: 1700px; */
+}
+.jumbotron
+{
+    padding: 5rem 1rem;
+    background-color: rgb(219, 215, 215);
+}
+.navbar
+{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#aboutdesc
+{
+    text-align: justify;
+}
+.carousel-indicators button 
+{
+    height: 10px !important;
+    width: 10px !important; 
+    margin-inline: 10px !important;
+    border-radius: 100%;
+}
+#footerc
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+#footerc a:link
+{
+    color: white;
+    text-decoration: none;
+}
+#footerc a:active
+{
+    color: white;
+    text-decoration: none;
+}
+#footerc a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+#footerc p
+{
+    margin: 0;
+    /* background-color: red; */
+}
