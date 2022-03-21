@@ -1,0 +1,17 @@
+body
+{
+    height: 1700px;
+}
+.jumbotron
+{
+    padding: 5rem 1rem;
+    background-color: rgb(219, 215, 215);
+}
+.navbar
+{
+    background-color: black;
+}
+#aboutdesc
+{
+    text-align: justify;
+}
