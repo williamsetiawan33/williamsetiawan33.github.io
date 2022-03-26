@@ -1,0 +1,333 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{    
+    margin: 0;
+    /* height: 2200px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* navbar */
+#navbar
+{
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 55px; */
+    box-shadow: 1px 1px 15px -12px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#navcontrol
+{
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    border-radius: 7px;
+}
+
+#navleftc
+{
+    position: relative;
+    left: 0;
+    width: 50%;
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: red; */
+}
+
+#navleftc p
+{
+    margin: 0;
+    margin-left: 10px;
+    /* background-color: blue; */
+}
+
+#navlogo
+{    
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#navrightc
+{
+    position: relative;
+    right: 0;
+    width: 50%;
+    height: 55px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: blue;    */
+}
+
+#navrightc p
+{
+    margin: 0;
+    margin-right: 10px;
+    /* background-color: blue; */
+}
+
+#navrightc a:link, a:hover, a:visited, a:active
+{
+    color: black;
+    text-decoration: none;
+}
+
+/* main banner */
+#mainbannerc
+{
+    width: 100%;
+    height: 570px;   
+    background-image: url(/img/coffe-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */ 
+}
+
+#mainsolid
+{
+    position: absolute;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 570px;   
+}
+
+#maindesc
+{
+    z-index: 0;
+    color: white;
+    text-align: center;
+    font-size: 27px;
+}
+
+/* promotion banner */
+#promotion
+{
+    /* background-color: red; */
+    padding-top: 20px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#promotittle
+{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+}
+
+#promotittle h2
+{
+    margin: 0;
+    /* background-color: blue; */
+}
+
+.promocard
+{
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    box-shadow: 1px 5px 15px -10px;
+    border-radius: 10px;
+    width: 280px;
+    /* height: 320px; */
+    margin: 10px;
+    overflow: hidden;
+}
+
+#card1 img
+{
+    width: 100%;
+    height: 270px;
+}
+
+.carddesc
+{
+    padding-block: 40px;
+    width: 100%;    
+    /* background-color: red; */
+}
+
+.carddesc p
+{
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+    /* background-color: blue; */
+}
+
+.cardbtn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(204, 202, 202);
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+    margin-block: 5px;
+}
+
+/* decor1 */
+#decor1
+{
+    /* background-color: rgb(230, 230, 230); */
+    box-shadow: 0 0 13px -7px;
+    padding-block: 200px;
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: 45%;
+}
+
+#decor1 p
+{
+    margin: 0;
+    width: 400px;
+    text-align: center;
+    font-size: 15px;
+    /* background-color: red; */
+}
+
+.dummypart
+{
+    width: 100%;
+    height: 200px;    
+}
+
+#footerc
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* background-color: red; */
+}
+
+#footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40%;
+    padding-block: 20px;
+    background-color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.footerpc
+{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footerpc p
+{
+    /* width: 400px; */
+    /* background-color: blue; */
+}
+
+@media only screen and (orientation: portrait)
+{
+    #navbar
+    {
+        position: fixed;
+        top: 0;
+        border-bottom: 3px solid rgb(0, 0, 0);
+        box-shadow: 0 0 0;
+    }
+
+    #navleftc
+    {
+        width: 100%;
+    }
+
+    #navcontrol
+    {
+        display: flex;
+    }
+
+    #navrightc
+    {
+        position: static;
+        margin-top: 10px;
+        width: 100%;
+        height: 0;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        transition: height 0.3s;        
+    }
+
+    #navrightc a
+    {
+        background-color: rgb(240, 240, 240);
+        width: 100%;
+        padding-block: 10px;
+        margin-block: 1px;
+        /* background-color: blue; */
+    } 
+    
+    #mainbannerc
+    {
+    background-attachment: scroll;
+    }
+
+    .promocard
+    {
+        width: 340px;
+    }
+
+    #card1 img
+    {
+        /* width: 100%; */
+        /* height: 270px; */
+        width: 100%;
+        height: 350px;
+    }
+
+    #footer
+    {
+        width: 270px;
+    }
+
+    .footerpc p
+    {
+        font-size: 12px;
+    }
+}
