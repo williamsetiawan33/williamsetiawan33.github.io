@@ -18,7 +18,7 @@ function navfunc()
 
 function darkmode()
 {
-    if(y == 0)
+    if(z == 0)
     {
         document.body.style.backgroundColor = "black";
         document.getElementById("promotittle").style.color = "white";
@@ -27,7 +27,7 @@ function darkmode()
         document.getElementById("darksw").style.backgroundColor = "white";
         document.getElementById("darkswp").style.color = "black";    
         document.getElementById("darkswp").innerHTML = "Light";
-        y = 1;
+        z = 1;
     }
     else
     {
@@ -38,6 +38,6 @@ function darkmode()
         document.getElementById("darksw").style.backgroundColor = "black";
         document.getElementById("darkswp").style.color = "white";
         document.getElementById("darkswp").innerHTML = "Dark";
-        y = 0;
+        z = 0;
     }
 }
