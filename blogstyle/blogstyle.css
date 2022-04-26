@@ -1,0 +1,520 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-color: rgb(94, 50, 86); */
+    /* background-image: url(/blogimg/galaxy.gif); */
+    background-color: rgb(228, 228, 228);
+}
+
+#blackdum
+{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 900px;
+    z-index: 5;
+    filter: blur(5px);
+}
+
+#btn1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.3s ease-in, background-color 0.3s;
+    border: 1px solid rgb(228, 228, 228);
+}
+#btn1 p
+{
+    color: white;
+    margin: 0;
+    font-size: 50px;
+    /* background-color: red; */
+}
+#btn1:hover
+{
+    cursor: pointer;
+    background-color: rgb(73, 73, 73);
+}
+
+#header
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-block: 300px;    
+    /* background-color: red; */    
+}
+#headerp
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-block: 30px;    
+    /* background-color: red; */    
+}
+.headerbg
+{
+    z-index: 1;
+    filter: blur(3px) brightness(40%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(/blogimg/lamp1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;    
+}
+#headtit, #headpar
+{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#headpar p, #headtit h1
+{
+    margin: 0;
+    color: white;
+}
+#nextbtn
+{
+    z-index: 1;
+    margin: 0;
+    margin-block: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in;
+}
+#nextbtn:hover
+{
+    text-decoration: none;
+    color: black;
+    transform: scale(120%);
+    background-color: rgb(218, 218, 218);
+}
+#nextbtn:active
+{
+    text-decoration: none;
+    color: black;
+}
+#nextbtn:link
+{
+    text-decoration: none;
+    color: black;
+}
+#nextbtn:visited
+{
+    text-decoration: none;
+    color: black;
+}
+#nextbtn p
+{
+    font-size: 11px;
+}
+.headcov
+{
+    z-index: 0;
+    /* width: 100%; */
+    background-color: rgba(0, 0, 0, 0.6); 
+    position: absolute;
+    /* top: 0; */
+    /* bottom: 0; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#lefside
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 900px;
+    box-shadow: 1px 1px 15px -10px;
+    background-color: white;
+    transition: transform 0.3s ease-in;
+    z-index: 5;
+}
+#lefside a
+{
+    width: 100%;
+    color: black;
+}
+#lefside a:link
+{
+    text-decoration: none;
+    color: black;
+}
+#lefside a:hover
+{
+    text-decoration: none;
+    color: black;
+}
+#lefside a:visited
+{
+    text-decoration: none;
+    color: black;
+}
+#lefside a:active
+{
+    text-decoration: none;
+    color: black;
+}
+.sublef
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    margin-bottom: 1px;
+}
+.lefl
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+}
+.sublef p
+{
+    margin: 0;
+    padding: 10px;
+}
+.lefl p
+{
+    margin: 0;
+    padding: 10px;
+}
+.lefl ul
+{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+.sublef:hover
+{
+    background-color: rgb(202, 202, 202);
+}
+
+.main
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+    margin-inline: 15%;
+}
+
+.article
+{    
+    position: relative;
+    width: 100%;
+    box-shadow: 1px 1px 15px -10px black;
+    margin-top: 50px;
+    overflow: hidden;
+    background-color: white;
+}
+#head1
+{
+    margin: 0;
+    text-align: center;
+    padding-block: 50px;
+}
+.imgcont
+{
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+}
+#img1
+{
+    width: 70%;
+}
+#par1
+{
+    margin: 0;
+    text-align: justify;
+    padding: 50px;
+}
+#par2
+{
+    margin: 0;
+    text-align: justify;
+    padding-inline: 50px;
+    padding-bottom: 20px;
+}
+
+.openart:link
+{
+    text-align: none;
+    color: black;
+}
+.openart:active
+{
+    text-align: none;
+    color: black;
+}
+.openart:visited
+{
+    text-align: none;
+    color: black;
+}
+.subopenart
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(233, 233, 233);
+    padding: 20px;
+    border-top-left-radius: 17px;
+    box-shadow: 0 0 15px -7px;
+    transition: box-shadow 0.1s ease-in;
+}
+.subopenart:hover
+{
+    box-shadow: 0 0 15px -3px;
+    cursor: pointer;
+}
+.subopenart p
+{
+    margin: 0;
+    /* color: white; */
+}
+
+.gallery
+{
+    margin-top: 50px;
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(0, 0, 0);
+}
+.galbg
+{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(/blogimg/lofi_girl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(5px) brightness(45%);
+}
+.galtit
+{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-block: 20px;
+}
+.galtit p
+{
+    margin: 0;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.card
+{
+    z-index: 1;
+    margin: 10px;
+    width: 400px;
+    height: 250px;
+    box-shadow: 0 0 15px -7px white;
+}
+.card img
+{
+    width: inherit;
+    height: inherit;
+    transition: filter 0.1s ease-in;
+    transition: box-shadow 0.1s ease-in;
+}
+.card img:hover
+{
+    filter: brightness(130%);
+    box-shadow: 0 0 15px -3px white;
+}
+
+.footer
+{
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p
+{
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#responc
+{
+    position: relative;
+    margin-block: 70px;
+    width: 100%;
+    box-shadow: 1px 1px 15px -10px black;
+    height: 50px;
+    background-color: white;
+    overflow: hidden;
+    transition: height 0.3s ease-in;
+}
+.responc:hover
+{
+}
+.sosmedrespon
+{
+    /* background-color: red; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+#btncomment
+{
+    color: white;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;    
+    background-color: rgb(0, 153, 255);
+    position: absolute;
+    left: 20px;
+}
+#btncomment:hover
+{
+    cursor: pointer;
+}
+.subsosmedrespon
+{
+    margin-inline: 1px;
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+}
+.respontext
+{
+    width: 100%;
+    /* background-color: red; */
+}
+.subrespontext
+{
+    margin-left: 20px;
+    /* background-color: grey; */
+    border: 1px solid black;
+    width: 600px;
+    height: 160px;
+    border-radius:7px;
+}
+.btnsendc
+{
+    /* padding-block: 5px; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: red; */
+}
+.btnsend
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    border-radius: 5px;    
+}
+.btnsend:hover
+{
+    cursor: pointer;
+}
+@media only screen and (orientation: portrait)
+{    
+    .main
+    {        
+        margin-inline: 0;
+    }
+    #par1
+    {        
+        padding: 20px;
+    }
+    #par2
+    {        
+        padding-inline: 20px;
+        padding-bottom: 20px;
+    }
+    .card
+    {
+        margin: 0;
+        margin-block: 5px;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .article
+    {
+        margin-top: 5px;
+    }
+    #img1
+    {
+        width: 100%;
+    }
+
+    .respontext
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .subrespontext
+    {
+        width: 90%;
+        margin-left: 0;
+    }
+    .btnsendc
+    {
+        margin-top: 5px;
+    }
+}
