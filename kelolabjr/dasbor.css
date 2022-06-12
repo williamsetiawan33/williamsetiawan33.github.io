@@ -211,6 +211,10 @@ body
     {
         width: 100%;
     }
+    .navbarkanan
+    {
+    justify-content: center;
+    }
     #btnmenu
     {
         display: none;
