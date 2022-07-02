@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Masuk | Kelola Belajar</title>
+</head>
+
+<body>
+    <div id="regiscontainer">
+        <div class="subregis">
+            <div style="cursor: pointer;" onclick="regisclose()" class="closeregis">
+                <p>X</p>
+            </div>
+            <form action="index.html" id="formregis">
+                <div class="subsubregis">
+                    <p id="regisjudul">Mendaftar akun</p>
+                </div>
+                <div class="subsubregis">
+                    <label for="regisusername">Nama pengguna</label>
+                </div>
+                <div class="subsubregis">
+                    <input class="regisbevel" type="text" id="regisusername" autocomplete="off">
+                </div>
+                <div class="subsubregis">
+                    <label for="regisemail">Email</label>
+                </div>
+                <div class="subsubregis">
+                    <input class="regisbevel" type="text" id="regisemail" autocomplete="off">
+                </div>
+                <div class="subsubregis">
+                    <label for="regispass1">Kata sandi</label>
+                </div>
+                <div class="subsubregis">
+                    <input oninput="validate()" class="regisbevel" type="password" id="regispass1"
+                        placeholder="min. 8 karakter" autocomplete="off">
+                </div>
+                <div class="subsubregis">
+                    <label for="regispass2">Konfirmasi kata sandi</label>
+                </div>
+                <div class="subsubregis">
+                    <input oninput="validate()" class="regisbevel" type="password" id="regispass2"
+                        placeholder="Konfirmasi kata sandi" autocomplete="off">
+                </div>
+                <button id="regisbtn"
+                    onclick="moveuser(); alert('Terima kasih. Silahkan login dengan akun anda.'); regisclose();">Mendaftar</button>
+            </form>
+        </div>
+    </div>
+    <!-- navbar-->
+    <div class="navbar">
+        <div class="navbarkiri">
+            <!-- <div class="logo"></div> -->
+            <p>KELOLA BELAJAR</p>
+        </div>
+        <div class="navbarkanan">
+            <p>Masuk</p>
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <!-- main container -->
+    <div class="main">
+        <div class="leftmain">
+            <img src="img/banner1.jpg" alt="">
+            <div class="filterbg"></div>
+            <div class="slogancontainer">
+                <p class="slogan">Catat ini itu</p>
+                <div class="spacer1"></div>
+                <p class="slogan">Kelola tugas</p>
+                <div class="spacer1"></div>
+                <p class="slogan">Bikin jadwal</p>
+            </div>
+        </div>
+        <div class="rightmain">
+            <div class="logincontainer">
+                <form action="dasbor.html" id="formlogin">
+                    <div class="sublogin">
+                        <p id="loginjudul">Masuk</p>
+                    </div>
+                    <div class="sublogin">
+                        <label for="username">Nama pengguna</label>
+                    </div>
+                    <div class="sublogin">
+                        <input type="text" id="username">
+                    </div>
+                    <div class="sublogin">
+                        <label for="pass">Kata sandi</label>
+                    </div>
+                    <div class="sublogin">
+                        <input type="password" id="pass">
+                    </div>
+                    <button
+                        onclick="sessionStorage.setItem('username', document.getElementById('username').value); sessionStorage.setItem('dark', 0);">Masuk</button>
+                    <div class="sublogin">
+                        <p>Belum punya akun ?<span style="color: blue; cursor: pointer;"
+                                onclick="regisopen()">Mendaftar</span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+    <!-- footer -->
+    <div class="footer">
+        <p>© Tim kelompok 6</p>
+    </div>
+    <!-- end footer -->
+    <script src="script.js"></script>
+</body>
+
+</html>

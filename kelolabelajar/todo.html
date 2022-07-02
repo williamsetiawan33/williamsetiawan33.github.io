@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Dasbor | Kelola Belajar</title>
+</head>
+
+<body id="todobody">
+    <!-- navbar-->
+    <div class="navbar" id="nav">
+        <div class="navbarkiri">
+            <div class="logo"></div>
+            <p><a href="dasbor.html">KELOLA BELAJAR</a><br>Halo <span id="username">Nama Pengguna</span></p>
+        </div>
+        <div class="navbarkanan">
+            <a href="todo.html">
+                <p>To do</p>
+            </a>
+            <a href="catatan.html">
+                <p>Catatan</p>
+            </a>
+            <a href="jadwal.html">
+                <p>Buat jadwal</p>
+            </a>
+            <a href="about.html">
+                <p>Tentang</p>
+            </a>
+            <a href="bantuan.html">
+                <p style="margin-right: 15px;">Bantuan</p>
+            </a>
+        </div>
+    </div>
+    <!-- end navbar -->
+    <!-- end navbar -->
+
+    <!-- container -->
+    <div class="cont" id="todocont">
+        <form action="dasbor.html" id="form">
+            <div id="titlec" class="formc">
+                <p id="formtitle">Buat to do list</p>
+            </div>
+            <div class="formc">
+                <input type="text" class="taskname" placeholder="nama tugas">
+            </div>
+            <div id="formbtnc">
+                <div onclick="tambahtodo()" class="formbtn" id="btntambah">+</div>
+                <button class="formbtn"
+                    onclick="if(confirm('apakah anda sudah yakin ?') != true){return false;}">Simpan</button>
+                <button class="formbtn">Batal</button>
+            </div>
+        </form>
+    </div>
+    <!-- end container -->
+    <script src="script.js"></script>
+    <script>tododark()</script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELOLA BELAJAR | Buat catatan</title>
+    <link rel="stylesheet" href="catatan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body id="catatanbody">
+    <!-- navbar-->
+    <div class="navbar" id="nav">
+        <div class="navbarkiri">
+            <div class="logo"></div>
+            <p><a href="dasbor.html">KELOLA BELAJAR</a><br>Halo <span id="username">Nama Pengguna</span></p>
+        </div>
+        <div class="navbarkanan">
+            <a href="todo.html">
+                <p>To do</p>
+            </a>
+            <a href="catatan.html">
+                <p>Catatan</p>
+            </a>
+            <a href="jadwal.html">
+                <p>Buat jadwal</p>
+            </a>
+            <a href="about.html">
+                <p>Tentang</p>
+            </a>
+            <a href="bantuan.html">
+                <p style="margin-right: 15px;">Bantuan</p>
+            </a>
+        </div>
+    </div>
+    <!-- end navbar -->
+    <br>
+    <h2 style="height: 1vh;"> BUAT CATATAN </h2>
+    <br>
+    <div id="formcontainer">
+        <form style="width: 85%;" action="">
+            <input type="text" id="judul" placeholder="Judul">
+            <br>
+            <br>
+            <textarea name="" id="isi" cols="30" rows="10" placeholder="Isi"></textarea>
+        </form>
+        <div id="btncontainer">
+            <a href="dasbor.html">
+                <button class="btn"
+                    onclick="if(confirm('apakah anda sudah yakin ?') != true){return false;}">Simpan</button>
+            </a>
+            <a href="dasbor.html">
+                <button class="btn">Batal</button>
+            </a>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer" id="foot">
+        <p>© Tim kelompok 6</p>
+    </div>
+    <script src="script.js"></script>
+    <script>catatandark()</script>
+</body>
+
+</html>
