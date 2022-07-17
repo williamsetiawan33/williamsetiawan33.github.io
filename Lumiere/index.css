@@ -376,6 +376,7 @@ body {
     #subnewsslidec {
         height: 100vw;
         width: 300px;
+        overflow-x: initial;
     }
 
     .sub:hover {
