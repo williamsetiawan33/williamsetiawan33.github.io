@@ -494,6 +494,10 @@ body::-webkit-scrollbar {
         height: 100vw;
     }
 
+    .sub {
+        width : 100vw;
+    }
+
     .sub:hover {
         opacity: 100%;
         transform: rotate(90deg) translateY(25px) scale(100%);
