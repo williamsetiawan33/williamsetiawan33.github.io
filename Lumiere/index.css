@@ -324,6 +324,7 @@ body::-webkit-scrollbar {
     overflow: auto;
     position: relative;
     scroll-behavior: smooth;
+    scroll-snap-type : y mandatory;
 }
 
 #subnewsslidec::-webkit-scrollbar {
