@@ -3,7 +3,7 @@
     "short_name": "Lumiere",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#5900b3",
+    "background_color": "#ffffff",
     "theme_color": "white",
     "scope": ".",
     "description": "PWA app kopi lumiere",
