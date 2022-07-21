@@ -1,0 +1,22 @@
+{
+    "name": "Lumiere",
+    "short_name": "Lumiere",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#5900b3",
+    "theme_color": "white",
+    "scope": ".",
+    "description": "PWA app kopi lumiere",
+    "icons": [
+        {
+            "src": "icon/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
