@@ -8,8 +8,25 @@ var best1 = document.getElementById("best1");
 var best2 = document.getElementById("best2");
 var best3 = document.getElementById("best3");
 var subnews = document.getElementById("subnewsslidec");
-subnews.scrollLeft = 80;
-subnews.scrollTop = 80;
+
+function scrollof(event) {
+    var y = event.deltaY;
+    var x = event.deltaX;
+    if(y > 0) {
+        subnews.scrollTop+= 80;
+    }
+    else {
+        subnews.scrollTop -= 80;
+    }
+    
+    if(x > 0) {
+        subnews.scrollLeft += 80;
+    }
+    else {
+        subnews.scrollLeft -= 80;
+    }
+}
+
 function slide() {
     headimg.src = "img/" + "head" + indexImg + ".jpg";
     indexImg++;
