@@ -13,10 +13,10 @@ function scrollof(event) {
     var y = event.deltaY;
     var x = event.deltaX;
     if(y > 0) {
-        subnews.scrollTop += 40;
+        subnews.scrollTop += 280;
     }
     else {
-        subnews.scrollTop -= 40;
+        subnews.scrollTop -= 280;
     }
     
     if(x > 0) {
