@@ -351,7 +351,7 @@ body::-webkit-scrollbar {
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     flex: none;
-    scroll-snap-align: end;
+    scroll-snap-align: start;
     transform: rotate(90deg);
     display: flex;
     justify-content: center;
@@ -560,7 +560,7 @@ body::-webkit-scrollbar {
         background-size: cover;
         /* border-radius: 7px; */
         flex: none;
-        scroll-snap-align: end;
+        scroll-snap-align: start;
         /* transform: unset; */
         transform: rotate(0);
     }
