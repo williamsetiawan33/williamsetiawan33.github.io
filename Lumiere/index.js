@@ -8,8 +8,8 @@ var best1 = document.getElementById("best1");
 var best2 = document.getElementById("best2");
 var best3 = document.getElementById("best3");
 var subnews = document.getElementById("subnewsslidec");
-subnews.scrollLeft = 180;
-subnews.scrollTop = 180;
+subnews.scrollLeft = 80;
+subnews.scrollTop = 80;
 function slide() {
     headimg.src = "img/" + "head" + indexImg + ".jpg";
     indexImg++;
