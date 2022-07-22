@@ -13,17 +13,17 @@ function scrollof(event) {
     var y = event.deltaY;
     var x = event.deltaX;
     if(y > 0) {
-        subnews.scrollTop+= 80;
+        subnews.scrollTop += 40;
     }
     else {
-        subnews.scrollTop -= 80;
+        subnews.scrollTop -= 40;
     }
     
     if(x > 0) {
-        subnews.scrollLeft += 80;
+        subnews.scrollLeft += 40;
     }
     else {
-        subnews.scrollLeft -= 80;
+        subnews.scrollLeft -= 40;
     }
 }
 
