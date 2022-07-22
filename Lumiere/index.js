@@ -7,6 +7,9 @@ var menuc = document.getElementById("menucontainer");
 var best1 = document.getElementById("best1");
 var best2 = document.getElementById("best2");
 var best3 = document.getElementById("best3");
+var subnews = document.getElementById("subnewsslidec");
+subnews.scrollLeft = 180;
+subnews.scrollTop = 180;
 function slide() {
     headimg.src = "img/" + "head" + indexImg + ".jpg";
     indexImg++;
