@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Soal | Coba Tebak</title>
+    <style>
+        table {
+            width: 80%;
+            font-size: 15px;
+            /* background-color: red; */
+            margin: auto;
+            text-align: justify;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        .soal {
+            border: none;
+            border-bottom: 1px solid black;
+            padding-block: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Kembali</button>
+    <h1>Buat soal yuk...</h1>
+    <h5>Ketentuan : Pastikan soal sesuai dengan etika dan moral yang ada di masyarakat serta anda bersedia bahwa setelah
+        soal diupload maka soal akan selalu dipantau kelayakannya untuk berada di sistem kami. Selengkapnya</h5>
+
+    <form action="" method="POST" onsubmit="sendData()">
+        <input type="text" id="txtSoal" name="soal" placeholder="Pertanyaan" onkeydown="checkSoal(event)">
+        <br>
+        <br>
+        <input type="text" id="txtJawaban" name="jawaban" placeholder="Jawaban" onkeydown="checkSoal(event)">
+        <br>
+        <br>
+        <input type="text" id="txtHint" name="hint" placeholder="Hint" onkeydown="checkSoal(event)">
+        <br>
+        <br>
+        <button id="btnUpload" name="upload">Buat soal</button>
+        <!-- <h5 style="color: blue">Kamu belum berada di peringkat 10 besar. Main lagi, terus mampir ke sini yak ^_^</h5> -->
+    </form>
+
+    <table>
+        <tr>
+            <th colspan="4" style="text-align: center">Soal yang kamu buat</th>
+        </tr>
+        <tr style="text-align: center;">
+            <th>No</th>
+            <th>Pertanyaan</th>
+        </tr>
+        <tr>
+            <td class="soal">1</td>
+            <td class="soal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, similique?</td>
+        </tr>
+        <tr>
+            <td class="soal">2</td>
+            <td class="soal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, similique?</td>
+        </tr>
+    </table>
+    <script>
+        function checkSoal(event) {
+            if (event.key == "Enter") {
+                if (document.getElementById("txtSoal").value == "" || document.getElementById("txtJawaban").value == "" || document.getElementById("txtHint").value == "") {
+                    event.preventDefault();
+                    alert("lengkapi dulu dong, hehe");
+                }
+            }
+        }
+        const btnUpload = document.getElementById("btnUpload");
+        const txtSoal = document.getElementById("txtSoal");
+        const txtJawaban = document.getElementById("txtJawaban");
+        const txtHint = document.getElementById("txtHint");
+        function sendData() {
+            event.preventDefault();
+            const ajax = new XMLHttpRequest();
+            ajax.onload = function () {
+                if (this.responseText == "succes") {
+                    alert("Soal berhasil ditambahkan, terima kasih.");
+                }
+            }
+            // set developer api V
+            ajax.open("POST", "http://localhost/coba-tebak/api.php");
+
+            // set release api V
+            // ajax.open("POST", "https://coba-tebak-api.000webhostapp.com/api.php");
+
+            ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            ajax.send("upload=" + btnUpload.value + "&" + "soal=" + txtSoal.value + "&" + "jawaban=" + txtJawaban.value + "&" + "hint=" + txtHint.value);
+        }
+    </script>
+</body>
+
+</html>
