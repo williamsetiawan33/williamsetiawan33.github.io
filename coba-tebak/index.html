@@ -73,7 +73,7 @@
             height: inherit;
         }
 
-        .btn {
+        .btn-menu {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -82,6 +82,99 @@
             margin: 5px;
             border: 1px solid rgb(128, 75, 0);
             border-radius: 7px;
+        }
+
+        /* bagian modal untuk login atau daftar */
+        .modalAccount {
+            position: fixed;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modalAccount-con {
+            background-color: white;
+            width: 70%;
+            height: 80%;
+            box-shadow: 0 0 13px -5px;
+            display: flex;
+            position: relative;
+        }
+
+        .modalAccount-con-leftPart,
+        .modalAccount-con-rightPart {
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid black; */
+        }
+
+        .modalAccount-con-leftPart {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modalAccount-con-leftPart-btnLogin,
+        .modalAccount-con-leftPart-btnRegister {
+            width: 90%;
+            height: 40%;
+            margin-block: 10px;
+            /* border: 1px solid rgb(255, 255, 255); */
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px;
+        }
+
+        .modalAccount-con-rightPart {
+            display: flex;
+            justify-content: center;
+            align-content: start;
+            flex-wrap: wrap;
+        }
+
+        .modalAccount-con-rightPart h3 {
+            width: 100%;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .modalAccount-con-rightPart input {
+            border-radius: 5px;
+            border: 1px solid gray;
+            font-size: 20px;
+            margin-block: 10px;
+            width: 60%;
+            padding: 5px;
+        }
+
+        .modalAccount-con-rightPart button {
+            font-size: 20px;
+            padding-inline: 25px;
+            padding-block: 10px;
+            border-radius: 7px;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        .modalAccount-con-btnClose {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -352,13 +445,29 @@
             </div>
         </div>
         <div class="right-subcon">
-            <div class="btn">Mulai</div>
+            <div class="btn-menu">Mulai</div>
             <div class="spacer" style="width:100%"></div>
-            <div class="btn">Buat pertanyaan</div>
+            <div class="btn-menu">Buat pertanyaan</div>
             <div class="spacer" style="width:100%"></div>
-            <div class="btn">Bantuan</div>
+            <div class="btn-menu">Bantuan</div>
             <div class="spacer" style="width:100%"></div>
-            <div class="btn">Tentang pengembang</div>
+            <div class="btn-menu">Tentang pengembang</div>
+        </div>
+    </div>
+    <div class="modalAccount">
+        <div class="modalAccount-con">
+            <div class="modalAccount-con-leftPart">
+                <div class="modalAccount-con-leftPart-btnLogin">Masuk</div>
+                <div class="modalAccount-con-leftPart-btnRegister">Daftar</div>
+            </div>
+            <div class="modalAccount-con-rightPart">
+                <h3>Masuk untuk bermain</h3>
+                <input type="text" placeholder="nama pengguna">
+                <input type="text" placeholder="kata sandi">
+                <div class="spacer" style="width: 100%;"></div>
+                <button>Masuk</button>
+            </div>
+            <div class="modalAccount-con-btnClose">X</div>
         </div>
     </div>
     <select name="" id="" style="position: fixed; right: 0; bottom: 0;">
@@ -370,7 +479,7 @@
         const prevpPlayerRank = [];
         const curPlayerRank = [];
         let dev = 0;
-        setInterval(function () { console.log("hello " + dev); dev++ }, 1000);
+        // setInterval(function () { console.log("hello " + dev); dev++ }, 1000);
         function getPlayerRank() {
             const ajax = new XMLHttpRequest();
             ajax.open("GET", "http://localhost/coba-tebak/api.php");
