@@ -82,6 +82,7 @@
             margin: 5px;
             border: 1px solid rgb(128, 75, 0);
             border-radius: 7px;
+            text-align: center;
         }
 
         /* bagian modal untuk login atau daftar */
@@ -94,75 +95,55 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            display: none;
         }
 
         .modalAccount-con {
             background-color: white;
-            width: 70%;
+            width: 30%;
             height: 80%;
-            box-shadow: 0 0 13px -5px;
+            box-shadow: 3px 3px 15px -8px;
             display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
             position: relative;
         }
 
-        .modalAccount-con-leftPart,
-        .modalAccount-con-rightPart {
-            width: 50%;
-            height: 100%;
-            /* border: 1px solid black; */
-        }
-
-        .modalAccount-con-leftPart {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modalAccount-con-leftPart-btnLogin,
-        .modalAccount-con-leftPart-btnRegister {
-            width: 90%;
-            height: 40%;
+        .modalAccount-con h3 {
+            padding: 0;
             margin-block: 10px;
-            /* border: 1px solid rgb(255, 255, 255); */
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 7px;
         }
 
-        .modalAccount-con-rightPart {
-            display: flex;
-            justify-content: center;
-            align-content: start;
-            flex-wrap: wrap;
-        }
-
-        .modalAccount-con-rightPart h3 {
-            width: 100%;
-            margin-top: 80px;
-            text-align: center;
-        }
-
-        .modalAccount-con-rightPart input {
+        .modalAccount-con input {
             border-radius: 5px;
             border: 1px solid gray;
             font-size: 20px;
             margin-block: 10px;
-            width: 60%;
+            width: 70%;
             padding: 5px;
         }
 
-        .modalAccount-con-rightPart button {
+        .modalAccount-con button {
             font-size: 20px;
             padding-inline: 25px;
             padding-block: 10px;
+            margin-block: 10px;
             border-radius: 7px;
             background-color: black;
             color: white;
             border: none;
+            cursor: pointer;
+        }
+
+        #accountAlert {
+            color: red;
+            padding: 0;
+            margin-block: 10px;
+            font-size: 15px;
+            text-align: center;
+            width: 70%;
+            padding-inline: 5px;
         }
 
         .modalAccount-con-btnClose {
@@ -175,6 +156,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .spacer {
+            width: 100%;
+        }
+
+        @media(max-width: 768px) {
+            .modalAccount-con {
+                width: 90%;
+            }
+
+            .left-subcon {
+                display: none;
+            }
+
+            .con {
+                grid-template-columns: 100vw;
+            }
+
+            .btn-menu {
+                width: 50%;
+            }
         }
     </style>
 </head>
@@ -456,17 +461,15 @@
     </div>
     <div class="modalAccount">
         <div class="modalAccount-con">
-            <div class="modalAccount-con-leftPart">
-                <div class="modalAccount-con-leftPart-btnLogin">Masuk</div>
-                <div class="modalAccount-con-leftPart-btnRegister">Daftar</div>
-            </div>
-            <div class="modalAccount-con-rightPart">
-                <h3>Masuk untuk bermain</h3>
-                <input type="text" placeholder="nama pengguna">
-                <input type="text" placeholder="kata sandi">
-                <div class="spacer" style="width: 100%;"></div>
-                <button>Masuk</button>
-            </div>
+            <h3>Masuk</h3>
+            <div class="spacer"></div>
+            <input type="text" placeholder="nama pengguna">
+            <div class="spacer"></div>
+            <input type="text" placeholder="kata sandi">
+            <div class="spacer"></div>
+            <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
+            <div class="spacer"></div>
+            <button>Masuk</button>
             <div class="modalAccount-con-btnClose">X</div>
         </div>
     </div>
