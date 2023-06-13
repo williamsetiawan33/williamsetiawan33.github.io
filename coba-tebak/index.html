@@ -46,6 +46,12 @@
             flex-wrap: wrap;
         }
 
+        .rank-con::-webkit-scrollbar {
+            display: flex;
+            /* background-color: red; */
+        }
+
+
         .rank-con h3 {
             /* width: 100%; */
             /* height: 10%; */
@@ -84,6 +90,7 @@
             border-radius: 7px;
             text-align: center;
             padding: 10px;
+            cursor: pointer;
         }
 
         /* bagian modal untuk login atau daftar */
@@ -97,7 +104,7 @@
             justify-content: center;
             align-items: center;
             z-index: 99999;
-            /* display: none; */
+            display: none;
         }
 
         .modalAccount-con {
@@ -166,6 +173,48 @@
             width: 100%;
         }
 
+        .menuBtn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            display: none;
+            /* background-color: red; */
+        }
+
+        .menuBtn svg {
+            width: inherit;
+            height: inherit;
+            padding: 0;
+        }
+
+        .sideBar {
+            background-color: white;
+            width: 80vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            border-right: 1px solid rgb(205, 205, 205);
+            display: flex;
+            justify-content: center;
+            transform: translateX(-350px);
+            transition: all .5s ease;
+        }
+
+        .sideBar-closeBtn {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .sideBar-closeBtn svg {
+            width: inherit;
+            height: inherit;
+        }
+
         @media(max-width: 768px) {
             .modalAccount-con {
                 width: 90%;
@@ -181,6 +230,14 @@
 
             .btn-menu {
                 width: 50%;
+            }
+
+            .menuBtn {
+                display: flex;
+            }
+
+            .rank-con {
+                margin-top: 50px;
             }
         }
     </style>
@@ -475,6 +532,283 @@
             <div class="modalAccount-con-btnClose">X</div>
         </div>
     </div>
+    <div class="menuBtn" onclick="checkSideMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </div>
+    <div class="sideBar">
+        <div class="sideBar-closeBtn" onclick="checkSideMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                viewBox="0 0 16 16">
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </div>
+        <div class="rank-con">
+            <h3>Live rank</h3>
+            <div class="spacer" style="width:100%"></div>
+            <table id="rank-table">
+                <tr style="position: sticky; top: 0; background-color: white;">
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Skor</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>Lani</td>
+                    <td>500</td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <select name="" id="" style="position: fixed; right: 0; bottom: 0;">
         <option value="">Level 1</option>
         <option value=""> Level 2</option>
@@ -483,11 +817,24 @@
     <script>
         const prevpPlayerRank = [];
         const curPlayerRank = [];
+        let sideState  = 0;
+        const sideBar = document.getElementsByClassName("sideBar")[0];
         let dev = 0;
         // setInterval(function () { console.log("hello " + dev); dev++ }, 1000);
         function getPlayerRank() {
             const ajax = new XMLHttpRequest();
             ajax.open("GET", "http://localhost/coba-tebak/api.php");
+        }
+    
+        function checkSideMenu(){
+            if(sideState == 0) {
+                sideBar.style.transform = "translateX(0px)";
+                sideState = 1;
+            }
+            else if(sideState == 1) {
+                sideBar.style.transform = "translateX(-350px)";
+                sideState = 0;
+            }
         }
     </script>
 </body>
