@@ -125,6 +125,19 @@
             display: none;
         }
 
+        .modalAccount2 {
+            position: fixed;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            display: none;
+        }
+
         .modalAccount-con {
             background-color: white;
             width: 30%;
@@ -558,7 +571,8 @@
         <div class="right-subcon">
             <div class="btn-main" onmouseenter="btnMainAnimTrue(0)" onmouseleave="btnMainAnimFalse(0)"
                 onclick="btnMainAnimClick([1,2,3,])">Mulai
-            <p class="">Memuat</p></div>
+                <!-- <p class="">Memuat</p> -->
+            </div>
             <select name="" id="" style="position: fixed; right: 0; bottom: 0;">
                 <option value="">Level 1</option>
                 <option value=""> Level 2</option>
@@ -584,11 +598,27 @@
             <div class="spacer"></div>
             <input type="text" placeholder="nama pengguna">
             <div class="spacer"></div>
-            <input type="text" placeholder="kata sandi">
+            <input type="password" placeholder="kata sandi">
             <div class="spacer"></div>
             <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
             <div class="spacer"></div>
             <button>Masuk</button>
+            <div class="modalAccount-con-btnClose">X</div>
+        </div>
+    </div>
+    <div class="modalAccount2">
+        <div class="modalAccount-con">
+            <h3>Daftar</h3>
+            <div class="spacer"></div>
+            <input type="text" placeholder="nama pengguna">
+            <div class="spacer"></div>
+            <input type="password" placeholder="kata sandi">
+            <div class="spacer"></div>
+            <input type="password" placeholder="konfirmasi kata sandi">
+            <div class="spacer"></div>
+            <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
+            <div class="spacer"></div>
+            <button>Daftar</button>
             <div class="modalAccount-con-btnClose">X</div>
         </div>
     </div>
