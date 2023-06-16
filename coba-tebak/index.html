@@ -571,8 +571,8 @@
         </div>
         <div class="right-subcon">
             <div class="btn-main" onmouseenter="btnMainAnimTrue(0)" onmouseleave="btnMainAnimFalse(0)"
-                onclick="btnMainAnimClick([1,2,3,])">Mulai
-                <!-- <p class="">Memuat</p> -->
+                onclick="btnMainAnimClick(0, [1,2,3,])">Mulai
+                <!-- <span class="spinner-border m-2"></span> -->
             </div>
             <select name="" id="" style="position: fixed; right: 0; bottom: 0;">
                 <option value="">Level 1</option>
@@ -581,14 +581,14 @@
             </select>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(1)" onmouseleave="btnMainAnimFalse(1)"
-                onclick="btnMainAnimClick([0,2,3,])">Buat pertanyaan
+                onclick="btnMainAnimClick(1, [0,2,3,])">Buat pertanyaan
             </div>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(2)" onmouseleave="btnMainAnimFalse(2)"
-                onclick="btnMainAnimClick([0,1,3,])">Bantuan</div>
+                onclick="btnMainAnimClick(2, [0,1,3,])">Bantuan</div>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(3)" onmouseleave="btnMainAnimFalse(3)"
-                onclick="btnMainAnimClick([0,1,2])">Tentang
+                onclick="btnMainAnimClick(3, [0,1,2])">Tentang
                 pengembang
             </div>
         </div>
@@ -938,11 +938,18 @@
         function btnMainAnimFalse(index) {
             btnMain[index].classList.remove("btn-main-anim");
         }
-        function btnMainAnimClick(btnMainArray) {
+        function btnMainAnimClick(element, btnMainArray) {
+            console.log(btnMain[element]);
             btnMainArray.forEach(element => {
                 btnMain[element].style.opacity = "0";
                 btnMain[element].style.transform = "translateX(100px)";
             });
+            const spinnerSpan = document.createElement("span");
+            spinnerSpan.classList.add("spinner-border");
+            spinnerSpan.classList.add("m-2");
+            spinnerSpan.classList.add("text-primary");
+            btnMain[element].innerHTML = "";
+            btnMain[element].appendChild(spinnerSpan);
         }
     </script>
     <script src="js/bootstrap.js"></script>
