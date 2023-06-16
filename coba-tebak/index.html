@@ -581,7 +581,7 @@
             </select>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(1)" onmouseleave="btnMainAnimFalse(1)"
-                onclick="btnMainAnimClick(1, [0,2,3,]); location.href = 'creator.html'">Buat pertanyaan
+                onclick="btnMainAnimClick(1, [0,2,3,]); btnMainLocationGo('creator.html')">Buat pertanyaan
             </div>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(2)" onmouseleave="btnMainAnimFalse(2)"
@@ -950,6 +950,10 @@
             spinnerSpan.classList.add("text-primary");
             btnMain[element].innerHTML = "";
             btnMain[element].appendChild(spinnerSpan);
+        }
+        function btnMainLocationGo(url) {
+            console.log("btn triggered");
+            setTimeout(function () { location.href = url }, 2000);
         }
     </script>
     <script src="js/bootstrap.js"></script>
