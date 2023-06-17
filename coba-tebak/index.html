@@ -277,8 +277,8 @@
             top: 0;
             width: 100vw;
             height: 100vh;
-            background-color: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 1);
+            /* backdrop-filter: blur(5px); */
         }
 
         .loadingContainer .spinner-border {
@@ -602,10 +602,10 @@
         <div class="right-subcon">
             <h1>Coba tebak</h1>
             <div class="spacer"></div>
-            <select name="" id="levelSelector">
-                <option value="">Level 1</option>
-                <option value=""> Level 2</option>
-                <option value="">Level 3</option>
+            <select name="levelSelector" id="levelSelector">
+                <option value="1">Level 1</option>
+                <option value="2"> Level 2</option>
+                <option value="3">Level 3</option>
             </select>
             <div class="spacer"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(0)" onmouseleave="btnMainAnimFalse(0)"
@@ -946,10 +946,14 @@
 
         const loadingContainer = document.getElementsByClassName("loadingContainer")[0];
 
+        let listPoss = 1;
+        const levelSelector = document.getElementById("levelSelector");
+
         // setInterval(function () { console.log("hello " + dev); dev++ }, 1000);
         function getPlayerRank() {
             const ajax = new XMLHttpRequest();
-            ajax.open("GET", "http://localhost/coba-tebak/api.php");
+            ajax.open("GET", `http://localhost/coba-tebak/api.php?req=playerRank&level=${levelSelector.value}&start=${listPoss}`);
+            ajax.send();
         }
 
         function checkSideMenu() {
