@@ -67,7 +67,7 @@
             width: 100%;
         }
 
-        .rank-con table td {
+        .rank-con table td, .rank-con table th {
             text-align: center;
         }
 
@@ -118,7 +118,8 @@
             padding: 10px;
             text-align: center;
             background-color: white;
-            border: 1px solid rgb(128, 75, 0);
+            /* border: 1px solid rgb(128, 75, 0); */
+            border: none;
             border-radius: 7px;
             cursor: pointer;
         }
@@ -595,6 +596,11 @@
                         <td>50</td>
                         <td>Lani</td>
                         <td>500</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button id="btnMoreRank" name="btnMoreRank" style="width: 100%;">Lebih</button>
+                        </td>
                     </tr>
                 </table>
             </div>
