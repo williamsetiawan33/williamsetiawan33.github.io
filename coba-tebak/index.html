@@ -67,7 +67,8 @@
             width: 100%;
         }
 
-        .rank-con table td, .rank-con table th {
+        .rank-con table td,
+        .rank-con table th {
             text-align: center;
         }
 
@@ -213,10 +214,12 @@
             cursor: pointer;
         }
 
+        /* spacer untuk flex */
         .spacer {
             width: 100%;
         }
 
+        /* bagian button untuk membuka sidebar */
         .menuBtn {
             position: fixed;
             top: 10px;
@@ -233,6 +236,7 @@
             padding: 0;
         }
 
+        /* bagian sidebar */
         .sideBar {
             background-color: white;
             width: 80vw;
@@ -270,6 +274,7 @@
             display: none;
         }
 
+        /* bagian loading spinner */
         .loadingContainer {
             display: none;
             justify-content: center;
@@ -288,6 +293,30 @@
             font-size: 50px;
         }
 
+        /* bagian button akun */
+        .accountBtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border: 1px solid gray;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .accountBtn svg {
+            width: inherit;
+            height: inherit;
+            color: gray;
+        }
+
+        /* responsive media query */
         @media(max-width: 768px) {
             .modalAccount-con {
                 width: 90%;
@@ -319,6 +348,7 @@
             }
         }
 
+        /* animasi */
         @keyframes btnMainAnim {
             0% {
                 transform: scaleX(100%);
@@ -663,6 +693,12 @@
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </div>
+    <div class="accountBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
+            viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
         </svg>
     </div>
     <div class="sideBarBlackPart" onclick="checkSideMenu()"></div>
