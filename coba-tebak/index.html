@@ -101,7 +101,8 @@
             background-color: black;
         }
 
-        .btn-main-anim {
+        .btn-main-anim,
+        .accountSideBarBtn-anim {
             animation-name: btnMainAnim;
             animation-iteration-count: infinite;
             animation-duration: 1s;
@@ -315,6 +316,39 @@
             height: inherit;
             color: gray;
             margin-top: 9px;
+        }
+
+        /* bagian sideBar akun */
+        .accountSideBar {
+            position: fixed;
+            top: 70px;
+            right: 50px;
+            background-color: white;
+            box-shadow: 0px 0px 15px -7px;
+            width: 300px;
+            height: 50vh;
+            border-radius: 20px;
+            border-top-right-radius: 0;
+            transition: all .5s ease;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        .accountSideBarBtn {
+            width: 50%;
+            height: 80px;
+            background-color: black;
+            margin-block: 10px;
+            border-radius: 20px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: all .5s ease;
+            cursor: pointer;
         }
 
         /* responsive media query */
@@ -670,7 +704,7 @@
             <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
             <div class="spacer"></div>
             <button>Masuk</button>
-            <div class="modalAccount-con-btnClose">X</div>
+            <div class="modalAccount-con-btnClose" onclick="openModalAccount(0)">X</div>
         </div>
     </div>
     <div class="modalAccount2">
@@ -686,7 +720,7 @@
             <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
             <div class="spacer"></div>
             <button>Daftar</button>
-            <div class="modalAccount-con-btnClose">X</div>
+            <div class="modalAccount-con-btnClose" onclick="openModalAccount2(0)">X</div>
         </div>
     </div>
     <div class="menuBtn" onclick="checkSideMenu()">
@@ -696,11 +730,18 @@
                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
         </svg>
     </div>
-    <div class="accountBtn">
+    <div class="accountBtn" onclick="checkAccoundSideMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
             viewBox="0 0 16 16">
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
         </svg>
+    </div>
+    <div class="accountSideBar">
+        <div class="accountSideBarBtn" onmouseenter="accountSideBarBtnAnimTrue(0)"
+            onmouseleave="accountSideBarBtnAnimFalse(0)" onclick="openModalAccount(1)">Masuk</div>
+        <div class="spacer"></div>
+        <div class="accountSideBarBtn" onmouseenter="accountSideBarBtnAnimTrue(1)"
+            onmouseleave="accountSideBarBtnAnimFalse(1)" onclick="openModalAccount2(1)">Daftar</div>
     </div>
     <div class="sideBarBlackPart" onclick="checkSideMenu()"></div>
     <div class="sideBar">
@@ -978,17 +1019,26 @@
     </div>
     <script>
         let dev = 0;
-        const prevpPlayerRank = [];
-        const curPlayerRank = [];
 
+        // bagian sidebar
         let sideState = 0;
         const sideBar = document.getElementsByClassName("sideBar")[0];
         const sideBarBlackPart = document.getElementsByClassName("sideBarBlackPart")[0];
 
+        // bagian accountSideBar
+        let accounSideState = 1;
+        const accountSide = document.getElementsByClassName("accountSideBar")[0];
+        const accountSideBarBtn = document.getElementsByClassName("accountSideBarBtn");
+
+        // bagian button di right subcon
         const btnMain = document.getElementsByClassName("btn-main");
+
 
         const loadingContainer = document.getElementsByClassName("loadingContainer")[0];
 
+        // algoritma mendapatkan rank player untuk list rank
+        const prevpPlayerRank = [];
+        const curPlayerRank = [];
         let listPoss = 1;
         const levelSelector = document.getElementById("levelSelector");
 
@@ -1012,6 +1062,21 @@
             }
         }
 
+        function checkAccoundSideMenu() {
+            if (accounSideState == 0) {
+                accountSide.style.transform = "scale(100%) translateX(0px) translateY(0px)";
+                accountSide.style.opacity = "1";
+                accountSide.style.borderRadius = "20px";
+                accountSide.style.borderTopRightRadius = "0";
+                accounSideState = 1;
+            }
+            else if (accounSideState == 1) {
+                accountSide.style.transform = "scale(0%) translateX(870px) translateY(-155vh)";
+                accountSide.style.opacity = "0";
+                accountSide.style.borderRadius = "50%";
+                accounSideState = 0;
+            }
+        }
 
         function btnMainAnimTrue(index) {
             btnMain[index].classList.add("btn-main-anim");
@@ -1037,6 +1102,35 @@
             console.log("btn triggered");
             setTimeout(function () { location.href = url }, 2000);
         }
+
+        function accountSideBarBtnAnimTrue(index) {
+            accountSideBarBtn[index].classList.add("btn-main-anim");
+        }
+        function accountSideBarBtnAnimFalse(index) {
+            accountSideBarBtn[index].classList.remove("btn-main-anim");
+        }
+
+        function openModalAccount(state) {
+            if (state == 1) {
+                document.getElementsByClassName("modalAccount")[0].style.display = "flex";
+                checkAccoundSideMenu();
+            }
+            else if (state == 0) {
+                document.getElementsByClassName("modalAccount")[0].style.display = "none";
+            }
+        }
+
+        function openModalAccount2(state) {
+            if (state == 1) {
+                document.getElementsByClassName("modalAccount2")[0].style.display = "flex";
+                checkAccoundSideMenu();
+            }
+            else if (state == 0) {
+                document.getElementsByClassName("modalAccount2")[0].style.display = "none";
+            }
+        }
+
+        checkAccoundSideMenu();
     </script>
     <script src="js/bootstrap.js"></script>
 </body>
