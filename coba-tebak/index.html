@@ -680,15 +680,15 @@
             </select>
             <div class="spacer"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(0)" onmouseleave="btnMainAnimFalse(0)"
-                onclick="btnMainAnimClick(0, [1,2])">Mulai
+                onclick="checkPlayer()">Mulai
             </div>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(1)" onmouseleave="btnMainAnimFalse(1)"
-                onclick="btnMainAnimClick(1, [0,2]); btnMainLocationGo('creator.html')">Buat pertanyaan
+                onclick="showSpinner(); btnMainLocationGo('creator.html')">Buat pertanyaan
             </div>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(2)" onmouseleave="btnMainAnimFalse(2)"
-                onclick="btnMainAnimClick(2, [0,1])">Tentang
+                onclick="showSpinner()">Tentang
                 pengembang
             </div>
         </div>
@@ -704,6 +704,9 @@
             <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
             <div class="spacer"></div>
             <button>Masuk</button>
+            <div class="spacer"></div>
+            <p style="font-size: 15px;">Gak punya akun ? <span class="text-primary" style="cursor: pointer;"
+                    onclick="openModalAccount(0); openModalAccount2(1)">Daftar</span></p>
             <div class="modalAccount-con-btnClose" onclick="openModalAccount(0)">X</div>
         </div>
     </div>
@@ -720,6 +723,9 @@
             <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
             <div class="spacer"></div>
             <button>Daftar</button>
+            <div class="spacer"></div>
+            <p style="font-size: 15px;">Sudah punya akun ? <span class="text-primary" style="cursor: pointer;"
+                    onclick="openModalAccount2(0); openModalAccount(1)">Masuk</span></p>
             <div class="modalAccount-con-btnClose" onclick="openModalAccount2(0)">X</div>
         </div>
     </div>
@@ -1079,20 +1085,6 @@
         function btnMainAnimFalse(index) {
             btnMain[index].classList.remove("btn-main-anim");
         }
-        function btnMainAnimClick(element, btnMainArray) {
-            console.log(btnMain[element]);
-            btnMainArray.forEach(element => {
-                btnMain[element].style.opacity = "0";
-                btnMain[element].style.transform = "translateX(100px)";
-            });
-            // const spinnerSpan = document.createElement("span");
-            // spinnerSpan.classList.add("spinner-border");
-            // spinnerSpan.classList.add("m-2");
-            // spinnerSpan.classList.add("text-primary");
-            // btnMain[element].innerHTML = "";
-            // btnMain[element].appendChild(spinnerSpan);
-            loadingContainer.style.display = "flex";
-        }
         function btnMainLocationGo(url) {
             console.log("btn triggered");
             setTimeout(function () { location.href = url }, 2000);
@@ -1108,7 +1100,7 @@
         function openModalAccount(state) {
             if (state == 1) {
                 document.getElementsByClassName("modalAccount")[0].style.display = "flex";
-                checkAccoundSideMenu();
+                // checkAccoundSideMenu();
             }
             else if (state == 0) {
                 document.getElementsByClassName("modalAccount")[0].style.display = "none";
@@ -1118,10 +1110,28 @@
         function openModalAccount2(state) {
             if (state == 1) {
                 document.getElementsByClassName("modalAccount2")[0].style.display = "flex";
-                checkAccoundSideMenu();
+                // checkAccoundSideMenu();
             }
             else if (state == 0) {
                 document.getElementsByClassName("modalAccount2")[0].style.display = "none";
+            }
+        }
+
+        function showSpinner() {
+            loadingContainer.style.display = "flex";
+        }
+
+        function checkPlayer() {
+            // localStorage.setItem("user", "user")
+            // localStorage.removeItem("user");
+
+            let user = localStorage.getItem("user");
+            if (user == null) {
+                // alert("you're not logged in");
+                openModalAccount(1);
+            }
+            else {
+                // alert("logged in as " + localStorage.getItem("user"));
             }
         }
 
