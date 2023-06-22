@@ -351,6 +351,11 @@
             cursor: pointer;
         }
 
+        .accounSideBarInfo1 {
+            font-size: 15px;
+            color: blue;
+        }
+
         /* responsive media query */
         @media(max-width: 768px) {
             .modalAccount-con {
@@ -699,9 +704,9 @@
             <div class="spacer"></div>
             <input type="text" placeholder="nama pengguna">
             <div class="spacer"></div>
-            <input type="password" placeholder="kata sandi">
+            <input type="password" placeholder="Kode akses">
             <div class="spacer"></div>
-            <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
+            <p id="accountAlert">Nama pengguna atau kode akses salah</p>
             <div class="spacer"></div>
             <button>Masuk</button>
             <div class="spacer"></div>
@@ -715,10 +720,6 @@
             <h3>Daftar</h3>
             <div class="spacer"></div>
             <input type="text" placeholder="nama pengguna">
-            <div class="spacer"></div>
-            <input type="password" placeholder="kata sandi">
-            <div class="spacer"></div>
-            <input type="password" placeholder="konfirmasi kata sandi">
             <div class="spacer"></div>
             <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
             <div class="spacer"></div>
@@ -748,6 +749,9 @@
         <div class="spacer"></div>
         <div class="accountSideBarBtn" onmouseenter="accountSideBarBtnAnimTrue(1)"
             onmouseleave="accountSideBarBtnAnimFalse(1)" onclick="openModalAccount2(1)">Daftar</div>
+        <p class="accountSideBarInfo1">Bermain sebagai :</p>
+        <div class="spacer"></div>
+        <p>Lorem ipsum dolor sit amet.</p>
     </div>
     <div class="sideBarBlackPart" onclick="checkSideMenu()"></div>
     <div class="sideBar">
@@ -1035,6 +1039,7 @@
         let accounSideState = 1;
         const accountSide = document.getElementsByClassName("accountSideBar")[0];
         const accountSideBarBtn = document.getElementsByClassName("accountSideBarBtn");
+        const accountSideBarInfo1 = document.getElementsByClassName("accountSideBarInfo1");
 
         // bagian button di right subcon
         const btnMain = document.getElementsByClassName("btn-main");
@@ -1048,6 +1053,7 @@
         let listPoss = 1;
         const levelSelector = document.getElementById("levelSelector");
 
+        // fungsi untuk mengupdate list rank secara live berdasarkan database
         // setInterval(function () { console.log("hello " + dev); dev++ }, 1000);
         function getPlayerRank() {
             const ajax = new XMLHttpRequest();
@@ -1055,6 +1061,7 @@
             ajax.send();
         }
 
+        // fungsi untuk cek state sideBar
         function checkSideMenu() {
             if (sideState == 0) {
                 sideBar.style.transform = "translateX(0px)";
@@ -1068,6 +1075,7 @@
             }
         }
 
+        // fungsi untuk cek state sideBar akun
         function checkAccoundSideMenu() {
             if (accounSideState == 0) {
                 accountSide.style.display = "flex";
@@ -1079,6 +1087,7 @@
             }
         }
 
+        // fungsi2 animasi
         function btnMainAnimTrue(index) {
             btnMain[index].classList.add("btn-main-anim");
         }
@@ -1097,6 +1106,7 @@
             accountSideBarBtn[index].classList.remove("btn-main-anim");
         }
 
+        // fungsi untuk membuka modal login dan signup
         function openModalAccount(state) {
             if (state == 1) {
                 document.getElementsByClassName("modalAccount")[0].style.display = "flex";
@@ -1117,24 +1127,32 @@
             }
         }
 
+        // fungsi menampilkan spinner loading
         function showSpinner() {
             loadingContainer.style.display = "flex";
         }
 
+        // fungsi untuk mengecek identitasi player berdasarkan database
         function checkPlayer() {
-            // localStorage.setItem("user", "user")
-            // localStorage.removeItem("user");
+            localStorage.setItem("playerId", "devWilliam")
+            // localStorage.removeItem("playerId");
 
-            let user = localStorage.getItem("user");
-            if (user == null) {
+            let playerId = localStorage.getItem("playerId");
+            if (playerId == null) {
                 // alert("you're not logged in");
                 openModalAccount(1);
             }
             else {
                 // alert("logged in as " + localStorage.getItem("user"));
+                for (let i = 0; i < accountSideBarBtn.length; i++) {
+                    accountSide.style.justifyContent = "start";
+                    accountSideBarBtn[i].style.display = "none";
+                    accountSideBarInfo1[0].innerHTML = `Bermain sebagai : ${playerId}`;
+                }
             }
         }
 
+        checkPlayer();
         checkAccoundSideMenu();
     </script>
     <script src="js/bootstrap.js"></script>
