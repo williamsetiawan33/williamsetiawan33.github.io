@@ -1133,26 +1133,36 @@
         }
 
         // fungsi untuk mengecek identitasi player berdasarkan database
-        function checkPlayer() {
-            localStorage.setItem("playerId", "devWilliam")
+        function checkPlayer(state) {
+            // localStorage.setItem("playerId", "devWilliam")
             // localStorage.removeItem("playerId");
 
             let playerId = localStorage.getItem("playerId");
-            if (playerId == null) {
-                // alert("you're not logged in");
-                openModalAccount(1);
-            }
-            else {
+            if (state == "init") {
                 // alert("logged in as " + localStorage.getItem("user"));
                 for (let i = 0; i < accountSideBarBtn.length; i++) {
                     accountSide.style.justifyContent = "start";
                     accountSideBarBtn[i].style.display = "none";
                     accountSideBarInfo1[0].innerHTML = `Bermain sebagai : ${playerId}`;
                 }
+            } else {
+                if (playerId == null) {
+                    // alert("you're not logged in");
+                    openModalAccount(1);
+                    accountSideBarInfo1[0].style.display = "none";
+                }
+                else {
+                    // alert("logged in as " + localStorage.getItem("user"));
+                    for (let i = 0; i < accountSideBarBtn.length; i++) {
+                        accountSide.style.justifyContent = "start";
+                        accountSideBarBtn[i].style.display = "none";
+                        accountSideBarInfo1[0].innerHTML = `Bermain sebagai : ${playerId}`;
+                    }
+                }
             }
         }
 
-        checkPlayer();
+        checkPlayer("init");
         checkAccoundSideMenu();
     </script>
     <script src="js/bootstrap.js"></script>
