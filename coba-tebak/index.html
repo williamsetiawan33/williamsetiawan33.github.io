@@ -72,6 +72,20 @@
             text-align: center;
         }
 
+        #currentRankCon {
+            display: none;
+            justify-content: start;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: white;
+        }
+
+        #currentRankCon p {
+            padding: 10px;
+            margin: 0;
+        }
+
         .right-subcon {
             display: flex;
             justify-content: center;
@@ -199,6 +213,7 @@
             text-align: center;
             width: 70%;
             padding-inline: 5px;
+            display: none;
         }
 
         .modalAccount-con-btnClose {
@@ -351,7 +366,23 @@
             cursor: pointer;
         }
 
-        .accountSideBarInfo1 {
+        .accountSideBarBtn2 {
+            width: 50%;
+            height: 80px;
+            background-color: black;
+            margin-block: 10px;
+            border-radius: 20px;
+            font-size: 20px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: all .2s ease;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .accountSideBarInfo1, .accountSideBarInfo2 {
             font-size: 15px;
             padding-left: 15px;
         }
@@ -409,269 +440,268 @@
     <div class="con">
         <div class="left-subcon">
             <div class="rank-con">
-                <h3>Live rank</h3>
+                <h3>Live Rank</h3>
                 <div class="spacer" style="width:100%"></div>
+                <div id="currentRankCon">
+                    <p id="currentRankText">Rank devwilliam : 3</p>
+                </div>
+                <div class="spacer"></div>
                 <table id="rank-table">
-                    <tr style="position: sticky; top: 0; background-color: white;">
+                    <tr style="position: sticky; top: 0px; background-color: rgb(248, 248, 248)">
                         <th>Rank</th>
                         <th>Player</th>
                         <th>Skor</th>
                     </tr>
-                    <!-- <tr>
-                        <td>1</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank1"></td>
+                        <td id="rankPlayer1"></td>
+                        <td id="rankScore1"></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank2"></td>
+                        <td id="rankPlayer2"></td>
+                        <td id="rankScore2"></td>
                     </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank3"></td>
+                        <td id="rankPlayer3"></td>
+                        <td id="rankScore3"></td>
                     </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank4"></td>
+                        <td id="rankPlayer4"></td>
+                        <td id="rankScore4"></td>
                     </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank5"></td>
+                        <td id="rankPlayer5"></td>
+                        <td id="rankScore5"></td>
                     </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank6"></td>
+                        <td id="rankPlayer6"></td>
+                        <td id="rankScore6"></td>
                     </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank7"></td>
+                        <td id="rankPlayer7"></td>
+                        <td id="rankScore7"></td>
                     </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank8"></td>
+                        <td id="rankPlayer8"></td>
+                        <td id="rankScore8"></td>
                     </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank9"></td>
+                        <td id="rankPlayer9"></td>
+                        <td id="rankScore9"></td>
                     </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank10"></td>
+                        <td id="rankPlayer10"></td>
+                        <td id="rankScore10"></td>
                     </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank11"></td>
+                        <td id="rankPlayer11"></td>
+                        <td id="rankScore11"></td>
                     </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank12"></td>
+                        <td id="rankPlayer12"></td>
+                        <td id="rankScore12"></td>
                     </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank13"></td>
+                        <td id="rankPlayer13"></td>
+                        <td id="rankScore13"></td>
                     </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank14"></td>
+                        <td id="rankPlayer14"></td>
+                        <td id="rankScore14"></td>
                     </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank15"></td>
+                        <td id="rankPlayer15"></td>
+                        <td id="rankScore15"></td>
                     </tr>
-                    <tr>
-                        <td>16</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank16"></td>
+                        <td id="rankPlayer16"></td>
+                        <td id="rankScore16"></td>
                     </tr>
-                    <tr>
-                        <td>17</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank17"></td>
+                        <td id="rankPlayer17"></td>
+                        <td id="rankScore17"></td>
                     </tr>
-                    <tr>
-                        <td>18</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank18"></td>
+                        <td id="rankPlayer18"></td>
+                        <td id="rankScore18"></td>
                     </tr>
-                    <tr>
-                        <td>19</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank19"></td>
+                        <td id="rankPlayer19"></td>
+                        <td id="rankScore19"></td>
                     </tr>
-                    <tr>
-                        <td>20</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank20"></td>
+                        <td id="rankPlayer20"></td>
+                        <td id="rankScore20"></td>
                     </tr>
-                    <tr>
-                        <td>21</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank21"></td>
+                        <td id="rankPlayer21"></td>
+                        <td id="rankScore21"></td>
                     </tr>
-                    <tr>
-                        <td>22</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank22"></td>
+                        <td id="rankPlayer22"></td>
+                        <td id="rankScore22"></td>
                     </tr>
-                    <tr>
-                        <td>23</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank23"></td>
+                        <td id="rankPlayer23"></td>
+                        <td id="rankScore23"></td>
                     </tr>
-                    <tr>
-                        <td>24</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank24"></td>
+                        <td id="rankPlayer24"></td>
+                        <td id="rankScore24"></td>
                     </tr>
-                    <tr>
-                        <td>25</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank25"></td>
+                        <td id="rankPlayer25"></td>
+                        <td id="rankScore25"></td>
                     </tr>
-                    <tr>
-                        <td>26</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank26"></td>
+                        <td id="rankPlayer26"></td>
+                        <td id="rankScore26"></td>
                     </tr>
-                    <tr>
-                        <td>27</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank27"></td>
+                        <td id="rankPlayer27"></td>
+                        <td id="rankScore27"></td>
                     </tr>
-                    <tr>
-                        <td>28</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank28"></td>
+                        <td id="rankPlayer28"></td>
+                        <td id="rankScore28"></td>
                     </tr>
-                    <tr>
-                        <td>29</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank29"></td>
+                        <td id="rankPlayer29"></td>
+                        <td id="rankScore29"></td>
                     </tr>
-                    <tr>
-                        <td>30</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank30"></td>
+                        <td id="rankPlayer30"></td>
+                        <td id="rankScore30"></td>
                     </tr>
-                    <tr>
-                        <td>31</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank31"></td>
+                        <td id="rankPlayer31"></td>
+                        <td id="rankScore31"></td>
                     </tr>
-                    <tr>
-                        <td>32</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank32"></td>
+                        <td id="rankPlayer32"></td>
+                        <td id="rankScore32"></td>
                     </tr>
-                    <tr>
-                        <td>33</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank33"></td>
+                        <td id="rankPlayer33"></td>
+                        <td id="rankScore33"></td>
                     </tr>
-                    <tr>
-                        <td>34</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank34"></td>
+                        <td id="rankPlayer34"></td>
+                        <td id="rankScore34"></td>
                     </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank35"></td>
+                        <td id="rankPlayer35"></td>
+                        <td id="rankScore35"></td>
                     </tr>
-                    <tr>
-                        <td>36</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank36"></td>
+                        <td id="rankPlayer36"></td>
+                        <td id="rankScore36"></td>
                     </tr>
-                    <tr>
-                        <td>37</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank37"></td>
+                        <td id="rankPlayer37"></td>
+                        <td id="rankScore37"></td>
                     </tr>
-                    <tr>
-                        <td>38</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank38"></td>
+                        <td id="rankPlayer38"></td>
+                        <td id="rankScore38"></td>
                     </tr>
-                    <tr>
-                        <td>39</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank39"></td>
+                        <td id="rankPlayer39"></td>
+                        <td id="rankScore39"></td>
                     </tr>
-                    <tr>
-                        <td>40</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank40"></td>
+                        <td id="rankPlayer40"></td>
+                        <td id="rankScore40"></td>
                     </tr>
-                    <tr>
-                        <td>41</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank41"></td>
+                        <td id="rankPlayer41"></td>
+                        <td id="rankScore41"></td>
                     </tr>
-                    <tr>
-                        <td>42</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank42"></td>
+                        <td id="rankPlayer42"></td>
+                        <td id="rankScore42"></td>
                     </tr>
-                    <tr>
-                        <td>43</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank43"></td>
+                        <td id="rankPlayer43"></td>
+                        <td id="rankScore43"></td>
                     </tr>
-                    <tr>
-                        <td>44</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank44"></td>
+                        <td id="rankPlayer44"></td>
+                        <td id="rankScore44"></td>
                     </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank45"></td>
+                        <td id="rankPlayer45"></td>
+                        <td id="rankScore45"></td>
                     </tr>
-                    <tr>
-                        <td>46</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank46"></td>
+                        <td id="rankPlayer46"></td>
+                        <td id="rankScore46"></td>
                     </tr>
-                    <tr>
-                        <td>47</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank47"></td>
+                        <td id="rankPlayer47"></td>
+                        <td id="rankScore47"></td>
                     </tr>
-                    <tr>
-                        <td>48</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank48"></td>
+                        <td id="rankPlayer48"></td>
+                        <td id="rankScore48"></td>
                     </tr>
-                    <tr>
-                        <td>49</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank49"></td>
+                        <td id="rankPlayer49"></td>
+                        <td id="rankScore49"></td>
                     </tr>
-                    <tr>
-                        <td>50</td>
-                        <td>Lani</td>
-                        <td>500</td>
+                    <tr class="rankList">
+                        <td id="rankRank50"></td>
+                        <td id="rankPlayer50"></td>
+                        <td id="rankScore50"></td>
                     </tr>
-                    <tr>
-                        <td colspan="3">
-                            <button id="btnMoreRank" name="btnMoreRank" style="width: 100%;">Lebih</button>
-                        </td>
-                    </tr> -->
                 </table>
             </div>
         </div>
@@ -685,7 +715,7 @@
             </select>
             <div class="spacer"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(0)" onmouseleave="btnMainAnimFalse(0)"
-                onclick="checkPlayer('initialized')">Mulai
+                onclick="checkLoginState()">Mulai
             </div>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(1)" onmouseleave="btnMainAnimFalse(1)"
@@ -702,13 +732,13 @@
         <div class="modalAccount-con">
             <h3>Masuk</h3>
             <div class="spacer"></div>
-            <input type="text" placeholder="nama pengguna">
+            <input id="txtName" name="txtName" type="text" placeholder="nama pengguna">
             <div class="spacer"></div>
-            <input type="password" placeholder="Kode akses">
+            <input id="txtAccess" name="txtAccess" type="password" placeholder="Kode akses">
             <div class="spacer"></div>
             <p id="accountAlert">Nama pengguna atau kode akses salah</p>
             <div class="spacer"></div>
-            <button>Masuk</button>
+            <button id="btnSubmit" name="submit" onclick="login()">Masuk</button>
             <div class="spacer"></div>
             <p style="font-size: 15px;">Gak punya akun ? <span class="text-primary" style="cursor: pointer;"
                     onclick="openModalAccount(0); openModalAccount2(1)">Daftar</span></p>
@@ -751,6 +781,10 @@
             onmouseleave="accountSideBarBtnAnimFalse(1)" onclick="openModalAccount2(1)">Daftar</div>
         <p class="accountSideBarInfo1">Bermain sebagai :</p>
         <div class="spacer"></div>
+        <p class="accountSideBarInfo2">Kode akses (diinget, kalo engga ntar kamu gabisa login !) :</p>
+        <div class="spacer"></div>
+        <div class="accountSideBarBtn2" onmouseenter="accountSideBarBtnAnimTrue(0)"
+            onmouseleave="accountSideBarBtnAnimFalse(0)" onclick="signOut()">Keluar</div>
         <!-- <p>Lorem ipsum dolor sit amet.</p> -->
     </div>
     <div class="sideBarBlackPart" onclick="checkSideMenu()"></div>
@@ -771,255 +805,255 @@
                     <th>Player</th>
                     <th>Skor</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank1"></td>
+                    <td id="mobileRankPlayer1"></td>
+                    <td id="mobileRankScore1"></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank2"></td>
+                    <td id="mobileRankPlayer2"></td>
+                    <td id="mobileRankScore2"></td>
                 </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank3"></td>
+                    <td id="mobileRankPlayer3"></td>
+                    <td id="mobileRankScore3"></td>
                 </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank4"></td>
+                    <td id="mobileRankPlayer4"></td>
+                    <td id="mobileRankScore4"></td>
                 </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank5"></td>
+                    <td id="mobileRankPlayer5"></td>
+                    <td id="mobileRankScore5"></td>
                 </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank6"></td>
+                    <td id="mobileRankPlayer6"></td>
+                    <td id="mobileRankScore6"></td>
                 </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank7"></td>
+                    <td id="mobileRankPlayer7"></td>
+                    <td id="mobileRankScore7"></td>
                 </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank8"></td>
+                    <td id="mobileRankPlayer8"></td>
+                    <td id="mobileRankScore8"></td>
                 </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank9"></td>
+                    <td id="mobileRankPlayer9"></td>
+                    <td id="mobileRankScore9"></td>
                 </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank10"></td>
+                    <td id="mobileRankPlayer10"></td>
+                    <td id="mobileRankScore10"></td>
                 </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank11"></td>
+                    <td id="mobileRankPlayer11"></td>
+                    <td id="mobileRankScore11"></td>
                 </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank12"></td>
+                    <td id="mobileRankPlayer12"></td>
+                    <td id="mobileRankScore12"></td>
                 </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank13"></td>
+                    <td id="mobileRankPlayer13"></td>
+                    <td id="mobileRankScore13"></td>
                 </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank14"></td>
+                    <td id="mobileRankPlayer14"></td>
+                    <td id="mobileRankScore14"></td>
                 </tr>
-                <tr>
-                    <td>15</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank15"></td>
+                    <td id="mobileRankPlayer15"></td>
+                    <td id="mobileRankScore15"></td>
                 </tr>
-                <tr>
-                    <td>16</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank16"></td>
+                    <td id="mobileRankPlayer16"></td>
+                    <td id="mobileRankScore16"></td>
                 </tr>
-                <tr>
-                    <td>17</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank17"></td>
+                    <td id="mobileRankPlayer17"></td>
+                    <td id="mobileRankScore17"></td>
                 </tr>
-                <tr>
-                    <td>18</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank18"></td>
+                    <td id="mobileRankPlayer18"></td>
+                    <td id="mobileRankScore18"></td>
                 </tr>
-                <tr>
-                    <td>19</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank19"></td>
+                    <td id="mobileRankPlayer19"></td>
+                    <td id="mobileRankScore19"></td>
                 </tr>
-                <tr>
-                    <td>20</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank20"></td>
+                    <td id="mobileRankPlayer20"></td>
+                    <td id="mobileRankScore20"></td>
                 </tr>
-                <tr>
-                    <td>21</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank21"></td>
+                    <td id="mobileRankPlayer21"></td>
+                    <td id="mobileRankScore21"></td>
                 </tr>
-                <tr>
-                    <td>22</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank22"></td>
+                    <td id="mobileRankPlayer22"></td>
+                    <td id="mobileRankScore22"></td>
                 </tr>
-                <tr>
-                    <td>23</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank23"></td>
+                    <td id="mobileRankPlayer23"></td>
+                    <td id="mobileRankScore23"></td>
                 </tr>
-                <tr>
-                    <td>24</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank24"></td>
+                    <td id="mobileRankPlayer24"></td>
+                    <td id="mobileRankScore24"></td>
                 </tr>
-                <tr>
-                    <td>25</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank25"></td>
+                    <td id="mobileRankPlayer25"></td>
+                    <td id="mobileRankScore25"></td>
                 </tr>
-                <tr>
-                    <td>26</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank26"></td>
+                    <td id="mobileRankPlayer26"></td>
+                    <td id="mobileRankScore26"></td>
                 </tr>
-                <tr>
-                    <td>27</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank27"></td>
+                    <td id="mobileRankPlayer27"></td>
+                    <td id="mobileRankScore27"></td>
                 </tr>
-                <tr>
-                    <td>28</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank28"></td>
+                    <td id="mobileRankPlayer28"></td>
+                    <td id="mobileRankScore28"></td>
                 </tr>
-                <tr>
-                    <td>29</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank29"></td>
+                    <td id="mobileRankPlayer29"></td>
+                    <td id="mobileRankScore29"></td>
                 </tr>
-                <tr>
-                    <td>30</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank30"></td>
+                    <td id="mobileRankPlayer30"></td>
+                    <td id="mobileRankScore30"></td>
                 </tr>
-                <tr>
-                    <td>31</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank31"></td>
+                    <td id="mobileRankPlayer31"></td>
+                    <td id="mobileRankScore31"></td>
                 </tr>
-                <tr>
-                    <td>32</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank32"></td>
+                    <td id="mobileRankPlayer32"></td>
+                    <td id="mobileRankScore32"></td>
                 </tr>
-                <tr>
-                    <td>33</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank33"></td>
+                    <td id="mobileRankPlayer33"></td>
+                    <td id="mobileRankScore33"></td>
                 </tr>
-                <tr>
-                    <td>34</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank34"></td>
+                    <td id="mobileRankPlayer34"></td>
+                    <td id="mobileRankScore34"></td>
                 </tr>
-                <tr>
-                    <td>35</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank35"></td>
+                    <td id="mobileRankPlayer35"></td>
+                    <td id="mobileRankScore35"></td>
                 </tr>
-                <tr>
-                    <td>36</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank36"></td>
+                    <td id="mobileRankPlayer36"></td>
+                    <td id="mobileRankScore36"></td>
                 </tr>
-                <tr>
-                    <td>37</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank37"></td>
+                    <td id="mobileRankPlayer37"></td>
+                    <td id="mobileRankScore37"></td>
                 </tr>
-                <tr>
-                    <td>38</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank38"></td>
+                    <td id="mobileRankPlayer38"></td>
+                    <td id="mobileRankScore38"></td>
                 </tr>
-                <tr>
-                    <td>39</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank39"></td>
+                    <td id="mobileRankPlayer39"></td>
+                    <td id="mobileRankScore39"></td>
                 </tr>
-                <tr>
-                    <td>40</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank40"></td>
+                    <td id="mobileRankPlayer40"></td>
+                    <td id="mobileRankScore40"></td>
                 </tr>
-                <tr>
-                    <td>41</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank41"></td>
+                    <td id="mobileRankPlayer41"></td>
+                    <td id="mobileRankScore41"></td>
                 </tr>
-                <tr>
-                    <td>42</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank42"></td>
+                    <td id="mobileRankPlayer42"></td>
+                    <td id="mobileRankScore42"></td>
                 </tr>
-                <tr>
-                    <td>43</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank43"></td>
+                    <td id="mobileRankPlayer43"></td>
+                    <td id="mobileRankScore43"></td>
                 </tr>
-                <tr>
-                    <td>44</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank44"></td>
+                    <td id="mobileRankPlayer44"></td>
+                    <td id="mobileRankScore44"></td>
                 </tr>
-                <tr>
-                    <td>45</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank45"></td>
+                    <td id="mobileRankPlayer45"></td>
+                    <td id="mobileRankScore45"></td>
                 </tr>
-                <tr>
-                    <td>46</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank46"></td>
+                    <td id="mobileRankPlayer46"></td>
+                    <td id="mobileRankScore46"></td>
                 </tr>
-                <tr>
-                    <td>47</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank47"></td>
+                    <td id="mobileRankPlayer47"></td>
+                    <td id="mobileRankScore47"></td>
                 </tr>
-                <tr>
-                    <td>48</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank48"></td>
+                    <td id="mobileRankPlayer48"></td>
+                    <td id="mobileRankScore48"></td>
                 </tr>
-                <tr>
-                    <td>49</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank49"></td>
+                    <td id="mobileRankPlayer49"></td>
+                    <td id="mobileRankScore49"></td>
                 </tr>
-                <tr>
-                    <td>50</td>
-                    <td>Lani</td>
-                    <td>500</td>
+                <tr class="rankList">
+                    <td id="mobileRankRank50"></td>
+                    <td id="mobileRankPlayer50"></td>
+                    <td id="mobileRankScore50"></td>
                 </tr>
             </table>
         </div>
@@ -1029,6 +1063,12 @@
     </div>
     <script>
         let dev = 0;
+
+        // current player variable
+        let playerId = "";
+        let playerName = "";
+        let playerRank = "";
+        let playerAccessCode = "";
 
         // bagian sidebar
         let sideState = 0;
@@ -1040,6 +1080,7 @@
         const accountSide = document.getElementsByClassName("accountSideBar")[0];
         const accountSideBarBtn = document.getElementsByClassName("accountSideBarBtn");
         const accountSideBarInfo1 = document.getElementsByClassName("accountSideBarInfo1");
+        const accountSideBarInfo2 = document.getElementsByClassName("accountSideBarInfo2");
 
         // bagian button di right subcon
         const btnMain = document.getElementsByClassName("btn-main");
@@ -1055,39 +1096,56 @@
 
         const rankTable = document.getElementById("rank-table");
 
+        // fungsi mendapatkan peringkat pemain
+        setInterval(getSelfRank, 1000);
+        function getSelfRank() {
+            if (loginState == true) {
+                const ajaxSelfRank = new XMLHttpRequest;
+                ajaxSelfRank.onload = function () {
+                    json = JSON.parse(this.responseText);
+                    playerRank = json[0].rank;
+                    // console.log(json);
+                    document.getElementById("currentRankText").innerHTML = "rank " + playerName + " : " + playerRank;
+                };
+                ajaxSelfRank.open("GET", "http://localhost/coba-tebak/api.php?req=playerRank&level=" + levelSelector.value + "&rank=" + playerId);
+                ajaxSelfRank.send();
+            }
+            console.log(playerAccessCode)
+        }
+
         // fungsi untuk mengupdate list rank secara live berdasarkan database
         setInterval(getPlayerRank, 1000);
         function getPlayerRank() {
             const ajax = new XMLHttpRequest();
             ajax.onload = function () {
-                json = JSON.parse(this.responseText);
-                console.log(json);
-                for (let x in json) {
-                    const tr = document.createElement("tr");
-                    tr.classList.add("rankList");
-                    const tdRank = document.createElement("td");
-                    tdRank.innerHTML = json[x].rank;
-                    tr.append(tdRank);
-                    const tdName = document.createElement("td");
-                    tdName.innerHTML = json[x].playerName;
-                    tr.append(tdName);
-                    const tdScore = document.createElement("td");
-                    tdScore.innerHTML = json[x].levelOneScore;
-                    tr.append(tdScore);
-                    rankTable.append(tr);
+                const json = JSON.parse(this.responseText);
+                // console.log(json);
+                // console.log(levelSelector.value);
+                const rankList = document.getElementsByClassName("rankList");
+                for (let i = 0; i < Object.keys(json).length; i++) {
+                    document.getElementById("rankRank" + (i + 1)).innerHTML = json[i].rank;
+                    document.getElementById("rankPlayer" + (i + 1)).innerHTML = json[i].playerName;
+                    // mobile part update
+                    document.getElementById("mobileRankRank" + (i + 1)).innerHTML = json[i].rank;
+                    document.getElementById("mobileRankPlayer" + (i + 1)).innerHTML = json[i].playerName;
+                    if (levelSelector.value == 1) {
+                        document.getElementById("rankScore" + (i + 1)).innerHTML = json[i].levelOneScore;
+                        // mobile part update
+                        document.getElementById("mobileRankScore" + (i + 1)).innerHTML = json[i].levelOneScore;
+                    }
+                    else if (levelSelector.value == 2) {
+                        document.getElementById("rankScore" + (i + 1)).innerHTML = json[i].levelTwoScore;
+                        // mobile part update
+                        document.getElementById("mobileRankScore" + (i + 1)).innerHTML = json[i].levelTwoScore;
+                    }
+                    else if (levelSelector.value == 3) {
+                        document.getElementById("rankScore" + (i + 1)).innerHTML = json[i].levelThreeScore;
+                        // mobile part update
+                        document.getElementById("mobileRankScore" + (i + 1)).innerHTML = json[i].levelThreeScore;
+                    }
                 }
-                // rankTable.replaceChild(tr, rankTable.childNodes[2]);
-                // const rankList = document.getElementsByClassName("rankList");
-                // for (let i = 0; i < rankList.length; i++) {
-                //     rankList[i].remove();
-                // }
-
-                // document.getElementsByClassName("rankList")[0].remove();
-                // document.getElementsByClassName("rankList")[1].remove();
-                // document.getElementsByClassName("rankList")[2].remove();
-                // document.getElementsByClassName("rankList")[3].remove();
             }
-            ajax.open("GET", `http://localhost/coba-tebak/api.php?req=playerRank&level=1&rank=all50`);
+            ajax.open("GET", "http://localhost/coba-tebak/api.php?req=playerRank&level=" + levelSelector.value + "&rank=all50");
             ajax.send();
         }
 
@@ -1162,12 +1220,24 @@
             loadingContainer.style.display = "flex";
         }
 
+        // login state function
+        let loginState = false;
+        function checkLoginState() {
+            if (loginState == false) {
+                checkPlayer("initialized");
+            }
+            else if (loginState == true) {
+                location.href = "game.html";
+            }
+        }
+
         // fungsi untuk mengecek identitasi player berdasarkan database
         function checkPlayer(state) {
-            localStorage.setItem("playerId", "devWilliam")
-            localStorage.removeItem("playerId");
+            // localStorage.setItem("playerId", "devWilliam")            
 
-            let playerId = localStorage.getItem("playerId");
+            playerId = localStorage.getItem("playerId");
+            playerName = localStorage.getItem("playerName");
+            playerAccessCode = localStorage.getItem("playerAccessCode");
             if (playerId == null) {
                 // alert("you're not logged in");
                 if (state == "initialized") {
@@ -1183,10 +1253,49 @@
                 for (let i = 0; i < accountSideBarBtn.length; i++) {
                     accountSideBarBtn[i].style.display = "none";
                 }
+                document.getElementsByClassName("accountSideBarBtn2")[0].style.display = "flex";
                 accountSide.style.justifyContent = "start";
                 accountSideBarInfo1[0].style.display = "inline";
-                accountSideBarInfo1[0].innerHTML = `Bermain sebagai : ${playerId}`;
+                accountSideBarInfo2[0].style.display = "inline";
+                accountSideBarInfo1[0].innerHTML = `Bermain sebagai : ${playerName}`;
+                accountSideBarInfo2[0].innerHTML = `Kode akses (diinget ya, ntar kamu gabisa masuk lho !) : ${playerAccessCode}`;
+                document.getElementById("currentRankCon").style.display = "block";
+                loginState = true;
+                // location.href = "game.html";
             }
+        }
+
+        // fungsi untuk login
+        const btnSubmit = document.getElementById("btnSubmit");
+        const txtName = document.getElementById("txtName");
+        const txtAccess = document.getElementById("txtAccess");
+        function login() {
+            const ajaxLogin = new XMLHttpRequest();
+            ajaxLogin.onload = function () {
+                const json = JSON.parse(this.responseText);
+                console.log(json);
+                if (json.message == "no data") {
+                    document.getElementById("accountAlert").style.display = "inline";
+                    checkPlayer("initialized");
+                }
+                else {
+                    localStorage.setItem("playerId", json[0].playerId);
+                    localStorage.setItem("playerName", json[0].playerName);
+                    localStorage.setItem("playerAccessCode", json[0].playerAccessCode);
+                    checkPlayer("init");
+                    openModalAccount(0);
+                }
+            }
+            ajaxLogin.open("POST", "http://localhost/coba-tebak/api.php");
+            ajaxLogin.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            ajaxLogin.send("submit=" + btnSubmit.value + "&" + "name=" + txtName.value + "&" + "access=" + txtAccess.value);
+        }
+
+        function signOut() {
+            localStorage.removeItem("playerId");
+            localStorage.removeItem("playerName");
+            localStorage.removeItem("playerAccessCode");
+            location.href = "index.html";
         }
 
         checkPlayer("init");
