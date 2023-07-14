@@ -1,0 +1,29 @@
+body {
+    background-color: #F6F1F1;
+    color: #146C94 !important;
+}
+
+#btnHome {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: #146C94;
+}
+
+.col-lg-3 {
+    transition: all .3s;
+}
+
+.col-lg-3:hover {
+    transform: scale(105%);
+}
+
+
+@media(max-width: 768px) {
+    .about-row img {
+        width: 70%;
+    }
+}

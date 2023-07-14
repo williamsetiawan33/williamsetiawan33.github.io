@@ -7,433 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coba Tebak | Main Menu</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            font-size: 20px;
-        }
-
-        body::-webkit-scrollbar {
-            /* display: none; */
-        }
-
-        .con {
-            display: grid;
-            width: 100vw;
-            height: 100vh;
-            grid-template-columns: 30vw 70vw;
-            /* border: 1px solid red; */
-        }
-
-        .left-subcon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* border: 1px solid green; */
-            height: inherit;
-        }
-
-        .rank-con {
-            width: 90%;
-            height: 90%;
-            overflow: scroll;
-            border: 1px solid gray;
-            border-radius: 7px;
-            display: flex;
-            justify-content: center;
-            align-content: start;
-            flex-wrap: wrap;
-        }
-
-        .rank-con::-webkit-scrollbar {
-            display: flex;
-            /* background-color: red; */
-        }
-
-
-        .rank-con h3 {
-            /* width: 100%; */
-            /* height: 10%; */
-            padding: 0;
-            margin: 0;
-            /* border: 1px solid green; */
-        }
-
-        .rank-con table {
-            /* border: 1px solid gray; */
-            margin-top: 5px;
-            width: 100%;
-        }
-
-        .rank-con table td,
-        .rank-con table th {
-            text-align: center;
-        }
-
-        #currentRankCon {
-            display: none;
-            justify-content: start;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background-color: white;
-        }
-
-        #currentRankCon p {
-            padding: 10px;
-            margin: 0;
-        }
-
-        .right-subcon {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            /* border: 1px solid green; */
-            flex-wrap: wrap;
-            height: inherit;
-        }
-
-        .btn-main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 30%;
-            height: 10%;
-            margin: 5px;
-            border: 1px solid rgb(128, 75, 0);
-            border-radius: 7px;
-            text-align: center;
-            padding: 10px;
-            transition: all .2s ease;
-        }
-
-        .btn-main:hover {
-            cursor: pointer;
-            color: white;
-            background-color: black;
-        }
-
-        .btn-main-anim,
-        .accountSideBarBtn-anim {
-            animation-name: btnMainAnim;
-            animation-iteration-count: infinite;
-            animation-duration: 1s;
-        }
-
-        .btn-main p {
-            position: absolute;
-            right: -200px;
-        }
-
-        #levelSelector {
-            width: 30%;
-            height: 10%;
-            margin: 5px;
-            padding: 10px;
-            text-align: center;
-            background-color: white;
-            /* border: 1px solid rgb(128, 75, 0); */
-            border: none;
-            border-radius: 7px;
-            cursor: pointer;
-        }
-
-        /* bagian modal untuk login atau daftar */
-        .modalAccount {
-            position: fixed;
-            top: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            display: none;
-        }
-
-        .modalAccount2 {
-            position: fixed;
-            top: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            display: none;
-        }
-
-        .modalAccount-con {
-            background-color: white;
-            width: 30%;
-            height: 80%;
-            box-shadow: 3px 3px 15px -8px;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-wrap: wrap;
-            position: relative;
-        }
-
-        .modalAccount-con h3 {
-            padding: 0;
-            margin-block: 10px;
-        }
-
-        .modalAccount-con input {
-            border-radius: 5px;
-            border: 1px solid gray;
-            font-size: 20px;
-            margin-block: 10px;
-            width: 70%;
-            padding: 5px;
-        }
-
-        .modalAccount-con button {
-            font-size: 20px;
-            padding-inline: 25px;
-            padding-block: 10px;
-            margin-block: 10px;
-            border-radius: 7px;
-            background-color: black;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        #accountAlert {
-            color: red;
-            padding: 0;
-            margin-block: 10px;
-            font-size: 15px;
-            text-align: center;
-            width: 70%;
-            padding-inline: 5px;
-            display: none;
-        }
-
-        .modalAccount-con-btnClose {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* spacer untuk flex */
-        .spacer {
-            width: 100%;
-        }
-
-        /* bagian button untuk membuka sidebar */
-        .menuBtn {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            width: 50px;
-            height: 50px;
-            display: none;
-            /* background-color: red; */
-        }
-
-        .menuBtn svg {
-            width: inherit;
-            height: inherit;
-            padding: 0;
-        }
-
-        /* bagian sidebar */
-        .sideBar {
-            background-color: white;
-            width: 80vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            border-right: 1px solid rgb(205, 205, 205);
-            display: none;
-            justify-content: center;
-            transform: translateX(-100vh);
-            transition: all .5s;
-            z-index: 1;
-        }
-
-        .sideBar-closeBtn {
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        .sideBar-closeBtn svg {
-            width: inherit;
-            height: inherit;
-        }
-
-        .sideBarBlackPart {
-            background-color: rgba(0, 0, 0, .8);
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            z-index: 0;
-            display: none;
-        }
-
-        /* bagian loading spinner */
-        .loadingContainer {
-            display: none;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(255, 255, 255, 1);
-            /* backdrop-filter: blur(5px); */
-        }
-
-        .loadingContainer .spinner-border {
-            width: 100px;
-            height: 100px;
-            font-size: 50px;
-        }
-
-        /* bagian button akun */
-        .accountBtn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: white;
-            border: 2px solid gray;
-            width: 40px;
-            height: 40px;
-            border-radius: 50px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .accountBtn svg {
-            width: inherit;
-            height: inherit;
-            color: gray;
-            margin-top: 9px;
-        }
-
-        /* bagian sideBar akun */
-        .accountSideBar {
-            position: fixed;
-            top: 70px;
-            right: 50px;
-            background-color: white;
-            box-shadow: 0px 0px 15px -7px;
-            width: 300px;
-            height: 50vh;
-            border-radius: 20px;
-            border-top-right-radius: 0;
-            /* transition: all .5s ease; */
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-wrap: wrap;
-        }
-
-        .accountSideBarBtn {
-            width: 50%;
-            height: 80px;
-            background-color: black;
-            margin-block: 10px;
-            border-radius: 20px;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            transition: all .2s ease;
-            cursor: pointer;
-        }
-
-        .accountSideBarBtn2 {
-            width: 50%;
-            height: 80px;
-            background-color: black;
-            margin-block: 10px;
-            border-radius: 20px;
-            font-size: 20px;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            transition: all .2s ease;
-            cursor: pointer;
-            margin-left: 15px;
-        }
-
-        .accountSideBarInfo1, .accountSideBarInfo2 {
-            font-size: 15px;
-            padding-left: 15px;
-        }
-
-        /* responsive media query */
-        @media(max-width: 768px) {
-            .modalAccount-con {
-                width: 90%;
-            }
-
-            .left-subcon {
-                display: none;
-            }
-
-            .con {
-                grid-template-columns: 100vw;
-            }
-
-            .btn-main,
-            #levelSelector {
-                width: 50%;
-            }
-
-            .menuBtn {
-                display: flex;
-            }
-
-            .rank-con {
-                margin-top: 50px;
-            }
-
-            .sideBar {
-                display: flex;
-            }
-        }
-
-        /* animasi */
-        @keyframes btnMainAnim {
-            0% {
-                transform: scaleX(100%);
-            }
-
-            50% {
-                transform: scaleX(105%);
-            }
-
-            100% {
-                transform: scaleX(100%);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -443,11 +17,11 @@
                 <h3>Live Rank</h3>
                 <div class="spacer" style="width:100%"></div>
                 <div id="currentRankCon">
-                    <p id="currentRankText">Rank devwilliam : 3</p>
+                    <p id="currentRankText"></p>
                 </div>
                 <div class="spacer"></div>
                 <table id="rank-table">
-                    <tr style="position: sticky; top: 0px; background-color: rgb(248, 248, 248)">
+                    <tr style="position: sticky; top: 0px; background-color: #F6F1F1">
                         <th>Rank</th>
                         <th>Player</th>
                         <th>Skor</th>
@@ -708,7 +282,8 @@
         <div class="right-subcon">
             <h1>Coba tebak</h1>
             <div class="spacer"></div>
-            <select name="levelSelector" id="levelSelector">
+            <select name="levelSelector" id="levelSelector"
+                onchange="changeLevel(document.getElementById('levelSelector').value)" style="outline: none;">
                 <option value="1">Level 1</option>
                 <option value="2"> Level 2</option>
                 <option value="3">Level 3</option>
@@ -723,7 +298,7 @@
             </div>
             <div class="spacer" style="width:100%"></div>
             <div class="btn-main" onmouseenter="btnMainAnimTrue(2)" onmouseleave="btnMainAnimFalse(2)"
-                onclick="showSpinner()">Tentang
+                onclick="showSpinner(); btnMainLocationGo('about.html')">Tentang
                 pengembang
             </div>
         </div>
@@ -749,11 +324,11 @@
         <div class="modalAccount-con">
             <h3>Daftar</h3>
             <div class="spacer"></div>
-            <input type="text" placeholder="nama pengguna">
+            <input id="txtNameDaftar" type="text" placeholder="nama pengguna">
             <div class="spacer"></div>
             <p id="accountAlert">Nama pengguna atau kata sandi salah</p>
             <div class="spacer"></div>
-            <button>Daftar</button>
+            <button id="btnSubmitDaftar" name="submit" onclick="signup()">Daftar</button>
             <div class="spacer"></div>
             <p style="font-size: 15px;">Sudah punya akun ? <span class="text-primary" style="cursor: pointer;"
                     onclick="openModalAccount2(0); openModalAccount(1)">Masuk</span></p>
@@ -799,8 +374,12 @@
         <div class="rank-con">
             <h3>Live rank</h3>
             <div class="spacer" style="width:100%"></div>
+            <div id="currentRankConMobile">
+                <p id="currentRankTextMobile"></p>
+            </div>
+            <div class="spacer"></div>
             <table id="rank-table">
-                <tr style="position: sticky; top: 0; background-color: white;">
+                <tr style="position: sticky; top: 0px; background-color: #F6F1F1">
                     <th>Rank</th>
                     <th>Player</th>
                     <th>Skor</th>
@@ -1061,247 +640,13 @@
     <div class="loadingContainer">
         <div class="spinner-border text-primary"></div>
     </div>
-    <script>
-        let dev = 0;
-
-        // current player variable
-        let playerId = "";
-        let playerName = "";
-        let playerRank = "";
-        let playerAccessCode = "";
-
-        // bagian sidebar
-        let sideState = 0;
-        const sideBar = document.getElementsByClassName("sideBar")[0];
-        const sideBarBlackPart = document.getElementsByClassName("sideBarBlackPart")[0];
-
-        // bagian accountSideBar
-        let accounSideState = 1;
-        const accountSide = document.getElementsByClassName("accountSideBar")[0];
-        const accountSideBarBtn = document.getElementsByClassName("accountSideBarBtn");
-        const accountSideBarInfo1 = document.getElementsByClassName("accountSideBarInfo1");
-        const accountSideBarInfo2 = document.getElementsByClassName("accountSideBarInfo2");
-
-        // bagian button di right subcon
-        const btnMain = document.getElementsByClassName("btn-main");
-
-
-        const loadingContainer = document.getElementsByClassName("loadingContainer")[0];
-
-        // algoritma mendapatkan rank player untuk list rank
-        const prevpPlayerRank = [];
-        const curPlayerRank = [];
-        let listPoss = 1;
-        const levelSelector = document.getElementById("levelSelector");
-
-        const rankTable = document.getElementById("rank-table");
-
-        // fungsi mendapatkan peringkat pemain
-        setInterval(getSelfRank, 1000);
-        function getSelfRank() {
-            if (loginState == true) {
-                const ajaxSelfRank = new XMLHttpRequest;
-                ajaxSelfRank.onload = function () {
-                    json = JSON.parse(this.responseText);
-                    playerRank = json[0].rank;
-                    // console.log(json);
-                    document.getElementById("currentRankText").innerHTML = "rank " + playerName + " : " + playerRank;
-                };
-                ajaxSelfRank.open("GET", "http://localhost/coba-tebak/api.php?req=playerRank&level=" + levelSelector.value + "&rank=" + playerId);
-                ajaxSelfRank.send();
-            }
-            console.log(playerAccessCode)
-        }
-
-        // fungsi untuk mengupdate list rank secara live berdasarkan database
-        setInterval(getPlayerRank, 1000);
-        function getPlayerRank() {
-            const ajax = new XMLHttpRequest();
-            ajax.onload = function () {
-                const json = JSON.parse(this.responseText);
-                // console.log(json);
-                // console.log(levelSelector.value);
-                const rankList = document.getElementsByClassName("rankList");
-                for (let i = 0; i < Object.keys(json).length; i++) {
-                    document.getElementById("rankRank" + (i + 1)).innerHTML = json[i].rank;
-                    document.getElementById("rankPlayer" + (i + 1)).innerHTML = json[i].playerName;
-                    // mobile part update
-                    document.getElementById("mobileRankRank" + (i + 1)).innerHTML = json[i].rank;
-                    document.getElementById("mobileRankPlayer" + (i + 1)).innerHTML = json[i].playerName;
-                    if (levelSelector.value == 1) {
-                        document.getElementById("rankScore" + (i + 1)).innerHTML = json[i].levelOneScore;
-                        // mobile part update
-                        document.getElementById("mobileRankScore" + (i + 1)).innerHTML = json[i].levelOneScore;
-                    }
-                    else if (levelSelector.value == 2) {
-                        document.getElementById("rankScore" + (i + 1)).innerHTML = json[i].levelTwoScore;
-                        // mobile part update
-                        document.getElementById("mobileRankScore" + (i + 1)).innerHTML = json[i].levelTwoScore;
-                    }
-                    else if (levelSelector.value == 3) {
-                        document.getElementById("rankScore" + (i + 1)).innerHTML = json[i].levelThreeScore;
-                        // mobile part update
-                        document.getElementById("mobileRankScore" + (i + 1)).innerHTML = json[i].levelThreeScore;
-                    }
-                }
-            }
-            ajax.open("GET", "http://localhost/coba-tebak/api.php?req=playerRank&level=" + levelSelector.value + "&rank=all50");
-            ajax.send();
-        }
-
-        // fungsi untuk cek state sideBar
-        function checkSideMenu() {
-            if (sideState == 0) {
-                sideBar.style.transform = "translateX(0px)";
-                sideBarBlackPart.style.display = "flex";
-                sideState = 1;
-            }
-            else if (sideState == 1) {
-                sideBar.style.transform = "translateX(-100vh)";
-                sideBarBlackPart.style.display = "none";
-                sideState = 0;
-            }
-        }
-
-        // fungsi untuk cek state sideBar akun
-        function checkAccoundSideMenu() {
-            if (accounSideState == 0) {
-                accountSide.style.display = "flex";
-                accounSideState = 1;
-            }
-            else if (accounSideState == 1) {
-                accountSide.style.display = "none";
-                accounSideState = 0;
-            }
-        }
-
-        // fungsi2 animasi
-        function btnMainAnimTrue(index) {
-            btnMain[index].classList.add("btn-main-anim");
-        }
-        function btnMainAnimFalse(index) {
-            btnMain[index].classList.remove("btn-main-anim");
-        }
-        function btnMainLocationGo(url) {
-            console.log("btn triggered");
-            setTimeout(function () { location.href = url }, 2000);
-        }
-
-        function accountSideBarBtnAnimTrue(index) {
-            accountSideBarBtn[index].classList.add("btn-main-anim");
-        }
-        function accountSideBarBtnAnimFalse(index) {
-            accountSideBarBtn[index].classList.remove("btn-main-anim");
-        }
-
-        // fungsi untuk membuka modal login dan signup
-        function openModalAccount(state) {
-            if (state == 1) {
-                document.getElementsByClassName("modalAccount")[0].style.display = "flex";
-                // checkAccoundSideMenu();
-            }
-            else if (state == 0) {
-                document.getElementsByClassName("modalAccount")[0].style.display = "none";
-            }
-        }
-
-        function openModalAccount2(state) {
-            if (state == 1) {
-                document.getElementsByClassName("modalAccount2")[0].style.display = "flex";
-                // checkAccoundSideMenu();
-            }
-            else if (state == 0) {
-                document.getElementsByClassName("modalAccount2")[0].style.display = "none";
-            }
-        }
-
-        // fungsi menampilkan spinner loading
-        function showSpinner() {
-            loadingContainer.style.display = "flex";
-        }
-
-        // login state function
-        let loginState = false;
-        function checkLoginState() {
-            if (loginState == false) {
-                checkPlayer("initialized");
-            }
-            else if (loginState == true) {
-                location.href = "game.html";
-            }
-        }
-
-        // fungsi untuk mengecek identitasi player berdasarkan database
-        function checkPlayer(state) {
-            // localStorage.setItem("playerId", "devWilliam")            
-
-            playerId = localStorage.getItem("playerId");
-            playerName = localStorage.getItem("playerName");
-            playerAccessCode = localStorage.getItem("playerAccessCode");
-            if (playerId == null) {
-                // alert("you're not logged in");
-                if (state == "initialized") {
-                    openModalAccount(1);
-                }
-                else {
-                    openModalAccount(0);
-                }
-                accountSideBarInfo1[0].style.display = "none";
-            }
-            else {
-                // alert("logged in as " + localStorage.getItem("user"));
-                for (let i = 0; i < accountSideBarBtn.length; i++) {
-                    accountSideBarBtn[i].style.display = "none";
-                }
-                document.getElementsByClassName("accountSideBarBtn2")[0].style.display = "flex";
-                accountSide.style.justifyContent = "start";
-                accountSideBarInfo1[0].style.display = "inline";
-                accountSideBarInfo2[0].style.display = "inline";
-                accountSideBarInfo1[0].innerHTML = `Bermain sebagai : ${playerName}`;
-                accountSideBarInfo2[0].innerHTML = `Kode akses (diinget ya, ntar kamu gabisa masuk lho !) : ${playerAccessCode}`;
-                document.getElementById("currentRankCon").style.display = "block";
-                loginState = true;
-                // location.href = "game.html";
-            }
-        }
-
-        // fungsi untuk login
-        const btnSubmit = document.getElementById("btnSubmit");
-        const txtName = document.getElementById("txtName");
-        const txtAccess = document.getElementById("txtAccess");
-        function login() {
-            const ajaxLogin = new XMLHttpRequest();
-            ajaxLogin.onload = function () {
-                const json = JSON.parse(this.responseText);
-                console.log(json);
-                if (json.message == "no data") {
-                    document.getElementById("accountAlert").style.display = "inline";
-                    checkPlayer("initialized");
-                }
-                else {
-                    localStorage.setItem("playerId", json[0].playerId);
-                    localStorage.setItem("playerName", json[0].playerName);
-                    localStorage.setItem("playerAccessCode", json[0].playerAccessCode);
-                    checkPlayer("init");
-                    openModalAccount(0);
-                }
-            }
-            ajaxLogin.open("POST", "http://localhost/coba-tebak/api.php");
-            ajaxLogin.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            ajaxLogin.send("submit=" + btnSubmit.value + "&" + "name=" + txtName.value + "&" + "access=" + txtAccess.value);
-        }
-
-        function signOut() {
-            localStorage.removeItem("playerId");
-            localStorage.removeItem("playerName");
-            localStorage.removeItem("playerAccessCode");
-            location.href = "index.html";
-        }
-
-        checkPlayer("init");
-        checkAccoundSideMenu();
-    </script>
+    <div class="bg-img">
+        <img src="img/main-bg.jpg" alt="">
+        <div class="bg-img-cover">
+        </div>
+    </div>
     <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

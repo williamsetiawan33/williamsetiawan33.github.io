@@ -6,39 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Coba Tebak | Game</title>
-    <style>
-        /* .nav-container svg {
-            position: absolute;
-            right: 50px;
-            width: 30px;
-            height: 30px;
-            color: rgb(255, 153, 0);
-            cursor: pointer;
-        } */
-
-        #homeBtn,
-        #hintBtn {
-            width: 30px;
-            height: 30px;
-        }
-
-        #hintBtn {
-            /* color: orange; */
-        }
-
-        #leftBtn,
-        #rightBtn {
-            width: 40px;
-            height: 40px;
-        }
-
-        @media(max-width: 768px) {
-            #questionText {
-                width: 80% !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/game.css">
+    <title>Coba Tebak | Game</title>     
 </head>
 
 <body>
@@ -53,7 +22,7 @@
                     </svg>
                 </div>
                 <div class="col-5 bg-dangers d-flex justify-content-center align-items-center">
-                    <p class="p-0 m-0">Skor : 500</p>
+                    <p class="p-0 m-0 score-text">Skor : 500</p>
                 </div>
                 <div class="col bg-secondarys d-flex justify-content-end align-items-center">
                     <svg id="hintBtn" data-bs-toggle="modal" data-bs-target="#hintModal"
@@ -71,23 +40,24 @@
         </div>
         <div class="question-container container-fluid py-3">
             <div class="row py-3">
-                <p class=" text-center m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, accusamus.
+                <p class=" text-center m-0 question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur, accusamus.
                 </p>
             </div>
             <div class="row py-3 d-flex justify-content-center align-items-center">
-                <input class="text-center" id="questionText" type="text" style="width: 50%;">
+                <input class="text-center" id="questionInput" type="text" style="width: 50%;">
             </div>
             <div class="row py-3">
-                <div class="col d-flex justify-content-end align-items-center">
+                <!-- <div class="col d-flex justify-content-end align-items-center">
                     <svg class="me-5" id="leftBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
                     </svg>
-                </div>
-                <div class="col d-flex justify-content-start align-items-center">
-                    <svg class="ms-5" id="rightBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                </div> -->
+                <div class="col p-0 d-flex justify-content-center align-items-center">
+                    <svg id="rightBtn" onclick="submitAnswer()" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                     </svg>
@@ -104,17 +74,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, unde?</p>
+                    <p class="hint-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, unde?</p>
                 </div>
             </div>
         </div>
     </div>
 
-
     <script src="js/bootstrap.js"></script>
-    <script>
-        console.log(localStorage.getItem("playerId"));
-    </script>
+    <script src="js/game.js"></script>
 </body>
 
 </html>

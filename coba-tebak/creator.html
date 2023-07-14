@@ -6,99 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buat Soal | Coba Tebak</title>
-    <style>
-        table {
-            width: 80%;
-            font-size: 15px;
-            /* background-color: red; */
-            margin: auto;
-            text-align: justify;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 5px;
-        }
-
-        .soal {
-            border: none;
-            border-bottom: 1px solid black;
-            padding-block: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/creator.css">
 </head>
 
 <body>
-    <button onclick="location.href = 'index.html'">Kembali</button>
-    <h1>Buat soal yuk...</h1>
-    <h5>Ketentuan : Pastikan soal sesuai dengan etika dan moral yang ada di masyarakat serta anda bersedia bahwa setelah
-        soal diupload maka soal akan selalu dipantau kelayakannya untuk berada di sistem kami. Selengkapnya</h5>
-
-    <form action="" method="POST" onsubmit="sendData()">
-        <input type="text" id="txtSoal" name="soal" placeholder="Pertanyaan" onkeydown="checkSoal(event)">
-        <br>
-        <br>
-        <input type="text" id="txtJawaban" name="jawaban" placeholder="Jawaban" onkeydown="checkSoal(event)">
-        <br>
-        <br>
-        <input type="text" id="txtHint" name="hint" placeholder="Hint" onkeydown="checkSoal(event)">
-        <br>
-        <br>
-        <button id="btnUpload" name="upload">Buat soal</button>
-        <!-- <h5 style="color: blue">Kamu belum berada di peringkat 10 besar. Main lagi, terus mampir ke sini yak ^_^</h5> -->
-    </form>
-
-    <table>
-        <tr>
-            <th colspan="4" style="text-align: center">Soal yang kamu buat</th>
-        </tr>
-        <tr style="text-align: center;">
-            <th>No</th>
-            <th>Pertanyaan</th>
-        </tr>
-        <tr>
-            <td class="soal">1</td>
-            <td class="soal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, similique?</td>
-        </tr>
-        <tr>
-            <td class="soal">2</td>
-            <td class="soal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, similique?</td>
-        </tr>
-    </table>
-    <script>
-        function checkSoal(event) {
-            if (event.key == "Enter") {
-                if (document.getElementById("txtSoal").value == "" || document.getElementById("txtJawaban").value == "" || document.getElementById("txtHint").value == "") {
-                    event.preventDefault();
-                    alert("lengkapi dulu dong, hehe");
-                }
-            }
-        }
-        const btnUpload = document.getElementById("btnUpload");
-        const txtSoal = document.getElementById("txtSoal");
-        const txtJawaban = document.getElementById("txtJawaban");
-        const txtHint = document.getElementById("txtHint");
-        function sendData() {
-            event.preventDefault();
-            const ajax = new XMLHttpRequest();
-            ajax.onload = function () {
-                if (this.responseText == "succes") {
-                    alert("Soal berhasil ditambahkan, terima kasih.");
-                }
-            }
-            // set developer api V
-            ajax.open("POST", "http://localhost/coba-tebak/api.php");
-
-            // set release api V
-            // ajax.open("POST", "https://coba-tebak-api.000webhostapp.com/api.php");
-
-            ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            ajax.send("upload=" + btnUpload.value + "&" + "soal=" + txtSoal.value + "&" + "jawaban=" + txtJawaban.value + "&" + "hint=" + txtHint.value);
-        }
-    </script>
+    <svg id="btnHome" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house"
+        viewBox="0 0 16 16" onclick="window.location.href = 'index.html'">
+        <path
+            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+    </svg>
+    <!-- <button onclick="location.href = 'index.html'">Kembali</button> -->
+    <div class="header-container d-flex justify-content-center align-items-end" style="height: 10vh;">
+        <h1 class="bg-dansger p-0 m-0">Buat Soal</h1>
+    </div>
+    <div class="subheader-container d-flex justify-content-center align-items-end flex-wrap" style="height: 10vh;">
+        <p class="bg-dangser text-center p-0 m-0">Kamu bisa bikin soal lagi kalau kamu peringkat 10 besar</p>
+        <div class="spacer"></div>
+        <p class="list-guide">Pilih pertanyaan untuk menghapus</p>
+    </div>
+    <div class="container-fluid container-main d-flex justify-content-center align-items-center" style="height: 80vh;">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="card list-card d-flex justify-content-center align-items-center"
+                    style="width: 40vw; height: 30vh;" onclick="openList()">
+                    <div class="card-body p-0 d-flex justify-content-center align-items-center"
+                        style="width: inherit; height: inherit;">
+                        <svg style="width: 50%; height: 50%;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-list-ol" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z" />
+                            <path
+                                d="M1.713 11.865v-.474H2c.217 0 .363-.137.363-.317 0-.185-.158-.31-.361-.31-.223 0-.367.152-.373.31h-.59c.016-.467.373-.787.986-.787.588-.002.954.291.957.703a.595.595 0 0 1-.492.594v.033a.615.615 0 0 1 .569.631c.003.533-.502.8-1.051.8-.656 0-1-.37-1.008-.794h.582c.008.178.186.306.422.309.254 0 .424-.145.422-.35-.002-.195-.155-.348-.414-.348h-.3zm-.004-4.699h-.604v-.035c0-.408.295-.844.958-.844.583 0 .96.326.96.756 0 .389-.257.617-.476.848l-.537.572v.03h1.054V9H1.143v-.395l.957-.99c.138-.142.293-.304.293-.508 0-.18-.147-.32-.342-.32a.33.33 0 0 0-.342.338v.041zM2.564 5h-.635V2.924h-.031l-.598.42v-.567l.629-.443h.635V5z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card create-card d-flex justify-content-center align-items-center"
+                    style="width: 40vw; height: 30vh;" onclick="openCreate()">
+                    <div class="card-body p-0 d-flex justify-content-center align-items-center"
+                        style="width: inherit; height: inherit;">
+                        <svg style="width: 50%; height: 50%;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid container-create justify-content-center align-content-center flex-wrap"
+        style="height: 80vh;">
+        <input id="questionInput" type="text" placeholder="Soal">
+        <div class="spacer"></div>
+        <input id="answerInput" type="text" placeholder="Jawaban">
+        <div class="spacer"></div>
+        <input id="hintInput" type="text" placeholder="Hint">
+        <div class="spacer"></div>
+        <button onclick="createAnswer()">Buat</button>
+        <button onclick="openMain()">Kembali</button>
+    </div>
+    <div class="container-fluid container-list" style="height: 80vh;">
+        <div class="row" style="height: inherit;">
+            <div class="col-3 d-flex justify-content-center align-content-center flex-wrap"
+                style="overflow: scroll; height: inherit;">
+                <div class="btn-level my-2 btn-level1 d-flex justify-content-center align-items-center"
+                    onclick="getQuestion(1)">Level 1</div>
+                <div class="btn-level my-2 btn-level2 d-flex justify-content-center align-items-center"
+                    onclick="getQuestion(2)">Level 2</div>
+                <div class="btn-level my-2 btn-level3 d-flex justify-content-center align-items-center"
+                    onclick="getQuestion(3)">Level 3</div>
+                <div class="btn-level my-2 btn-level3 d-flex justify-content-center align-items-center"
+                    onclick="openMain()">Kembali</div>
+            </div>
+            <div class="col-9 question-col" style="overflow: scroll; height: inherit;">
+                <!-- <div class="row my-2 mx-2 question-row" style="font-size: 20px;">
+                    <div class="col-2 col-md-1 border-end d-flex justify-content-center align-items-center">1</div>
+                    <div class="col-10 col-md-11">
+                        <p class="p-0 m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, quos.</p>
+                    </div>
+                </div>
+                <div class="row my-2 mx-2 question-row" style="font-size: 20px;">
+                    <div class="col-2 col-md-1 bsg-primary border-end d-flex justify-content-center align-items-center">2</div>
+                    <div class="col-10 col-md-11">
+                        <p class="p-0 m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, quos.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/creator.js"></script>
 </body>
 
 </html>
