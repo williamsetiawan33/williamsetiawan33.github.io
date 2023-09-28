@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breads | Lumiere online store</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div id="nav">
+        <div class="menu-btn">
+            <div class="menu-line-1"></div>
+            <div class="menu-line-2"></div>
+            <div class="menu-line-3"></div>
+        </div>
+        <p id="navTitle"></p>
+    </div>
+
+    <!-- <div class="searchCon">
+        <div class="search">
+            <select name="" id="">
+                <option value="In this menu">In this menu</option>
+                <option value="All menu">All menu</option>
+            </select>
+            <input id="itemSearch" type="text" placeholder="Cari item">
+        </div>
+    </div> -->
+
+    <h1 id="sectionHeader"></h1>
+
+    <!-- dynamic promo container -->
+    <div class="promo-con">
+        <img class="promo-img" src="img/b3b4.jpg" alt="">
+    </div>    
+
+    <!-- main container -->
+    <div class="con">
+        <select name="" id="">
+            <option value="">--Filter--</option>
+            <option value="">Harga (rendah - tinggi)</option>
+            <option value="">Harga (tinggi - rendah)</option>
+            <option value="">Nama (A - Z)</option>
+            <option value="">Nama (Z - A)</option>
+        </select>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="img/b1b2.jpg" alt="">
+            <p><span style="color: rgb(84, 84, 84)">Rp15.000</span><br>Croissant</p>
+        </div>
+    </div>
+
+    <div id="side">
+        <div id="side-menu-btn-container">
+            <div class="menu-btn">
+                <!-- <div class="menu-line-1"></div>
+                <div class="menu-line-2"></div>
+                <div class="menu-line-3"></div> -->
+                <p style="font-size: 40px; font-weight: bold; padding: 0; margin: 0; margin-top: 20px; color: white;">X
+                </p>
+            </div>
+        </div>
+        <div id="side-menu-title-container">
+            <p>Our products</p>
+        </div>
+        <div id="pc1" class="side-menu-product-container">
+            <p style="padding-block: 20px;" onclick="expandProduct(1)">Foods</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct1.1</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct1.2</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct1.3</p>
+        </div>
+        <div id="pc2" class="side-menu-product-container">
+            <p style="padding-block: 20px;" onclick="expandProduct(2)">Beverages</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct2.1</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct2.2</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct2.3</p>
+        </div>
+        <div id="pc3" class="side-menu-product-container">
+            <p style="padding-block: 20px;" onclick="expandProduct(3)">Snacks</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct3.1</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct3.2</p>
+            <p style="padding-left: 30px; padding-block: 20px; border-top: 1px solid gray;">subproduct3.3</p>
+        </div>
+        <div id="pc4" class="side-menu-product-container">
+            <p onclick="location.href = 'index.html#storyCon'; checkMenu();" style="padding-block: 20px; ">About</p>
+        </div>
+    </div>
+    <div id="black"></div>
+    <script src="index.js"></script>
+    <script src="product.js"></script>
+</body>
+
+</html>

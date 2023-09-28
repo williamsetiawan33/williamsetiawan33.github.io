@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Pengembang</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body id="aboutbody">
+  <!-- navbar-->
+  <div class="navbar" id="nav">
+    <div class="navbarkiri">
+      <div class="logo"></div>
+      <p><a href="dasbor.html">KELOLA BELAJAR</a><br>Halo <span id="username">Nama Pengguna</span></p>
+    </div>
+    <div class="navbarkanan">
+      <a href="todo.html">
+        <p>To do</p>
+      </a>
+      <a href="catatan.html">
+        <p>Catatan</p>
+      </a>
+      <a href="jadwal.html">
+        <p>Buat jadwal</p>
+      </a>
+      <a href="about.html">
+        <p>Tentang</p>
+      </a>
+      <a href="bantuan.html">
+        <p style="margin-right: 15px;">Bantuan</p>
+      </a>
+    </div>
+  </div>
+  <!-- end navbar -->
+  <!-- about -->
+  <div class="aboutus">
+    <h1 class="about">KELOLA BELAJAR</h1>
+    <p>Kelola belajar adalah sebuah web yang bertujuan untuk mengatur jadwal
+      belajar dan mempermudah kita dalam memulai pembelajaran. Website ini tercipta
+      karena adanya permasalahan tentang lupanya mengerjakan tugas dan tidak bisa menagement
+      waktu sehingga tugas dilupakan.</p>
+  </div>
+  <br>
+  <br>
+  <!-- kontainer flex -->
+  <div class="flex-container">
+    <div class="column">
+      <div class="colsection">
+        <img src="img/philip.JPG">
+      </div>
+      <div class="colsection">
+        <p>Philipus Dwi Julian Syaputra</p>
+      </div>
+      <div class="colsection">
+        <p>20.11.3566</p>
+      </div>
+      <div class="colsection">
+        <p>Membuat halaman web tentang pengembang</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="colsection">
+        <img src="img/rija.jpeg">
+      </div>
+      <div class="colsection">
+        <p>Riza Fatihul Ihsan</p>
+      </div>
+      <div class="colsection">
+        <p>20.11.3613</p>
+      </div>
+      <div class="colsection">
+        <p>Membuat halaman web bantuan</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="colsection">
+        <img src="img/naufal.jpg">
+      </div>
+      <div class="colsection">
+        <p>Naufal Algifari</p>
+      </div>
+      <div class="colsection">
+        <p>20.11.3586</p>
+      </div>
+      <div class="colsection">
+        <p>Membuat halaman web catatan</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="colsection">
+        <img src="img/faisal.jpg">
+      </div>
+      <div class="colsection">
+        <p>Faishal Muhammad Hisyam</p>
+      </div>
+      <div class="colsection">
+        <p>20.11.3571</p>
+      </div>
+      <div class="colsection">
+        <p>Membuat halaman web jadwal</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="colsection">
+        <img src="img/willy.png">
+      </div>
+      <div class="colsection">
+        <p>William Bagus Setiawan</p>
+      </div>
+      <div class="colsection">
+        <p>20.11.3605</p>
+      </div>
+      <div class="colsection">
+        <p>Membuat halaman web login, dasbor, dan todo</p>
+      </div>
+    </div>
+  </div>
+  <div id="earlyc">
+    <div id="earlytitle">
+      <p>Dapatkan akses lebih cepat.<br>Dengan bergabung anda akan dikabari dengan fitur terbaru di website ini lebih
+        awal.</p>
+    </div>
+    <form action="">
+      <input type="text" placeholder="email"><button
+        onclick="if(confirm('Ikut bergabung dengan program beta tester ?')){alert('Terimakasih. Anda akan dikabari lebih lanjut melalui email');} else {return 0;}">Bergabung</button>
+    </form>
+  </div>
+  <!-- footer -->
+  <div class="footer" id="foot">
+    <p>© Tim kelompok 6</p>
+  </div>
+  <script src="script.js"></script>
+  <script>aboutdark()</script>
+</body>
+
+</html>

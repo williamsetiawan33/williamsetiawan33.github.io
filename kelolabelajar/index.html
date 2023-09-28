@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo | Kelola Belajar</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .projectplanelement {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Roboto', sans-serif;">
+    <div class="whyhead container-fluid p-0 py-5 d-flex justify-content-center">
+        <h1 class="whyheadtext text-center" style="font-size: 90px;">Halo, selamat datang.</h1>
+    </div>
+    <div class="whydes container-fluid p-5 d-flex justify-content-center">
+        <p class="whydestext text-center" style="font-size: 20px;">Kelola belajar masih akan dikembangkan nih, nantikan
+            kelanjutan-nya ya...</p>
+    </div>
+    <div class="subwhydes1 container-fluid d-flex justify-content-center justify-content-md-start flex-wrap"
+        style="opacity: 0; overflow: hidden; padding-block: 250px !important;">
+        <p class="subwhydes1text p-5" style="width: 400px; font-size: 20px;">Nama saya William.
+            Saya ingin projek Kelola
+            Belajar yang dibuat oleh tim saya ini lebih baik, interaktif, dan menarik.</p>
+        <img class="subwhydes1text rounded-circle" src="img/William_3605.jpg" alt="" width="200px" height="200px">
+    </div>
+    <div class="subwhydes2 container-fluid d-flex justify-content-center justify-content-md-end flex-wrap"
+        style="opacity: 1; overflow: hidden; padding-block: 250px !important;">
+        <img class="subwhydes2text rounded-circle m-1" src="img/naufal.jpg" alt="" width="200px" height="200px">
+        <img class="subwhydes2text rounded-circle m-1" src="img/faisal.jpg" alt="" width="200px" height="200px">
+        <img class="subwhydes2text rounded-circle m-1" src="img/philip.JPG" alt="" width="200px" height="200px">
+        <img class="subwhydes2text rounded-circle m-1" src="img/rija.jpeg" alt="" width="200px" height="200px">
+        <p class="subwhydes2text p-5" style="width: 400px; font-size: 20px;">Naufal, Faisal,
+            Philipus, dan Riza. Mereka
+            adalah kawan-kawan
+            saya yang berjasa dalam pembuatan web Kelola Belajar ini.</p>
+    </div>
+    <div class="container-fluid py-5-sm py-0-md bg-lighst d-flex justify-content-center align-content-center flex-wrap"
+        style="padding-top: 500px; padding-bottom: 100px; overflow: hidden;">
+        <h2 class="projectplanelement py-5" style="width: 100%; text-align: center;">Rencana pengembangan</h2>
+        <p class="projectplanelement" style="width: 100%; font-size: 20px; padding-inline: 50px; text-align: justify;">
+            Berangkat dari projek yang
+            telah ada saya berniat untuk menggunakan beberapa framework, tools, atau bahasa pemrograman dalam projek ini
+            antara
+            lain :</p>
+        <div class="projectplanelement kotak bg-secondary text-light m-1 rounded-3 d-flex justify-content-center align-items-center"
+            style="width: 200px; height: 200px; transform: scale(0%); transition: 0.5s ease; font-size: 20px;">
+            PHP
+        </div>
+        <div class="projectplanelement kotak bg-secondary text-light m-1 rounded-3 d-flex justify-content-center align-items-center"
+            style="width: 200px; height: 200px; transform: scale(0%); transition: 0.5s ease; font-size: 20px;">
+            SQL
+        </div>
+        <div class="projectplanelement kotak bg-secondary text-light m-1 rounded-3 d-flex justify-content-center align-items-center"
+            style="width: 200px; height: 200px; transform: scale(0%); transition: 0.5s ease; font-size: 20px;">
+            REST API
+        </div>
+        <div class="projectplanelement kotak bg-secondary text-light m-1 rounded-3 d-flex justify-content-center align-items-center"
+            style="width: 200px; height: 200px; transform: scale(0%); transition: 0.5s ease; font-size: 20px;">
+            BOOTSTRAP
+        </div>
+        <div class="projectplanelement kotak bg-secondary text-light m-1 rounded-3 d-flex justify-content-center align-items-center"
+            style="width: 200px; height: 200px; transform: scale(0%); transition: 0.5s ease; font-size: 20px;">
+            JQUERY
+        </div>
+        <p class="mt-5 px-2 text-center">dan komponen-komponen lain apabila diperlukan.</p>
+    </div>
+    <div class="container-fluid bg-danger text-light p-2 d-flex justify-content-center align-items-center flex-wrap"
+        style="font-size: 20px;">
+        <a class="text-light" href="https://lilymalisa.github.io/kelolabelajar_1/" style="text-decoration: none;"><b>Versi awal Kelola Belajar</b></a>
+        <div class="dummy" style="width: 100%;"></div>
+        <a class="text-light" href="https://lilymalisa.github.io/kelolabelajar_dev/" style="text-decoration: none;"><b>Versi developer Kelola Belajar</b></a>
+    </div>
+    <div class="container-fluid bg-danger text-light p-2 d-flex justify-content-center align-items-center">
+        <p class="p-2 m-0 text-center">Halaman ini dibuat dengan bootstrap dan jquery</p>
+    </div>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.6.1.js"></script>
+    <script>
+        $(window).scroll(function () {
+            var pos = $(this).scrollTop();
+            $('.whyhead').css('transform', 'translateY(' + pos / 2 + 'px)');
+            $('.whyheadtext').css('opacity', 1 - (pos / 150));
+            $('.whydes').css('transform', 'translateY(' + pos / 4 + 'px)');
+            $('.whydestext').css('opacity', 1 - (pos / 300));
+            $('.subwhydes1').css('opacity', pos / 300);
+            $('.subwhydes1text').css('transform', 'scale(' + (550 - pos) + '%)');
+            $('.subwhydes1').css('transform', 'translateY(' + (-pos / 10) + 'px)');
+            $('.subwhydes2').css('opacity', pos / (300 * 4));
+            $('.subwhydes2text').css('transform', 'scale(' + (450 * 2.5 - pos) + '%)');
+            $('.projectplanelement').css('transform', 'translateY(' + (pos / -7) + 'px)');
+            $('.projectplanelement').css('opacity', pos / 2000);
+            $('.kotak').css('transform', 'scale(' + (pos / 17) + '%)');
+            if (550 - pos < 100) {
+                $('.subwhydes1text').css('transform', 'scale(' + (100) + '%)');
+            }
+            if (450 * 2.5 - pos < 100) {
+                $('.subwhydes2text').css('transform', 'scale(' + (100) + '%)');
+            }
+            if ((pos / 17) > 100) {
+                $('.kotak').css('transform', 'scale(' + (100) + '%)');
+            }
+            if ((pos / 17) < 100) {
+                $('.kotak').css('transform', 'scale(' + (0) + '%)');
+            }
+            console.log(pos);
+        })
+    </script>
+</body>
+
+</html>

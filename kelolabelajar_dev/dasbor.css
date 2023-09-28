@@ -1,0 +1,365 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    /* background-image: url(img/bg1.png); */
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-color: #f6f5f4;
+}
+
+.filterbg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 115, 0, 0.3);
+    z-index: -1;
+}
+
+/* part */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid rgb(197, 197, 197); */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* background-color: white; */
+    border-radius: 0px;
+    background: #f6f5f4;
+    box-shadow: -9px 9px 9px #d6d5d4, 9px -9px 9px #ffffff;
+    color: #8f8f8f;
+}
+
+.navbar a,
+.navbar a:visited,
+.navbar a:active,
+.navbaar a:focus {
+    text-decoration: none;
+    color: #8f8f8f;
+}
+
+.navbarkiri {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: rgb(199, 199, 199);
+    background-image: url(img/123_square.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbarkanan {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbarkanan p {
+    margin: 0;
+    padding-inline: 5px;
+    padding-block: 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbarkanan p:hover {
+    color: grey;
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+
+/* part */
+.main {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+
+.dasbortittle {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(233, 233, 233, 0.5); */
+    border-radius: 0px;
+    background: #f6f5f4;
+    box-shadow: -9px 9px 9px #d6d5d4, 9px -9px 9px #ffffff;
+}
+
+.dasbortittle p {
+    margin: 0;
+    padding-block: 20px;
+    font-size: 60px;
+    text-align: center;
+    color: #8f8f8f;
+}
+
+.card {
+    margin: 50px;
+    width: 220px;
+    height: 360px;
+    /* background-color: white; */
+    /* border-radius: 10px; */
+    overflow: hidden;
+    /* box-shadow: 0 0 10px -3px; */
+    transition: transform 0.3s, width 0.3s ease-in-out;
+    border-radius: 10px;
+    background: #f6f5f4;
+    box-shadow: -9px 9px 9px #d6d5d4, 9px -9px 9px #ffffff;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+    /* position: relative; */
+}
+
+.card:hover {
+    transform: scale(105%);
+    cursor: pointer;
+}
+
+.cardimg {
+    width: inherit;
+    height: 80%;
+    background-color: #f6f5f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardimg img {
+    width: inherit;
+    height: inherit;
+}
+
+#imgcatat {
+    width: 170px;
+    height: 190px;
+}
+
+#imgjadwal {
+    width: 170px;
+    height: 190px;
+}
+
+.cardtittle {
+    width: inherit;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #616161;
+}
+/* part */
+.banner {
+    width: 80%;
+    height: 200px;
+    /* border-radius: 17px; */
+    margin-block: 50px;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    background: #f6f5f4;
+    box-shadow: inset -9px 9px 9px #d6d5d4, inset 9px -9px 9px #ffffff;
+}
+
+.banner2 {
+    width: 90%;
+    /* height: 200px; */
+    margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    background: #f6f5f4;
+    box-shadow: inset -9px 9px 9px #d6d5d4, inset 9px -9px 9px #ffffff;
+}
+
+.banner p {
+    color: #8f8f8f;
+    font-size: 40px;
+    text-align: center;
+    margin-inline: 20px;
+}
+
+.banner2 p {
+    margin: 0;
+    padding: 15px;
+    color: #8f8f8f;
+    font-size: 30px;
+    text-align: center;
+    margin-inline: 70px;
+}
+
+/* part */
+.btmbtnc {
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+}
+
+#btnlogout,
+#btndark {
+    width: 100px;
+    height: 60px;
+    margin-inline: 10px;
+    border: none;
+    background-color: rgb(171, 171, 171);
+    color: white;
+    border-radius: 7px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+#btnlogout:hover,
+#btndark:hover {
+    background-color: rgb(208, 208, 208);
+    cursor: pointer;
+}
+
+/* part */
+
+/* part */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    color: #8f8f8f;
+    /* background-color: rgb(247, 247, 247); */
+    border-radius: 17px;
+    background: #f6f5f4;
+    box-shadow: -9px 9px 9px #d6d5d4, 9px -9px 9px #ffffff;
+}
+
+/* part */
+#subcatat3,
+#subcatat4,
+#subcatat5,
+#subtodo3,
+#subtodo4,
+#subtodo5 {
+    width: 100%;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block: 3px;
+    padding: 10px;
+    background: #d6d6d6;
+    transition: background 0.3s;
+}
+
+#subcatat3:hover,
+#subcatat4:hover,
+#subcatat5:hover,
+#subtodo3:hover,
+#subtodo4:hover,
+#subtodo5:hover {
+    background: #b6b6b6;
+}
+
+#subcatat3 p,
+#subcatat4 p,
+#subcatat5 p {
+    padding: 0;
+    margin: 0;
+    width: 80%;
+}
+
+#subtodo3 form,
+#subtodo4 form,
+#subtodo5 form {
+    width: 100%;
+    font-size: 20px;
+}
+
+#subjadwal3
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#btnbuatcatat,
+#btnbuattodo,
+#btnbuatjadwal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    bottom: 5px;
+    margin-right: 5px;
+    /* right: 0; */
+    background-color: rgb(78, 134, 255);
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-size: 17px;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+
+}
+
+#btnbuatcatat:hover,
+#btnbuattodo:hover,
+#btnbuatjadwal:hover {
+    background-color: rgb(151, 184, 255);
+    cursor: pointer;
+}
+
+/* part */
+@media only screen and (orientation: portrait) {
+    body {
+        /* background-color: lightblue; */
+    }
+
+    .navbarkiri {
+        justify-content: center;
+    }
+
+    .navbarkiri,
+    .navbarkanan {
+        width: 100%;
+    }
+
+    .navbarkanan {
+        justify-content: center;
+    }
+
+    #btnmenu {
+        display: none;
+    }
+
+    .banner p {
+        font-size: 30px;
+        margin-inline: 10px
+    }
+
+    .btmbtnc {
+        justify-content: center;
+    }
+}

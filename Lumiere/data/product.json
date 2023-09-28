@@ -1,0 +1,60 @@
+{
+    "bread": {
+        "b1": {
+            "name": "Classic Croissant",
+            "des": "lorem12",
+            "price": "12000",
+            "image": "b1b2.jpg"
+        },
+        "b2": {
+            "name": "Mocca Croissant",
+            "des": "lorem12",
+            "price": "12000",
+            "image": "b1b2.jpg"
+        },
+        "b3": {
+            "name": "Chocolate Toast",
+            "des": "lorem12",
+            "price": "11000",
+            "image": "b3b4.jpg"
+        },
+        "b4": {
+            "name": "Cheese Toast",
+            "des": "lorem12",
+            "price": "13000",
+            "image": "b3b4.jpg"
+        },
+        "b5": {
+            "name": "Fried Rice",
+            "des": "lorem12",
+            "price": "10000",
+            "image": "b5.jpg"    
+        }
+    },
+    "snack": {
+        "s1": {
+            "name": "Kaasstengels",
+            "des": "lorem12",
+            "price": "19000"
+        },
+        "s2": {
+            "name": "Lidah Kucing",
+            "des": "lorem12",
+            "price": "19000"
+        }
+    },
+    "beverage": {
+        "bv1": {
+            "name": "Cappucino",
+            "des": "lorem12",
+            "price": "15000",
+            "image": "bv1.jpg"
+        },
+        "bv2": {
+            "name": "Matcha Tea",
+            "des": "lorem12",
+            "price": "13500",
+            "image": "bv1.jpg"
+        }
+    }
+}

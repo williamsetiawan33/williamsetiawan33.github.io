@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dasbor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Dasbor | Kelola Belajar</title>
+</head>
+
+<body id="dasbody">
+    <!-- navbar-->
+    <div class="navbar" id="nav">
+        <div class="navbarkiri">
+            <div class="logo"></div>
+            <p><a href="dasbor.html">KELOLA BELAJAR</a><br>Halo <span id="username">Nama Pengguna</span></p>
+        </div>
+        <div class="navbarkanan">
+            <a href="todo.html">
+                <p>To do</p>
+            </a>
+            <a href="catatan.html">
+                <p>Catatan</p>
+            </a>
+            <a href="jadwal.html">
+                <p>Buat jadwal</p>
+            </a>
+            <a href="about.html">
+                <p>Tentang</p>
+            </a>
+            <a href="bantuan.html">
+                <p style="margin-right: 15px;">Bantuan</p>
+            </a>
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <!-- main container -->
+    <div id="scpart1" class="dasbortittle">
+        <p>Kelola belajarmu di sini</p>
+        <!-- <div class="filterbg"></div> -->
+    </div>
+    <div class="main" id="dasmain">
+        <div id="todocard" class="card" onclick="todo_open(); setTimeout(setdisplay1, 300);">
+            <div id="subtodo1" class="cardimg">
+                <img src="img/ic1.png" alt="">
+            </div>
+            <div id="subtodo2" class="cardtittle">
+                <p>To do list</p>
+            </div>
+            <div id="subtodo3">
+                <form action="">
+                    <input oninput="checkopsi()" type="checkbox" name="opsi1" id="opsi1">
+                    <label id="lblopsi1" for="opsi1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
+                        ad.</label>
+                </form>
+            </div>
+            <div id="subtodo4">
+                <form action="">
+                    <input oninput="checkopsi()" type="checkbox" name="opsi2" id="opsi2">
+                    <label id="lblopsi2" for="opsi2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
+                        ad.</label>
+                </form>
+            </div>
+            <div id="subtodo5">
+                <form action="">
+                    <input oninput="checkopsi()" type="checkbox" name="opsi3" id="opsi3">
+                    <label id="lblopsi3" for="opsi3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
+                        ad.</label>
+                </form>
+            </div>
+            <a href="todo.html">
+                <div id="btnbuattodo">
+                    <p>Buat todo</p>
+                </div>
+            </a>
+        </div>
+        <div id="catatcard" class="card" onclick="catat_open(); setTimeout(setdisplay2, 300);">
+            <div id="subcatat1" class="cardimg">
+                <img id="imgcatat" src="img/ic2.png" alt="">
+            </div>
+            <div id="subcatat2" class="cardtittle">
+                <p>Catatan</p>
+            </div>
+            <div id="subcatat3">
+                <p>
+                    <b>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, maxime. (<span
+                            style="color:red;">judul catatan</span>)
+                    </b>
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate quam praesentium dolore cum?
+                    Optio dolorem blanditiis officia. Hic, cumque. (<span style="color: red;">ringkasan catatan secara
+                        pendek</span>)
+                </p>
+            </div>
+            <div id="subcatat4">
+                <p>
+                    <b>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae? (<span
+                            style="color:red;">judul catatan</span>)
+                    </b>
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate quam praesentium dolore cum?
+                    Optio dolorem blanditiis officia. Hic, cumque. (<span style="color: red;">ringkasan catatan secara
+                        pendek</span>)
+                </p>
+            </div>
+            <div id="subcatat5">
+                <p>
+                    <b>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae? (<span
+                            style="color:red;">judul catatan</span>)
+                    </b>
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate quam praesentium dolore cum?
+                    Optio dolorem blanditiis officia. Hic, cumque. (<span style="color: red;">ringkasan catatan secara
+                        pendek</span>)
+                </p>
+            </div>
+            <a href="catatan.html">
+                <div id="btnbuatcatat">
+                    <p>Buat catatan</p>
+                </div>
+            </a>
+        </div>
+        <div id="jadwalcard" class="card" onclick="jadwal_open(); setTimeout(setdisplay3, 300);">
+            <div id="subjadwal1" class="cardimg">
+                <img id="imgjadwal" src="img/ic3.png" alt="">
+            </div>
+            <div id="subjadwal2" class="cardtittle">
+                <p>Jadwal pribadi</p>
+            </div>
+            <div id="subjadwal3">
+                <img src="img/ic3b.png" width="80%" alt="" onclick="window.location.href='/kelolabelajar/img/ic3b.png'">
+            </div>
+            <a href="jadwal.html">
+                <div id="btnbuatjadwal">
+                    <p>Buat jadwal</p>
+                </div>
+            </a>
+        </div>
+        <div class="banner">
+            <p>LEBIH RAPI DENGAN KELOLA BELAJAR</p>
+        </div>
+        <div class="banner2">
+            <p>"Ing ngarsa sung tuladha, Ing madya mangun karsa, Tut Wuri Handayani."<br><br>-Ki Hajar Dewantara-</p>
+        </div>
+    </div>
+    <!-- end main container -->
+
+    <!-- btn container -->
+    <div class="btmbtnc">
+        <button id="btnlogout" onclick="logout()">Keluar</button>
+        <button id="btndark" onclick="darkmode(); window.location.replace('dasbor.html');">Mode gelap</button>
+    </div>
+    <!-- end btn container -->
+
+    <!-- footer -->
+    <div class="footer" id="foot">
+        <p>© Tim kelompok 6</p>
+    </div>
+    <!-- end footer -->
+    <script src="script.js"></script>
+    <script>dasdark()</script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELOLA BELAJAR | Bantuan</title>
+    <link rel="stylesheet" href="bantuan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body id="bantuanbody">
+    <!-- navbar-->
+    <div class="navbar" id="nav">
+        <div class="navbarkiri">
+            <div class="logo"></div>
+            <p><a href="dasbor.html">KELOLA BELAJAR</a><br>Halo <span id="username">Nama Pengguna</span></p>
+        </div>
+        <div class="navbarkanan">
+            <a href="todo.html">
+                <p>To do</p>
+            </a>
+            <a href="catatan.html">
+                <p>Catatan</p>
+            </a>
+            <a href="jadwal.html">
+                <p>Buat jadwal</p>
+            </a>
+            <a href="about.html">
+                <p>Tentang</p>
+            </a>
+            <a href="bantuan.html">
+                <p style="margin-right: 15px;">Bantuan</p>
+            </a>
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <h2>BANTUAN<br>(Tekan / Sentuh gambar untuk memperbesar)</h2>
+    <p id="alerthelp">Perhatian, untuk tampilan mobile mohon menyesuaikan dengan panduan versi desktop di bawah ini.</p>
+    <div class="halaman1">
+        <a href="img/login.png">
+            <div class="imgcontainer">
+                <img class="tengah" src="img/login.png">
+            </div>
+        </a>
+        <h4>Halaman login berisi form untuk memasukkan identitas pengguna. Terdapat juga tombol "Mendaftar" untuk
+            membuat akun.</h4>
+    </div>
+    <div class="halaman1">
+        <a href="img/dashboard.png">
+            <div class="imgcontainer">
+                <img class="tengah" src="img/dashboard.png">
+            </div>
+        </a>
+        <h4>Halaman dasbor berisi 3 buah card yang apabila di tekan akan menampilkan todo, catatan, dan jadwal yang
+            dibuat oleh pengguna.</h4>
+    </div>
+    <div class="halaman1">
+        <a href="img/navbar.jpeg">
+            <div class="imgcontainer">
+                <img class="tengah" src="img/navbar.jpeg">
+            </div>
+        </a>
+        <h4>Di setiap halaman terdapat navbar pada bagian atas halaman. Di bagian kiri navbar terdapat informasi
+            pengguna dan di sebelah kanan navbar terdapat tombol-tombol akses cepat pembuatan to do, catatan, dan
+            jadwal.</h4>
+    </div>
+    <div class="halaman1">
+        <a href="img/todo.png">
+            <div class="imgcontainer">
+                <img class="tengah" src="img/todo.png">
+            </div>
+        </a>
+        <h4>Didalam halaman to do bisa menyimpan list tugas anda dengan cara menambahkan nama tugas lalu klik
+            tombol simpan untuk menyimpan.</h4>
+    </div>
+    <div class="halaman1">
+        <a href="img/catatan.png">
+            <div class="imgcontainer">
+                <img class="tengah" src="img/catatan.png">
+            </div>
+        </a>
+        <h4>Di dalam halaman ini terdapat fitur untuk menuliskan sebuah catatan, dengan cara klik di bagian judul untuk
+            menambahkan judul catatan dan mulailah membuat catatan, simpanlah jika sudah selesai membuat catatan. </h4>
+    </div>
+    <div class="halaman1">
+        <a href="img/catatan.png">
+            <div class="imgcontainer">
+                <img class="tengah" src="img/catatan.png">
+            </div>
+        </a>
+        <h4>Halaman pembuatan jadwal berisi tabel yang dapat diisi oleh pengguna dan dapat di simpan. </h4>
+    </div>
+    <div class="btncontainer">
+        <button onclick="window.location.href = 'dasbor.html';" id="btnexit">Kembali</button>
+    </div>
+    <!-- footer -->
+    <div class="footer" id="foot">
+        <p>© Tim kelompok 6</p>
+    </div>
+    <script src="script.js"></script>
+    <script>bantuandark()</script>
+</body>
+
+</html>

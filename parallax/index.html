@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lat_parallax</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .backc {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .back {
+            width: 100%;
+            height: 100%;
+        }
+
+        .frontc {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 11;
+        }
+
+        .front {
+            width: 40%;
+            height: 40%;
+        }
+
+        .titlec {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0px;
+            z-index: 10;
+            opacity: 0%;
+            scale: 150%;
+        }
+
+        .titlec p {
+            font-size: 90px;
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+
+        .parc {
+            position: relative;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .parc p {
+            font-size: 20px;
+        }
+
+        .square1,
+        .square2 {
+            position: absolute;
+            top: 100px;
+            background-color: rgba(255, 0, 0, 0.373);
+            width: 70px;
+            height: 70px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        .square2 {
+            top: 500px;
+            background-color: rgba(255, 166, 0, 0.373);
+            right: 0;
+
+        }
+
+        .green {
+            position: absolute;
+            top: 700px;
+            right: 0;
+            font-weight: bold;
+            font-size: 70px !important;
+            z-index: -1;
+        }
+
+        .nature {
+            position: absolute;
+            top: 2000px;
+            left: 0;
+            font-weight: bold;
+            font-size: 70px !important;
+            z-index: -1;
+        }
+
+        @media(orientation: portrait) {
+            .front {
+                width: 90%;
+            }
+
+            .back {
+                width: 150%
+            }
+
+            .titlec p {
+                font-size: 50px;
+            }
+
+            .parc {
+                padding-inline: 30px !important;
+                opacity: 0%;
+            }
+
+            .parc p,
+            .parc img {
+                padding-inline: 0 !important;
+            }
+
+            .green,
+            .nature {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backc">
+        <img class="back" src="back.jpg" alt="">
+        <div class="frontc">
+            <img class="front" src="front.png" alt="">
+        </div>
+        <div class="titlec">
+            <p class="title">Together</p>
+            <div class="w-100"></div>
+            <p class="m-0 p-0" style="font-size: 20px;">We're strong</p>
+        </div>
+    </div>
+    <div class="parc pt-5 px-5" style="text-align: justify;">
+        <div class="square1"></div>
+        <div class="square2"></div>
+        <p class="green">GREEN</p>
+        <p class="nature">NATURE</p>
+        <p class="p-0 m-0 px-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium aliquam nostrum
+            adipisci
+            expedita, veniam ab debitis nobis odio labore saepe suscipit impedit sunt perferendis. Ut aliquam
+            perferendis
+            provident? Laborum, mollitia nesciunt molestias aut at ipsam possimus itaque voluptates quo dicta magnam
+            iusto,
+            blanditiis repellendus adipisci ipsa optio quia ducimus, dolorem ex aliquid corrupti eaque velit? Beatae
+            quos
+            unde molestias, excepturi dolor libero iste quam eius accusantium error reiciendis officiis nobis id optio
+            odio,
+            quas magnam velit exercitationem doloremque consectetur. Deleniti praesentium molestiae quam minus ipsam
+            nihil,
+            numquam labore, reiciendis aut impedit quo cum temporibus delectus veniam voluptatum veritatis quos repellat
+            accusantium, deserunt tenetur totam! Dolores molestias quae beatae totam eos a quibusdam possimus porro
+            placeat
+            omnis in, optio ab temporibus dicta ullam enim tempore odio. Quam assumenda hic aliquid ab soluta
+            exercitationem
+            culpa nemo enim? Accusantium architecto commodi enim tenetur quia facilis pariatur accusamus magnam
+            distinctio
+            nesciunt ab debitis aliquid nobis, sit deleniti nostrum voluptates eius aut libero, eaque id autem adipisci
+            rerum? Quasi architecto distinctio eos eum expedita ipsam reprehenderit dolores obcaecati explicabo.
+            Distinctio
+            eligendi assumenda temporibus quos exercitationem accusantium labore? Vitae optio maiores illo, et est
+            sequi,
+            iure ducimus corporis praesentium dolores nemo ab, repudiandae in repellendus deleniti nam numquam libero.
+            Ratione earum ipsa nostrum at similique, hic natus consequuntur voluptatum vitae dolore deserunt,
+            asperiores,
+            quae pariatur recusandae praesentium. In, numquam. Recusandae in dolorum ab, eligendi totam odio accusantium
+            reiciendis voluptatum modi, nesciunt placeat ut id dolore similique nulla sunt. Consectetur, itaque quo
+            nostrum
+            quas a asperiores quisquam.</p>
+        <img class="pt-4 px-5 img1" src="back.jpg" style="width: 100%; height: auto; position: relative">
+        <p class="p-0 m-0 pt-4 px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nobis aut
+            laboriosam
+            rerum, fugiat
+            asperiores? Accusamus repellendus culpa voluptas modi nulla! Dolorum culpa exercitationem minus quam
+            explicabo
+            assumenda repellendus deleniti nam unde dicta ipsam dolore praesentium inventore autem ipsa labore,
+            voluptates
+            repellat recusandae repudiandae accusamus quasi esse iure eligendi. Expedita alias harum molestiae,
+            laboriosam
+            corporis reprehenderit libero ut consequuntur reiciendis at molestias similique veniam cum cumque provident
+            ipsam esse. Labore, unde vero consectetur nesciunt dicta illo distinctio beatae fugit cumque, illum vitae
+            dignissimos libero fuga deserunt, tempora dolor? Possimus quia sequi ab voluptatibus tempore ea magni id
+            nostrum
+            accusantium officia?</p>
+        <img class="p-0 m-0 pt-4 px-5 img2" src="back.jpg" style="width: 100%; height:auto; position: relative">
+        <p class="p-0 m-0 pt-4 px-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, sequi! Laborum
+            voluptatum illum
+            mollitia quidem nemo suscipit eum necessitatibus sapiente nulla repellat esse exercitationem reiciendis
+            blanditiis iste dolore, nisi explicabo libero ut, sit doloremque eos eligendi sint molestias. Quod deleniti
+            quos
+            ab adipisci blanditiis odit officia obcaecati voluptatem deserunt. Beatae consectetur molestias nemo hic
+            labore
+            ex eius saepe voluptate. Est fugiat provident laborum expedita? Voluptas officia ad sunt quam molestiae, in
+            explicabo quidem veniam, sint dolor odio veritatis fugit illum, aliquid exercitationem nam harum. Vitae
+            aliquid
+            praesentium ut molestias perferendis delectus reiciendis excepturi odio sapiente nulla. Rem odit beatae nisi
+            delectus voluptate, voluptas earum voluptatum, deleniti mollitia vitae tempore optio reprehenderit ullam non
+            deserunt aliquid ea animi, vel cumque? Consectetur dolor id voluptatibus laudantium, vero voluptate vitae
+            molestias, voluptates architecto, assumenda dicta dolore quod adipisci at ipsum. Perspiciatis reprehenderit,
+            minus ipsa expedita asperiores labore numquam exercitationem nihil quibusdam, velit, molestias quisquam sint
+            enim quas ad! Itaque quod maiores, saepe earum facere ducimus? Accusamus aspernatur, ducimus explicabo
+            expedita
+            alias repellat sunt saepe hic delectus. Id aspernatur suscipit repudiandae aut doloribus mollitia ab nisi
+            excepturi sapiente consectetur. Qui ad, id aspernatur, veniam similique minima officiis numquam maiores,
+            distinctio obcaecati neque labore. Adipisci repellendus consectetur sed, aspernatur optio minima illo
+            voluptate
+            suscipit placeat id ratione voluptatem, veritatis magni modi deserunt dolore iusto, eum dolores debitis
+            cumque
+            distinctio dicta sequi vitae error! Mollitia excepturi, corporis provident error minima, magnam eligendi
+            illo
+            veritatis eaque earum repellat autem animi nostrum, ad accusamus. Officia, sed doloremque quisquam nesciunt
+            dolore inventore aspernatur quos sint incidunt, unde asperiores corporis perspiciatis atque nam eius
+            tenetur.
+            Quia, obcaecati delectus! Officia saepe quisquam nostrum. Quod officiis deleniti laudantium porro nobis
+            deserunt
+            minima sapiente, molestias laboriosam excepturi nulla? Inventore modi eius tempore obcaecati qui numquam
+            beatae,
+            nam cum, itaque maxime sapiente blanditiis repudiandae.</p>
+    </div>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        $(document).scroll(function () {
+            var pos = $(this).scrollTop();
+            console.log($(window).width());
+            $(".back").css("scale", 100 + pos / 10 + "%");
+            $(".backc").css("opacity", 200 - pos / 3 + "%");
+            $(".parc").css("opacity", pos / 5 + "%");
+            $(".front").css("scale", 100 + pos / 10 + "%");
+            $(".titlec").css("top", pos / 20 + "px");
+            $(".titlec").css("opacity", pos + "%");
+            $(".titlec").css("scale", 150 - pos / 2 + "%");
+            $(".square1").css("top", 100 + pos / 5 + "px");
+            $(".square1").css("left", pos / 20 + "px");
+            $(".square2").css("top", 500 + pos / 5 + "px");
+            $(".nature").css("top", 1600 + pos / 5 + "px");
+            $(".nature").css("left", pos / 60 + "px");
+            $(".green").css("top", 700 + pos / 5 + "px");
+            $(".square2").css("right", pos / 20 + "px");
+            $(".green").css("right", pos / 20 + "px");
+            if ($(window).width() < 800) {
+                $(".img1").css("right", pos / 50 + "px");
+                $(".img2").css("left", pos / 50 + "px");
+            }
+            else {
+                $(".img1").css("right", pos / 5 + "px");
+                $(".img2").css("left", pos / 10 + "px");
+            }
+            //$(".img1").css("opacity", 125 - pos / 30 + "%");
+            //$(".img2").css("opacity", 125 - pos / 40 + "%");
+            if ($(".titlec").css("scale") < 1) {
+                $(".titlec").css("scale", "100%");
+            }
+        })
+    </script>
+</body>
+
+</html>

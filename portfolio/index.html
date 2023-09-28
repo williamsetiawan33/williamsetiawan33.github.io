@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="web_title">Halo | William Bagus Setiawan</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body onwheel="scrollanim()" ontouchmove="scrollanim()">
+    <div class="headbgc">
+        <div class="subheadbgc">
+            <img src="img/banner_1.jpg" alt="">
+            <img src="img/banner_3.jpg" alt="">
+            <img src="img/banner_4.jpg" alt="">
+        </div>
+    </div>
+    <div class="headc" id="headpart">
+        <h1>William</h1>
+        <div class="subhead">
+            <div class="subhead1pill pill1">
+                <p id="web_slogan1">MIKROKONTROLLER</p>
+            </div>
+            <div class="subhead1pill pill2">
+                <p id="web_slogan2">WEB DEVELOP</p>
+            </div>
+            <div class="subhead1pill pill3">
+                <p id="web_slogan3">DLL</p>
+            </div>
+        </div>
+        <div class="subhead subhead2">
+            <p onclick="window.location.href = '#part1'; setTimeout(scrollanim, 500);">></p>
+        </div>
+    </div>
+    <div class="divider" id="part1">
+        <div class="subdivider lefprofilesubdivider">
+            <div id="dummy1"></div>
+            <img id="profileimg" src="img/William_3605.jpg" alt="">
+        </div>
+        <div class="subdivider rightprofilesubdivider" style="position: relative;">
+            <h3 id="profiletitle">Tentang saya</h3>
+            <p id="profiledes">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea dolorem incidunt sequi vero
+                tempore, repellendus ullam consequatur laboriosam labore perspiciatis nobis cupiditate dicta obcaecati
+                ducimus. Sapiente nemo vitae quasi facilis? Dicta facere quas laborum corrupti maxime incidunt atque
+                sint dolores itaque, temporibus est, sed libero reiciendis laboriosam, sapiente mollitia! Quibusdam.</p>
+            <div class="decor1"></div>
+            <div class="decor2"></div>
+        </div>
+    </div>
+    <div class="divider" id="part2">
+        <div class="subdivider lefskillssubdivider">
+            <img id="skillsimg1" src="img/code_sample.png" alt="">
+        </div>
+        <div class="subdivider rightskillssubdivider" style="position: relative;">
+            <h3 id="skillstitle">Kemampuan saya</h3>
+            <p id="skillsdes">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea dolorem incidunt sequi vero
+                tempore, repellendus ullam consequatur laboriosam labore perspiciatis nobis cupiditate dicta obcaecati
+                ducimus. Sapiente nemo vitae quasi facilis? Dicta facere quas laborum corrupti maxime incidunt atque
+                sint dolores itaque, temporibus est, sed libero reiciendis laboriosam, sapiente mollitia! Quibusdam.</p>
+            <div class="decor1"></div>
+            <div class="decor2"></div>
+        </div>
+    </div>
+    <div class="divider projectdivider">
+        <h3 id="projecttitle" class="part3">Projek yang saya kerjakan</h3>
+        <div class="projectsc">
+            <div class="projectcard" id="projectcard1">
+                <img id="project1_img" src="img/projek/bread-1284438_1920.jpg" alt="">
+                <div class="projectdesc">
+                    <h3 id="project1">projek1</h3>
+                </div>
+            </div>
+            <div class="projectcard" id="projectcard2">
+                <img id="project2_img" src="img/projek/coffee-4648041_1920.jpg" alt="">
+                <div class="projectdesc">
+                    <h3 id="project2">projek2</h3>
+                </div>
+            </div>
+            <div class="projectcard" id="projectcard3">
+                <img id="project3_img" src="img/projek/fried-rice-3023040_1920.jpg" alt="">
+                <div class="projectdesc">
+                    <h3 id="project3">projek3</h3>
+                </div>
+            </div>
+            <div class="projectcard" id="projectcard4">
+                <img id="project4_img" src="img/projek/bread-1284438_1920.jpg" alt="">
+                <div class="projectdesc">
+                    <h3 id="project4">projek4</h3>
+                </div>
+            </div>
+            <div class="projectcard" id="projectcard5">
+                <img id="project5_img" src="img/projek/coffee-4648041_1920.jpg" alt="">
+                <div class="projectdesc">
+                    <h3 id="project5">projek5</h3>
+                </div>
+            </div>
+            <div class="projectcard" id="projectcard6">
+                <img id="project6_img" src="img/projek/fried-rice-3023040_1920.jpg" alt="">
+                <div class="projectdesc">
+                    <h3 id="project6">projek6</h3>
+                </div>
+            </div>
+            <div class="projectcard morecard" id="projectcard7" onclick="showmodal1()">
+                <div class="projectdesc" style="background-color: unset;">
+                    <h3 id="project7">LEBIH BANYAK...</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider contactdivider" id="part4">
+        <h3 id="contact1">Berinteraksi lebih lanjut dengan saya.</h3>
+        <p id="contact2">Saya dapat di jumpai di beberapa media berikut ini.</p>
+        <div id="dummy2" style=""></div>
+        <a id="social1" href="https://www.instagram.com/williamsetiawan33/" target="_blank">
+            <img id="social1_icon" class="socialbtn" src="img/ig_logo.png" alt="">
+        </a>
+        <a id="social2" href="https://github.com/lilymalisa" target="_blank">
+            <img id="social2_icon" class="socialbtn" src="img/github_logo.png" alt="">
+        </a>
+        <a id="social3" href="mailto:williamsetiawan33@gmail.com" target="_blank">
+            <img id="social3_icon" class="socialbtn" src="img/gmail_logo.png" alt="" style="width: 80px;">
+        </a>
+    </div>
+    <div class="navbtnl" onclick="topscroll()">
+        <p style="transform: rotate(-90deg);">></p>
+    </div>
+    <div class="navbtnr" onclick="btmscroll()">
+        <p style="transform: rotate(90deg);">></p>
+    </div>
+    <!-- bagian modal 1 -->
+    <div class="modalc" id="modalc">
+        <div class="submodalc mainmodalc">
+            <div id="mainmodalcard">
+                <div class="mainmodalcarddes">
+                    <p>projek1</p>
+                </div>
+            </div>
+        </div>
+        <div class="submodalc modalcardmodalc" onwheel="myFunction(event)">
+            <div class="modalcard selectedmodalcard" id="modalcard1" onclick="tomodalcard(1)">1</div>
+            <div class="modalcard" id="modalcard2" onclick="tomodalcard(2)">2</div>
+            <div class="modalcard" id="modalcard3" onclick="tomodalcard(3)">3</div>
+            <div class="modalcard" id="modalcard4" onclick="tomodalcard(4)">4</div>
+            <div class="modalcard" id="modalcard5" onclick="tomodalcard(5)">5</div>
+            <div class="modalcard" id="modalcard6" onclick="tomodalcard(6)">6</div>
+            <div class="modalcard" id="modalcard7" onclick="tomodalcard(7)">7</div>
+            <div class="modalcard" id="modalcard8" onclick="tomodalcard(8)">8</div>
+            <div class="modalcard" id="modalcard9" onclick="tomodalcard(9)">9</div>
+            <div class="modalcard" id="modalcard10" onclick="tomodalcard(10)">10</div>
+            <div class="modalcard" id="modalcard11" onclick="tomodalcard(11)">11</div>
+        </div>
+        <div class="btnexit" onclick="hidemodal1()">
+            <p>X</p>
+        </div>
+        <div class="scrl" onclick="scrollleft()">&lt</div>
+        <div class="scrr" onclick="scrollright()">&gt</div>
+    </div>
+    <p id="copyright">© William Bagus Setiawan</p>
+    <script src="index.js"></script>
+</body>
+
+</html>

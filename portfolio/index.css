@@ -1,0 +1,832 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(245, 245, 245);
+    /* user-select: none; */
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    /* display: none; */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(129, 129, 129);
+    border-radius: 17px;
+}
+
+.headc {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    color: white;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.headc h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 90px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode;     */
+    animation: opening1 1s ease 0s 1 normal forwards;
+}
+
+.subhead {
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+}
+
+.subhead1pill {
+    padding-inline: 15px;
+    padding-block: 10px;
+    margin-inline: 10px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px -7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pill1 {
+    opacity: 0;
+    animation: opening1 0.5s ease 1s 1 normal forwards;
+}
+
+.pill2 {
+    opacity: 0;
+    animation: opening1 0.5s ease 1.5s 1 normal forwards;
+}
+
+.pill3 {
+    opacity: 0;
+    animation: opening1 0.5s ease 2s 1 normal forwards;
+}
+
+.subhead1pill p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}
+
+.subhead2 {
+    padding-top: 100px;
+}
+
+.subhead2 p {
+    font-size: 150px;
+    margin: 0;
+    padding: 0;
+    transform: rotate(90deg) scale(100%);
+    transition: transform 0.5s;
+}
+
+.subhead2 p:hover {
+    cursor: pointer;
+    transform: rotate(90deg) scale(150%);
+}
+
+.headbgc {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.subheadbgc {
+    width: 300%;
+    height: 100vh;
+    display: flex;
+    animation: headslide 25s ease-in-out 0s infinite normal forwards;
+}
+
+.subheadbgc img {
+    width: 33.3%;
+    height: auto;
+}
+
+.divider {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subdivider {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(100, 100, 100);
+    box-shadow: 0 5px 15px -10px;
+}
+
+.lefprofilesubdivider {
+    background-image: url(img/William_3605.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    align-content: center;
+    /* box-shadow: 5px 0 15px 1px; */
+}
+
+#profileimg {
+    width: 300px;
+    height: 360px;
+    border-radius: 17px;
+    z-index: 2;
+    box-shadow: 0 0 15px -3px white;
+}
+
+#dummy1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+#profiletitle,
+#skillstitle {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    opacity: 0;
+}
+
+#profiledes,
+#skillsdes {
+    font-size: 25px;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    opacity: 0;
+}
+
+.lefskillssubdivider {
+    /* box-shadow: 5px 0 15px 1px; */
+}
+
+#skillsimg1 {
+    width: 100%;
+    height: auto;
+    transform: scale(250%);
+}
+
+.projectdivider {
+    justify-content: center;
+}
+
+.projectdivider h3 {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    margin-block: 100px;
+    padding-top: 50px;
+    opacity: 0;
+}
+
+.projectsc {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-radius: 17px;
+}
+
+.projectcard {
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    /* border-radius: 17px; */
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 0.3s;
+    box-shadow: 0 0 15px -7px;
+    opacity: 0;
+}
+
+.morecard {
+    align-content: center;
+}
+
+.projectcard:hover {
+    /* opacity: 50%; */
+    cursor: pointer;
+}
+
+.projectcard img {
+    width: 100%;
+    height: 240px;
+/*     border-top-left-radius: 17px; */
+/*     border-top-right-radius: 17px; */
+    transition: transform 0.3s;
+}
+.projectcard img:hover
+{
+    transform: scale(110%);
+}
+.projectdesc
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+}
+
+.projectcard h3 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;    
+    opacity: inherit;
+}
+
+.contactdivider {
+    padding-block: 200px;
+    justify-content: center;
+}
+
+.contactdivider h3 {
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contactdivider p {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    margin-block: 10px;
+}
+
+.socialbtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+}
+
+.socialbtn:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.navbtnl,
+.navbtnr {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    z-index: 0;
+    backdrop-filter: blur(3px);
+    transition: background-color 0.5s;
+}
+
+.navbtnl:hover,
+.navbtnr:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 1)
+}
+
+.navbtnr {
+    bottom: 10px;
+}
+
+.decor1 {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(181, 181, 181);
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: rotating 4s infinite linear;
+}
+
+.decor2 {
+    position: absolute;
+    right: 150px;
+    top: 90px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(181, 181, 181);
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: rotating 4s infinite linear reverse;
+}
+
+#copyright {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-block: 50px;
+}
+
+#dummy2 {
+    width: 100%;
+}
+
+/* bagian modal 1 */
+.modalc {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    z-index: 10;
+    display: none;
+}
+
+.submodalc {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.mainmodalc {
+    justify-content: center;
+    align-items: center;
+}
+
+#mainmodalcard {
+    width: 50%;
+    height: 65vh;
+    background-color: black;
+    border-radius: 17px;
+    background-image: url(img/projek/bread-1284438_1920.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+#mainmodalcard:hover {
+    background-size: 105% 105%;
+}
+
+.mainmodalcarddes {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    bottom: 0;
+}
+
+.mainmodalcarddes p {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-inline: 50px;
+    margin-block: 10px;
+}
+
+.modalcardmodalc {
+    justify-content: flex-start;
+    align-items: center;
+    height: 30vh;
+    width: 70%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.modalcardmodalc::-webkit-scrollbar {
+    display: none;
+}
+
+.modalcard {
+    width: 200px;
+    height: 20vh;
+    flex-shrink: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
+    box-shadow: 0 0 15px -3px white;
+}
+
+.modalcard:hover {
+    background-size: 105% 105%;
+    cursor: pointer;
+}
+
+#modalcard1,
+#modalcard4,
+#modalcard7,
+#modalcard10 {
+    background-image: url(img/projek/bread-1284438_1920.jpg);
+}
+
+#modalcard2,
+#modalcard5,
+#modalcard8,
+#modalcard11 {
+    background-image: url(img/projek/coffee-4648041_1920.jpg)
+}
+
+#modalcard3,
+#modalcard6,
+#modalcard9 {
+    background-image: url(img/projek/fried-rice-3023040_1920.jpg);
+}
+
+.selectedmodalcard {
+    border: 5px solid rgba(0, 128, 255, 0.7);
+}
+
+.btnexit {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin: 10px;
+    transition: opacity 0.3s;
+}
+
+.btnexit p {
+    margin: 0;
+    padding: 0;
+}
+
+.btnexit:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.scrl {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    transition: opacity 0.3s;
+}
+
+.scrr {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    transition: opacity 0.3s;
+}
+
+.scrl:hover,
+.scrr:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+/* responsive */
+@media(orientation: portrait) {
+    .headc h1 {
+        font-size: 60px;
+    }
+    .headc
+    {
+        background-color: black;
+        backdrop-filter: unset;
+    }
+    .headbgc
+    {
+        display: none;
+    }
+
+    .subdivider {
+        width: 100%;
+        height: 50vh;
+        box-shadow: unset;
+
+    }
+
+    .subhead1pill p {
+        font-size: 10px;
+    }
+
+    #profiletitle,
+    #skillstitle {
+        font-size: 40px;
+    }
+
+    #projecttitle {
+        padding-block: 100px;
+        text-align: center;
+    }
+
+    .projectdivider h3 {
+        margin-block: 20px;
+        padding-top: 0px;
+    }
+
+    .projectsc {
+        justify-content: center;
+    }
+
+    .projectcard {
+        width: 300px;
+        height: 350px;
+    }
+
+    .projectcard img {
+        height: 290px;
+    }
+
+    .contactdivider h3 {
+        font-size: 25px;
+    }
+
+    .contactdivider h3,
+    .contactdivider p {
+        width: 85%;
+    }
+
+    .lefskillssubdivider {
+        display: none;
+    }
+
+    .lefprofilesubdivider
+    {
+        background-image: unset;
+    }
+    #dummy1
+    {
+        display: none;
+    }
+
+    .rightprofilesubdivider {
+        padding-block: 50px;
+        height: unset;
+        align-content: flex-start;
+        border-bottom: 2.5px solid rgb(245, 245, 245);
+    }
+
+    .rightskillssubdivider {
+        padding-block: 50px;
+        height: unset;
+        align-content: flex-start;
+    }
+
+    .decor1,
+    .decor2 {
+        display: none;
+    }
+
+    .navbtnl,
+    .navbtnr {
+        width: 50px;
+        height: 50px;
+        bottom: 65px;
+    }
+
+    .navbtnr {
+        bottom: 10px;
+    }
+
+    /* responsive modal 1 */
+    .mainmodalc {
+        height: 50vh;
+    }
+
+    #mainmodalcard {
+        width: 100%;
+        height: 30vh;
+        border-radius: unset;
+    }
+
+    .modalcardmodalc {
+        height: 50vh;
+        width: 90%;
+    }
+
+    .modalcard {
+        width: 60%;
+        /* scroll-snap-align: center; */
+    }
+}
+
+/* animasi */
+.anim1 {
+    animation: opening1 0.7s ease 0s 1 normal forwards;
+}
+
+.anim2 {
+    animation: opening1 0.7s ease 0.2s 1 normal forwards;
+}
+
+.anim3 {
+    animation: opening2 1s ease 0s 1 normal forwards;
+}
+
+.anim4 {
+    animation: opening2 1s ease 0.3s 1 normal forwards;
+}
+
+.anim5 {
+    animation: opening2 1s ease 0.6s 1 normal forwards;
+}
+
+.anim6 {
+    animation: opening2 1s ease 0.9s 1 normal forwards;
+}
+
+.anim7 {
+    animation: opening2 1s ease 0.3s 1 normal forwards;
+}
+
+.anim8 {
+    animation: opening2 1s ease 0.6s 1 normal forwards;
+}
+
+.anim9 {
+    animation: opening2 1s ease 0.9s 1 normal forwards;
+}
+
+.modalfadeforward {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: modalfade 0.3s ease 0s 1 normal;
+}
+
+.modalfadebackward {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: modalfade 0.3s ease 0s 1 reverse;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {}
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes opening1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes opening2 {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes headslide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    10% {
+        transform: translateX(0%);
+    }
+
+    15% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(0%);
+    }
+
+    30% {
+        transform: translateX(-33.3%);
+    }
+
+    40% {
+        transform: translateX(-33.3%);
+    }
+
+    45% {
+        transform: translateX(-33.3%);
+    }
+
+    55% {
+        transform: translateX(-33.3%);
+    }
+
+    60% {
+        transform: translateX(-66.6%);
+    }
+
+    70% {
+        transform: translateX(-66.6%);
+    }
+
+    75% {
+        transform: translateX(-66.6%);
+    }
+
+    85% {
+        transform: translateX(-66.6%);
+    }
+
+    90% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes modalfade {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog_source/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Halo | William</title>
+</head>
+
+<body onscroll="scrollCheck()">
+    <div class="hero" id="hero">
+        <video src="blog_source/bg-web-keren.mp4" autoplay muted loop></video>
+        <div id="toBlack"></div>
+        <div class="heroText">
+            <p>Halo, nama saya William<span id="typeWriter">I</span><br><span
+                    style="font-size: 20px; font-weight: initial;">Saya senang dan siap membantu anda.</span><br><i
+                    class="bi bi-instagram icon-ig" onclick="openLink('ig')"></i><i class="bi bi-youtube icon-yt"
+                    onclick="openLink('yt')"></i><i class="bi bi-github icon-git" onclick="openLink('git')"></i></p>
+            <p class="credit">Bg credit : Tiktok<!-- <br><span style="font-size: 10px;">Cantik ya si emma :)</span> -->
+            </p>
+        </div>
+        <div class="nav">
+            <p onclick="window.location.href = 'index.html'" style="font-weight: bold;">Portfolio William</p>
+            <a href="#checkPoint1">Cerita</a>
+            <a href="">Projek</a>
+            <a href="#checkPoint2">Tentang</a>
+            <div id="nightBtn" onclick="toogleNight()">
+                <div id="nightBtnSub">
+                </div>
+            </div>
+        </div>
+        <div id="mobilenav">
+            <div class="btnmenu" onclick="toogleMenu()">
+                <div id="menuLine1"></div>
+                <div id="menuLine2">
+                    <div id="menuLine4"></div>
+                </div>
+                <div id="menuLine3">
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <a href="#checkPoint1" onclick="menuFunc.toogleCloseMenu();">Cerita</a>
+            <div class="spacer"></div>
+            <a href="">Projek</a>
+            <div class="spacer"></div>
+            <a href="#checkPoint2" onclick="menuFunc.toogleCloseMenu();">Tentang</a>
+            <div class="spacer"></div>
+            <div id="mobileNightBtn" onclick="toogleNight()">
+                <div id="mobileNightBtnSub"></div>
+            </div>
+            <div class="tittleConMobile">
+                <p onclick="window.location.href = 'index.html'">Portfolio William</p>
+            </div>
+        </div>
+    </div>
+    <div id="part1">
+        <p id="checkPoint1">Cerita</p>
+        <div class="spacer"></div>
+        <div class="card-container" id="card-container">
+            <div class="card">
+                <p class="card-title">Lorem</p>
+                <p class="card-content">
+                    23 Maret 2023 | Lily<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos at error? Quisquam autem
+                    voluptatem temporibus tempora illum repellendus cumque aliquam veniam sit, accusamus quibusdam
+                    corrupti adipisci. Placeat vel dolorum quibusdam hic ut, facere recusandae, optio fugit adipisci
+                    animi excepturi unde! Saepe itaque ab optio dolor debitis eius doloribus nihil repellendus tenetur
+                    suscipit, et animi harum. Eaque cum, hic, quod nihil ut sapiente aliquid animi nulla dignissimos,
+                    illo vel laborum dicta modi inventore velit cupiditate perspiciatis! Aliquam ea sint sunt obcaecati
+                    quo, error non, harum, dolore dolorem debitis tenetur ipsum et magni numquam culpa qui recusandae!
+                    Sapiente molestias qui tenetur quasi asperiores aut accusamus dolore? Nostrum necessitatibus quaerat
+                    et a hic aliquam consequuntur earum inventore est reprehenderit minus, tempora facere.
+                </p>
+                <div class="fader">
+                    <!-- <p>Lebih...</p> -->
+                </div>
+            </div>
+            <div class="card">
+                <p class="card-title">Lorem</p>
+                <p class="card-content">
+                    23 Maret 2023 | Lily<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos at error? Quisquam autem
+                    voluptatem temporibus tempora illum repellendus cumque aliquam veniam sit, accusamus quibusdam
+                    corrupti adipisci. Placeat vel dolorum quibusdam hic ut, facere recusandae, optio fugit adipisci
+                    animi excepturi unde! Saepe itaque ab optio dolor debitis eius doloribus nihil repellendus tenetur
+                    suscipit, et animi harum. Eaque cum, hic, quod nihil ut sapiente aliquid animi nulla dignissimos,
+                    illo vel laborum dicta modi inventore velit cupiditate perspiciatis! Aliquam ea sint sunt obcaecati
+                    quo, error non, harum, dolore dolorem debitis tenetur ipsum et magni numquam culpa qui recusandae!
+                    Sapiente molestias qui tenetur quasi asperiores aut accusamus dolore? Nostrum necessitatibus quaerat
+                    et a hic aliquam consequuntur earum inventore est reprehenderit minus, tempora facere.
+                </p>
+                <div class="fader">
+                    <!-- <p>Lebih...</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="part2">
+        <p id="checkPoint2">Siapakah saya ?</p>
+        <div class="spacer"></div>
+        <p id="part2Content">Nama saya William Bagus Setiawan a.k.a Gluwwis (Louise) Monica Malisa Betania (anagram),
+            bisa dipanggil
+            William atau Lily (anagram).
+            Umur saya saat ini adalah
+            22
+            tahun dan saat ini masih berkuliah mengambil program studi informatika di Jogja. Interest saya adalah di
+            bidang IoT dan web development.<br><br>Rencana saya membuat web
+            portfolio ini
+            adalah untuk bercerita pengalaman - pengalaman saat mengembangkan projek2 yang
+            pernah
+            saya buat baik saat berkuliah maupun projek external perkuliahan.</p>
+    </div>
+    <div id="topBtn" onclick="window.location.href = '#hero'">
+        <p>^</p>
+    </div>
+    <script src="blog_source/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post | Lily</title>
+    <link rel="stylesheet" href="blog_source/post.css">
+</head>
+
+<body onscroll="scrollCheck()">
+    <div id="mobilenav">
+        <div class="btnmenu" onclick="toogleMenu()">
+            <div id="menuLine1"></div>
+            <div id="menuLine2">
+                <div id="menuLine4"></div>
+            </div>
+            <div id="menuLine3">
+            </div>
+        </div>
+        <div class="tittleConMobile">
+            <p id="navTitle" onclick="window.location.href = 'index.html'"></p>
+        </div>
+        <div class="spacer"></div>
+        <a href="index.html#checkPoint1" onclick="menuFunc.toogleCloseMenu();">Cerita</a>
+        <div class="spacer"></div>
+        <a href="">Projek</a>
+        <div class="spacer"></div>
+        <a href="index.html#checkPoint2" onclick="menuFunc.toogleCloseMenu();">Tentang</a>
+        <div class="spacer"></div>
+        <div id="mobileNightBtn" onclick="toogleNight()">
+            <div id="mobileNightBtnSub"></div>
+        </div>
+    </div>
+    <div id="postContainer">
+        <div id="postHeader">
+            <p id="postTitle"></p>
+            <p id="postDate"></p>
+        </div>
+        <p id="postContent"></p>
+    </div>
+    <div id="topBtn" onclick="window.location.href = '#postContainer'">
+        <p>^</p>
+    </div>
+    <script src="blog_source/post.js"></script>
+</body>
+
+</html>

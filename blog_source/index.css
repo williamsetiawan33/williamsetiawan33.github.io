@@ -1,0 +1,451 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif', serif;
+}
+
+.hero {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+    z-index: 100000;
+}
+
+.hero video {
+    position: relative;
+    top: -250px;
+    scale: 250%;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* backdrop-filter: blur(15px); */
+}
+
+.nav a,
+.nav a:link,
+.nav a:visited,
+.nav a:active {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding-inline: 7px;
+    padding-bottom: 15px;
+}
+
+.nav p {
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    padding-inline: 7px;
+    padding-bottom: 15px;
+}
+
+#nightBtn {
+    width: 40px;
+    height: 20px;
+    border-radius: 50px;
+    margin-inline: 7px;
+    margin-bottom: 15px;
+    padding: 3px;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#nightBtnSub {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+#mobileNightBtn {
+    width: 40px;
+    height: 20px;
+    border-radius: 50px;
+    margin-inline: 7px;
+    margin-bottom: 15px;
+    padding: 3px;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#mobileNightBtnSub {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+#toBlack {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 200vh;
+}
+
+.heroText {
+    position: absolute;
+    /* top: 0; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    animation-name: fadeInHero;
+    animation-duration: 1s;
+    /* animation-timing-function: ease; */
+}
+
+.heroText p {
+    font-size: 50px;
+    color: white;
+    text-align: start;
+    padding: 0;
+    padding-inline: 50px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.heroText .credit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.icon-ig,
+.icon-yt,
+.icon-git {
+    margin: 10px;
+    font-size: 30px;
+    transition: all 0.3s;
+}
+
+.icon-ig:hover,
+.icon-yt:hover,
+.icon-git:hover {
+    cursor: pointer;
+    font-size: 35px;
+    opacity: 0.5;
+}
+
+#mobilenav {
+    position: fixed;
+    display: none;
+    justify-content: start;
+    align-content: start;
+    flex-wrap: wrap;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+#mobilenav a,
+#mobilenav a:link,
+#mobilenav a:visited,
+#mobilenav a:active {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-block: 10px;
+}
+
+.nav a,
+#mobilenav a {
+    transition: all 0.3s ease;
+}
+
+.nav a:hover,
+#mobilenav a:hover {
+    color: rgba(255, 255, 255, 0.5);
+    transform: scale(102%);
+}
+
+.btnmenu {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-block: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+
+.btnmenu:hover {
+    cursor: pointer;
+}
+
+#menuLine1,
+#menuLine2,
+#menuLine3 {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 3px;
+    margin-block: 2px;
+    transition: all 0.3s ease;
+}
+
+#menuLine4 {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 3px;
+    height: 30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#menuLine2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.tittleConMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    position: absolute;
+    top: 0;
+}
+
+.tittleConMobile p {
+    font-size: 25px;
+    color: white;
+}
+
+#part1,
+#part2 {
+    padding-block: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+#part1 #checkPoint1,
+#part2 #checkPoint2 {
+    font-size: 60px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    padding-block: 50px;
+    border-radius: 7px;
+    transition: opacity 0.5s;
+}
+
+.spacer {
+    width: 100%;
+}
+
+.card-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: opacity 0.5s;
+}
+
+.card {
+    width: 60vw;
+    height: 500px;
+    overflow: hidden;
+    /* border-radius: 7px; */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.7);
+    /* border-right: 1px solid rgba(128, 128, 128, 0.7); */
+    margin: 30px;
+    /* padding: 30px; */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.fader {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.fader p {
+    font-size: 20px;
+    padding: 5px;
+    margin: 0;
+    margin-right: 30px;
+    background-color: gray;
+    color: white;
+    border-radius: 7px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(102%);
+    opacity: 50%;
+}
+
+.card-title {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    margin: 0;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#part1 a,
+#part1 a:link,
+#part1 a:visited,
+#part1 a:active {
+    color: rgb(8, 0, 255);
+    text-decoration: none;
+}
+
+#part2 p {
+    margin: 0;
+    text-align: justify;
+    padding-inline: 190px;
+    padding-block: 10px;
+    font-size: 20px;
+    transition: opacity 0.5s;
+}
+
+#typeWriter {
+    animation-name: blinking;
+    animation-iteration-count: infinite;
+    animation-duration: 0.7s;
+    font-family: sans-serif;
+}
+
+#topBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    /* background-color: rgb(71, 65, 74); */
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 15px -7px;
+}
+
+#topBtn p {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+@media(orientation: portrait) {
+    #mobilenav {
+        display: flex;
+    }
+
+    .nav,
+    .nav a,
+    .nav p {
+        display: none;
+    }
+
+    .hero video {
+        /* top: 250px; */
+        right: 400px;
+        /* width: 100vw; */
+    }
+
+    #part2 p {
+        padding-inline: 20px;
+    }
+
+    #checkPoint1,
+    #checkPoint2 {
+        font-size: 40px !important;
+    }
+
+    .card {
+        width: 80vw;
+    }
+
+    .card:hover {
+        cursor: pointer;
+        transform: scale(100%);
+        opacity: 100%;
+    }
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHero {
+    0% {
+        opacity: 0;
+        bottom: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}

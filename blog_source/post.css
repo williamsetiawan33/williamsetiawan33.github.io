@@ -1,0 +1,243 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+body::-webkit-scrollbar {
+    display: flex;
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(189, 189, 189);
+    border-radius: 50px;
+}
+
+.spacer {
+    width: 100%;
+}
+
+#mobilenav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    flex-wrap: wrap;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+#mobilenav a,
+#mobilenav a:link,
+#mobilenav a:visited,
+#mobilenav a:active {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-block: 10px;
+}
+
+#mobilenav a {
+    transition: all 0.3s ease;
+}
+
+#mobilenav a:hover {
+    color: rgba(255, 255, 255, 0.5);
+    transform: scale(102%);
+}
+
+.btnmenu {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-block: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+
+.btnmenu:hover {
+    cursor: pointer;
+}
+
+#menuLine1,
+#menuLine2,
+#menuLine3 {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 3px;
+    margin-block: 2px;
+    transition: all 0.3s ease;
+}
+
+#menuLine4 {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 3px;
+    height: 30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#menuLine2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.tittleConMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    position: absolute;
+    width: 100vw;
+}
+
+.tittleConMobile p {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    /* margin-left: 10px; */
+    /* width: 100vw;
+    height: 60px; */
+}
+
+#mobileNightBtn {
+    width: 40px;
+    height: 20px;
+    border-radius: 50px;
+    margin-inline: 7px;
+    margin-bottom: 15px;
+    padding: 3px;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+#mobileNightBtnSub {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+#postContainer {
+    width: 70vw;
+    padding-block: 100px;
+    padding-inline: 30px;
+    margin-block: 30px;
+    border-radius: 50px;
+    transition: all 0.5s;
+    /* position: relative; */
+}
+
+#topBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    /* background-color: rgb(71, 65, 74); */
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 15px -7px;
+}
+
+#topBtn p {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+#postContent {
+    text-align: justify;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+#postTitle {
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+}
+
+#postDate {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+}
+
+#postHeader {
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    margin-bottom: 30px;
+}
+
+.postTab {
+    transition: all 0.5s;
+    user-select: none;
+}
+
+@media(orientation: portrait) {
+    #postContainer {
+        width: 100vw;
+    }
+
+    #postTitle {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #postDate {
+        text-align: center;
+    }
+
+    #mobilenav a,
+    #mobilenav a:link,
+    #mobilenav a:visited,
+    #mobilenav a:active {
+        font-size: 20px;
+    }
+
+    .tittleConMobile {
+        width: calc(100vw - 60px);
+        position: relative;
+        white-space: nowrap;
+        justify-content: start;
+        padding-left: 10px;
+    }
+}
