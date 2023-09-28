@@ -1,0 +1,101 @@
+body {
+  background-color: rgb(75, 59, 83);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.cell-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 318px;
+  height: 318px;
+}
+
+.cell-container h3 {
+  color: white;
+  width: 100%;
+  font-size: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  transition: all .3s ease;
+  font-weight: bold;
+}
+
+.cell:hover {
+  background-color: rgba(0, 0, 0, 0.305);
+}
+
+.menuContainer {
+  width: 300px;
+  height: 90vh;
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+}
+
+.menuContainer::-webkit-scrollbar {
+  display: flex;
+  width: 6px;
+}
+
+.menuContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.305);
+  border-radius: 17px;
+}
+
+
+.menuContainer h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  scroll-snap-align: start;
+  /* background-color: red; */
+  padding: 0;
+  margin: 0;
+}
+
+.btnMenu {
+  width: 70%;
+  height: 70px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.305);
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  transition: all .3s ease;font-weight: bold;
+  scroll-snap-align: start;
+}
+
+.btnMenu:hover {
+  opacity: .7;
+  cursor: pointer;
+}
