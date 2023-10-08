@@ -1,0 +1,111 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  width: 100vw;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(126, 54, 54);
+  font-size: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.navLinkCon {
+  display: flex;
+}
+
+.nav p {
+  color: white;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 7px;
+  transition: all .3s;
+}
+
+.nav p:hover {
+  background-color: rgba(0, 0, 0, 0.301);
+  cursor: pointer;
+}
+
+#promoBannerCon {
+  width: 90vw;
+  height: 44vh;
+  /* border-bottom: 1px solid black; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin: auto;
+}
+
+#promoBannerCon::-webkit-scrollbar {
+  display: flex;
+  /* background-color: red; */
+  height: 15px;
+
+}
+
+#promoBannerCon::-webkit-scrollbar-thumb {
+  background-color: rgb(105, 105, 105);
+  border-radius: 10px;
+}
+
+.subPromoBannerCon {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.promoBanner {
+  width: 500px;
+  height: 80%;
+  background-color: rgb(199, 199, 199);
+  border-radius: 17px;
+  margin-left: 20px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+#topUpCon {
+  width: 100vw;
+  height: 144vh;
+  padding: 50px;
+  display: flex;
+  justify-content: start;
+  align-content: start;
+  flex-wrap: wrap;
+  /* background-color: red; */
+}
+
+.topUpTitle {
+  font-size: 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  #promoBannerCon::-webkit-scrollbar {
+    height: 7px;
+  }
+  .promoBanner {
+    height: 70% !important;
+    width: 50vw;
+  }
+}
