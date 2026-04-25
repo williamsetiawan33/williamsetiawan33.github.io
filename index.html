@@ -8,15 +8,24 @@
     <title>Halo | William</title>
   <style>
     body {
-      width : 100vw;
-      height : 100vh;
-      display : flex;
-      justify-content : center;
-      align-items : center
+        background: linear-gradient(270deg, #a300ff, #000000);
+        animation: GradientAnim 8s ease infinite;
+        width : 100vw;
+        height : 100vh;
+        display : flex;
+        justify-content : center;
+        align-items : center
     }
+      
     .txtHero {
-      font-family : sans-serif;
-      size : 40px
+        font-family : sans-serif;
+        size : 40px
+    }
+
+    @keyframes GradientAnim {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
     }
   </style>
 </head>
